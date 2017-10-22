@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="sdl_game" Version="10.0.0" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <VirtualDirectory Name="system">
+      <VirtualDirectory Name="texture_loading">
+        <File Name="Texture.cpp"/>
+        <File Name="Texture.h"/>
+        <File Name="texture_types.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="config">
+        <File Name="Config.h"/>
+        <File Name="Config.cpp"/>
+        <File Name="config_types.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="translate">
+        <File Name="Translate.cpp"/>
+        <File Name="Translate.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="time">
+        <File Name="time_user.h"/>
+        <File Name="time_user.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="debug"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="assets">
+      <File Name="assets_includes.h"/>
+      <File Name="assets_structs.h"/>
+      <VirtualDirectory Name="components">
+        <VirtualDirectory Name="base">
+          <File Name="GraphicsComponent.h"/>
+          <File Name="InputComponent.h"/>
+          <File Name="PhysicsComponent.h"/>
+        </VirtualDirectory>
+        <File Name="Component.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="game_object">
+        <File Name="GameObject.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="sandbox">
+        <VirtualDirectory Name="world">
+          <File Name="World.h"/>
+          <File Name="World.cpp"/>
+          <File Name="world_types.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="tiles">
+          <VirtualDirectory Name="base">
+            <File Name="Tile.h"/>
+            <File Name="Tile.cpp"/>
+            <File Name="TileGraphicsComponent.h"/>
+            <File Name="tile_types.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="units">
+          <VirtualDirectory Name="civilian">
+            <File Name="Civilian.cpp"/>
+            <File Name="Civilian.h"/>
+            <File Name="CivilianGraphicsComponent.h"/>
+            <File Name="CivilianInputComponent.h"/>
+            <File Name="civilian_types.h"/>
+            <File Name="CivilianPhysicsComponent.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="buildings"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <File Name="system_includes.h"/>
+    <File Name="sdl_includes.h"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2"/>
+        <IncludePath Value="C:\Users\steve\Documents\sdl\SDL2_image-2.0.1\x86_64-w64-mingw32\include\SDL2"/>
+        <IncludePath Value="C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2"/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\lib"/>
+        <LibraryPath Value="C:\Users\steve\Documents\sdl\SDL2_image-2.0.1\x86_64-w64-mingw32\lib"/>
+        <LibraryPath Value="C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\lib"/>
+        <Library Value="mingw32"/>
+        <Library Value="SDL2main"/>
+        <Library Value="SDL2"/>
+        <Library Value="SDL2_image"/>
+        <Library Value="SDL2_ttf"/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-64 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall;-std=c++11" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="MinGW ( TDM-GCC-64 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
