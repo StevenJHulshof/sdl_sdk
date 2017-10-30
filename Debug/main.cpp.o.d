@@ -1,4 +1,5 @@
-Debug/main.cpp.o: main.cpp system_includes.h sdl_includes.h \
+Debug/main.cpp.o: main.cpp GameCore.h Tile.h TileGraphicsComponent.h \
+ tile_types.h GameObject.h Component.h GraphicsComponent.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -47,14 +48,23 @@ Debug/main.cpp.o: main.cpp system_includes.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- Config.h texture_types.h config_types.h Texture.h Translate.h \
- assets_structs.h assets_includes.h World.h world_types.h Tile.h \
- GameObjectFlyWeight.h GameObject.h Component.h TileGraphicsComponent.h \
- tile_types.h GraphicsComponent.h Civilian.h CivilianInputComponent.h \
- civilian_types.h InputComponent.h CivilianPhysicsComponent.h \
- PhysicsComponent.h CivilianGraphicsComponent.h
+ Texture.h texture_types.h TilePhysicsComponent.h PhysicsComponent.h \
+ system_includes.h Config.h config_types.h Translate.h assets_structs.h \
+ assets_includes.h
 
-system_includes.h:
+GameCore.h:
+
+Tile.h:
+
+TileGraphicsComponent.h:
+
+tile_types.h:
+
+GameObject.h:
+
+Component.h:
+
+GraphicsComponent.h:
 
 sdl_includes.h:
 
@@ -154,48 +164,22 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_co
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
 
-Config.h:
+Texture.h:
 
 texture_types.h:
 
-config_types.h:
+TilePhysicsComponent.h:
 
-Texture.h:
+PhysicsComponent.h:
+
+system_includes.h:
+
+Config.h:
+
+config_types.h:
 
 Translate.h:
 
 assets_structs.h:
 
 assets_includes.h:
-
-World.h:
-
-world_types.h:
-
-Tile.h:
-
-GameObjectFlyWeight.h:
-
-GameObject.h:
-
-Component.h:
-
-TileGraphicsComponent.h:
-
-tile_types.h:
-
-GraphicsComponent.h:
-
-Civilian.h:
-
-CivilianInputComponent.h:
-
-civilian_types.h:
-
-InputComponent.h:
-
-CivilianPhysicsComponent.h:
-
-PhysicsComponent.h:
-
-CivilianGraphicsComponent.h:

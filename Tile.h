@@ -1,18 +1,19 @@
 #pragma once
 
-#include "GameObjectFlyWeight.h"
 #include "TileGraphicsComponent.h"
+#include "TilePhysicsComponent.h"
 
 class Tile: public GameObject<Tile>
 {
 private:
 
-    
+    TilePhysicsComponent<Tile> physicsComponent;
+    TileGraphicsComponent<Tile> graphicsComponent;
 public:
 
-    Tile(int tileType);
+    Tile(int x, int y, int tileType);
     ~Tile();
         
-    TileGraphicsComponent<Tile> graphicsComponent;
+
 };
 

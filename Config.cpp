@@ -67,16 +67,8 @@ bool Config::loadMedia() {
 	//Loading success flag
 	bool success = true;
 
-    for(int i = TEXTURE_UNIT_CIVILIAN_0000; i < (TEXTURE_UNIT_CIVILIAN_0000 + UNIT_CIVILIAN_TEXTURES_TOTAL); i++) {
-        if(!gTextures[i].loadFromFile("../textures/units/civilian/" + gTextureStringNames[i] + ".png")) 
-            success = false;
-	}
-    for(int i = TEXTURE_TILE_GRASS_0000; i < (TEXTURE_TILE_GRASS_0000 + TILE_TEXTURES_TOTAL); i++) {
-        if(!gTextures[i].loadFromFile("../textures/tiles/" + gTextureStringNames[i] + ".png")) 
-            success = false;
-	}
-    for(int i = TEXTURE_RESOURCE_RAW_WOOD_0000; i < (TEXTURE_RESOURCE_RAW_WOOD_0000 + RESOURCE_RAW_TEXTURES_TOTAL); i++) {
-        if(!gTextures[i].loadFromFile("../textures/resources/raw/" + gTextureStringNames[i] + ".png")) 
+    for(int i = 0; i < TEXTURES_TOTAL; i++) {
+        if(!gTextures[i].loadFromFile("../textures/" + gTextureStringNames[i] + ".png")) 
             success = false;
 	}
     //Open the font

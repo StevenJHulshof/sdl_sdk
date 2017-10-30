@@ -71,14 +71,3 @@ const std::string gTextureStringNames[TEXTURES_TOTAL] = {
     "water_0000",
     "wood_0000"
 };
-
-struct TextureConfig {
-    int type;
-    SDL_Rect *clip;
-    double angle;
-    SDL_Point *center;
-    SDL_RendererFlip flip;
-};
-
-const TextureConfig textureConfigDefault = {0, NULL, 9, NULL, SDL_FLIP_NONE};
-

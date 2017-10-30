@@ -1,6 +1,5 @@
-Debug/Tile.cpp.o: Tile.cpp Tile.h GameObjectFlyWeight.h GameObject.h \
- Component.h TileGraphicsComponent.h tile_types.h GraphicsComponent.h \
- sdl_includes.h \
+Debug/Tile.cpp.o: Tile.cpp Tile.h TileGraphicsComponent.h tile_types.h \
+ GameObject.h Component.h GraphicsComponent.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -49,19 +48,17 @@ Debug/Tile.cpp.o: Tile.cpp Tile.h GameObjectFlyWeight.h GameObject.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- Texture.h texture_types.h
+ Texture.h texture_types.h TilePhysicsComponent.h PhysicsComponent.h
 
 Tile.h:
-
-GameObjectFlyWeight.h:
-
-GameObject.h:
-
-Component.h:
 
 TileGraphicsComponent.h:
 
 tile_types.h:
+
+GameObject.h:
+
+Component.h:
 
 GraphicsComponent.h:
 
@@ -166,3 +163,7 @@ C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf
 Texture.h:
 
 texture_types.h:
+
+TilePhysicsComponent.h:
+
+PhysicsComponent.h:

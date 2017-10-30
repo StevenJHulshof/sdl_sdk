@@ -13,7 +13,6 @@
       <VirtualDirectory Name="texture_loading">
         <File Name="Texture.cpp"/>
         <File Name="Texture.h"/>
-        <File Name="texture_types.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="config">
         <File Name="Config.h"/>
@@ -45,17 +44,14 @@
         <File Name="GameObject.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="sandbox">
-        <VirtualDirectory Name="world">
-          <File Name="World.h"/>
-          <File Name="World.cpp"/>
-          <File Name="world_types.h"/>
-        </VirtualDirectory>
+        <VirtualDirectory Name="world"/>
         <VirtualDirectory Name="tiles">
           <VirtualDirectory Name="base">
             <File Name="Tile.h"/>
             <File Name="Tile.cpp"/>
             <File Name="TileGraphicsComponent.h"/>
             <File Name="tile_types.h"/>
+            <File Name="TIlePhysicsComponent.h"/>
           </VirtualDirectory>
         </VirtualDirectory>
         <VirtualDirectory Name="units">
@@ -73,6 +69,11 @@
     </VirtualDirectory>
     <File Name="system_includes.h"/>
     <File Name="sdl_includes.h"/>
+    <VirtualDirectory Name="game">
+      <File Name="texture_types.h"/>
+      <File Name="GameCore.cpp"/>
+      <File Name="GameCore.h"/>
+    </VirtualDirectory>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

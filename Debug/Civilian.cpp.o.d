@@ -48,9 +48,9 @@ Debug/Civilian.cpp.o: Civilian.cpp Civilian.h GameObject.h Component.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- civilian_types.h InputComponent.h CivilianPhysicsComponent.h \
- PhysicsComponent.h CivilianGraphicsComponent.h GraphicsComponent.h \
- Texture.h texture_types.h
+ time_user.h civilian_types.h InputComponent.h CivilianPhysicsComponent.h \
+ config_types.h Texture.h texture_types.h PhysicsComponent.h \
+ CivilianGraphicsComponent.h GraphicsComponent.h
 
 Civilian.h:
 
@@ -158,18 +158,22 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_co
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
 
+time_user.h:
+
 civilian_types.h:
 
 InputComponent.h:
 
 CivilianPhysicsComponent.h:
 
+config_types.h:
+
+Texture.h:
+
+texture_types.h:
+
 PhysicsComponent.h:
 
 CivilianGraphicsComponent.h:
 
 GraphicsComponent.h:
-
-Texture.h:
-
-texture_types.h:

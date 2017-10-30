@@ -59,8 +59,8 @@ void CivilianGraphicsComponent<obj_t>::update() {
 template <class obj_t>
 void CivilianGraphicsComponent<obj_t>::render() {
     gTextures[this->textureType].render(
-        this->getGameObject()->send(MSG_GET, CIVILIAN_POS_X),
-        this->getGameObject()->send(MSG_GET, CIVILIAN_POS_Y),
+        this->getGameObject()->send(MSG_GET_PHYSICS, CIVILIAN_POS_X),
+        this->getGameObject()->send(MSG_GET_PHYSICS, CIVILIAN_POS_Y),
         NULL, 0, NULL, this->flip);
 }
 

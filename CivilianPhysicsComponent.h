@@ -32,7 +32,7 @@ void CivilianPhysicsComponent<obj_t>::receive(int message, int data, int *respon
     
     switch(message) {
         
-        case MSG_GET:
+        case MSG_GET_PHYSICS:
         switch(data) {
             
             case CIVILIAN_POS_X:

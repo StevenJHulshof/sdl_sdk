@@ -4,7 +4,9 @@
 #include "Component.h"
 
 enum {
-    MSG_GET = -1
+    MSG_GET_PHYSICS = -1,
+    MSG_GET_GRAPHICS = -2,
+    MSG_GET_INPUT = -3
 };
 
 template <class obj_t>

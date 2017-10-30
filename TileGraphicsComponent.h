@@ -13,7 +13,7 @@ public:
 
     virtual void receive(int message, int data, int *respons);
     virtual void update();
-    virtual void render(int x, int y);
+    virtual void render();
 };
 
 template <class obj_t>
@@ -32,7 +32,7 @@ void TileGraphicsComponent<obj_t>::receive(int message, int data, int *response)
     
     switch(message) {
         
-        case MSG_GET:
+        case MSG_GET_GRAPHICS:
         switch(data) {
             case TILE_TEXTURE_TYPE:
             *response = this->textureType;
@@ -64,6 +64,10 @@ void TileGraphicsComponent<obj_t>::update() {
 }
 
 template <class obj_t>
-void TileGraphicsComponent<obj_t>::render(int x, int y) {
-    gTextures[this->textureType].render(x, y, NULL, 0, NULL, this->flip);
+void TileGraphicsComponent<obj_t>::render() {
+
+    gTextures[this->textureType].render(
+        this->getGameObject()->send(MSG_GET_PHYSICS, TILE_POS_X),
+        this->getGameObject()->send(MSG_GET_PHYSICS, TILE_POS_Y),
+        NULL, 0, NULL, this->flip);
 }

@@ -1,5 +1,6 @@
-Debug/World.cpp.o: World.cpp World.h world_types.h config_types.h \
- sdl_includes.h \
+Debug/GameCore.cpp.o: GameCore.cpp GameCore.h Tile.h \
+ TileGraphicsComponent.h tile_types.h GameObject.h Component.h \
+ GraphicsComponent.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -48,17 +49,21 @@ Debug/World.cpp.o: World.cpp World.h world_types.h config_types.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- Texture.h texture_types.h Tile.h GameObjectFlyWeight.h GameObject.h \
- Component.h TileGraphicsComponent.h tile_types.h GraphicsComponent.h \
- Civilian.h CivilianInputComponent.h time_user.h civilian_types.h \
- InputComponent.h CivilianPhysicsComponent.h PhysicsComponent.h \
- CivilianGraphicsComponent.h
+ Texture.h texture_types.h TilePhysicsComponent.h PhysicsComponent.h
 
-World.h:
+GameCore.h:
 
-world_types.h:
+Tile.h:
 
-config_types.h:
+TileGraphicsComponent.h:
+
+tile_types.h:
+
+GameObject.h:
+
+Component.h:
+
+GraphicsComponent.h:
 
 sdl_includes.h:
 
@@ -162,32 +167,6 @@ Texture.h:
 
 texture_types.h:
 
-Tile.h:
-
-GameObjectFlyWeight.h:
-
-GameObject.h:
-
-Component.h:
-
-TileGraphicsComponent.h:
-
-tile_types.h:
-
-GraphicsComponent.h:
-
-Civilian.h:
-
-CivilianInputComponent.h:
-
-time_user.h:
-
-civilian_types.h:
-
-InputComponent.h:
-
-CivilianPhysicsComponent.h:
+TilePhysicsComponent.h:
 
 PhysicsComponent.h:
-
-CivilianGraphicsComponent.h:

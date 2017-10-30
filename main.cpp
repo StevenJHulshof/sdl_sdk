@@ -1,4 +1,5 @@
 //Using SDL, SDL_image, standard IO, and strings
+#include "GameCore.h"
 #include "system_includes.h"
 #include "assets_includes.h"
 #include <time.h>
@@ -8,7 +9,7 @@
 int main(int argc, char* args[]){
     
     srand(time(NULL));
-    World world;
+    GameCore core;
    	//Start up SDL and create window
 	if(!Config::init())
 		printf( "Failed to initialize!\n" );
@@ -28,15 +29,13 @@ int main(int argc, char* args[]){
 						quit = true;
 					}
 				}
-                world.update(); 
-
+                core.update();
                 //Clear screen
                 SDL_SetRenderDrawBlendMode(gRenderer, SDL_BLENDMODE_BLEND); 
 				SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
 				SDL_RenderClear( gRenderer );
 				//Update screen
-                world.render();    
-        
+                core.render();
 				SDL_RenderPresent( gRenderer );
 			}
 		}

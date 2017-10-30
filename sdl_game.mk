@@ -6,14 +6,14 @@
 ProjectName            :=sdl_game
 ConfigurationName      :=Debug
 WorkspacePath          :=C:/Users/steve/Documents/sdl
-ProjectPath            :=C:/Users/steve/Documents/sdl/sdl_game
+ProjectPath            :=C:/Users/steve/Documents/GitHub/sdl_sdk
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=steve
-Date                   :=22/10/2017
+Date                   :=30/10/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) 
 
 
 
@@ -94,15 +94,23 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
+$(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix): GameCore.cpp $(IntermediateDirectory)/GameCore.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/GameCore.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/GameCore.cpp$(DependSuffix): GameCore.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GameCore.cpp$(DependSuffix) -MM GameCore.cpp
+
+$(IntermediateDirectory)/GameCore.cpp$(PreprocessSuffix): GameCore.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GameCore.cpp$(PreprocessSuffix) GameCore.cpp
+
 $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix): Texture.cpp $(IntermediateDirectory)/Texture.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/Texture.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Texture.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Texture.cpp$(DependSuffix): Texture.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Texture.cpp$(DependSuffix) -MM Texture.cpp
 
@@ -110,7 +118,7 @@ $(IntermediateDirectory)/Texture.cpp$(PreprocessSuffix): Texture.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Texture.cpp$(PreprocessSuffix) Texture.cpp
 
 $(IntermediateDirectory)/Config.cpp$(ObjectSuffix): Config.cpp $(IntermediateDirectory)/Config.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/Config.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Config.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Config.cpp$(DependSuffix): Config.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Config.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Config.cpp$(DependSuffix) -MM Config.cpp
 
@@ -118,7 +126,7 @@ $(IntermediateDirectory)/Config.cpp$(PreprocessSuffix): Config.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Config.cpp$(PreprocessSuffix) Config.cpp
 
 $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix): Translate.cpp $(IntermediateDirectory)/Translate.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/Translate.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Translate.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Translate.cpp$(DependSuffix): Translate.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Translate.cpp$(DependSuffix) -MM Translate.cpp
 
@@ -126,23 +134,15 @@ $(IntermediateDirectory)/Translate.cpp$(PreprocessSuffix): Translate.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Translate.cpp$(PreprocessSuffix) Translate.cpp
 
 $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix): time_user.cpp $(IntermediateDirectory)/time_user.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/time_user.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/time_user.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/time_user.cpp$(DependSuffix): time_user.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/time_user.cpp$(DependSuffix) -MM time_user.cpp
 
 $(IntermediateDirectory)/time_user.cpp$(PreprocessSuffix): time_user.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/time_user.cpp$(PreprocessSuffix) time_user.cpp
 
-$(IntermediateDirectory)/World.cpp$(ObjectSuffix): World.cpp $(IntermediateDirectory)/World.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/World.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/World.cpp$(DependSuffix): World.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/World.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/World.cpp$(DependSuffix) -MM World.cpp
-
-$(IntermediateDirectory)/World.cpp$(PreprocessSuffix): World.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/World.cpp$(PreprocessSuffix) World.cpp
-
 $(IntermediateDirectory)/Tile.cpp$(ObjectSuffix): Tile.cpp $(IntermediateDirectory)/Tile.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/Tile.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Tile.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Tile.cpp$(DependSuffix): Tile.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Tile.cpp$(DependSuffix) -MM Tile.cpp
 
@@ -150,7 +150,7 @@ $(IntermediateDirectory)/Tile.cpp$(PreprocessSuffix): Tile.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tile.cpp$(PreprocessSuffix) Tile.cpp
 
 $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix): Civilian.cpp $(IntermediateDirectory)/Civilian.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/sdl/sdl_game/Civilian.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Civilian.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Civilian.cpp$(DependSuffix): Civilian.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Civilian.cpp$(DependSuffix) -MM Civilian.cpp
 
