@@ -60,7 +60,7 @@ void TileGraphicsComponent<obj_t>::receive(int message, int data, int *response)
 
 template <class obj_t>
 void TileGraphicsComponent<obj_t>::update() {
-    
+    DEBUG_FUN_VAR("%p | %s\ntextureType: %d\n", this->getGameObject(), __PRETTY_FUNCTION__, this->textureType);
 }
 
 template <class obj_t>

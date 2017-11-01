@@ -1,5 +1,6 @@
 Debug/Tile.cpp.o: Tile.cpp Tile.h TileGraphicsComponent.h tile_types.h \
- GameObject.h Component.h GraphicsComponent.h sdl_includes.h \
+ GameObject.h game_object_types.h Debug.h Component.h GraphicsComponent.h \
+ sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -57,6 +58,10 @@ TileGraphicsComponent.h:
 tile_types.h:
 
 GameObject.h:
+
+game_object_types.h:
+
+Debug.h:
 
 Component.h:
 

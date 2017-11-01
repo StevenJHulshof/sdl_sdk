@@ -1,7 +1,11 @@
 #include "Tile.h"
 
 Tile::Tile(int x, int y, int tileType):
-    GameObject<Tile>() {
+    GameObject<Tile>() 
+{
+#if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
+    DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
+#endif
         
     addComponent(this, &physicsComponent);
     addComponent(this, &graphicsComponent);
@@ -13,4 +17,7 @@ Tile::Tile(int x, int y, int tileType):
 
 Tile::~Tile()
 {
+#if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
+    DEBUG_ALLOC("Deallocate | %p | %s\n", this, __PRETTY_FUNCTION__);
+#endif
 }

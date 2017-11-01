@@ -27,7 +27,9 @@
         <File Name="time_user.h"/>
         <File Name="time_user.cpp"/>
       </VirtualDirectory>
-      <VirtualDirectory Name="debug"/>
+      <VirtualDirectory Name="debug">
+        <File Name="Debug.h"/>
+      </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="assets">
       <File Name="assets_includes.h"/>
@@ -42,9 +44,14 @@
       </VirtualDirectory>
       <VirtualDirectory Name="game_object">
         <File Name="GameObject.h"/>
+        <File Name="game_object_types.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="sandbox">
-        <VirtualDirectory Name="world"/>
+        <VirtualDirectory Name="world">
+          <File Name="World.h"/>
+          <File Name="World.cpp"/>
+          <File Name="world_types.h"/>
+        </VirtualDirectory>
         <VirtualDirectory Name="tiles">
           <VirtualDirectory Name="base">
             <File Name="Tile.h"/>

@@ -9,7 +9,6 @@
 int main(int argc, char* args[]){
     
     srand(time(NULL));
-    GameCore core;
    	//Start up SDL and create window
 	if(!Config::init())
 		printf( "Failed to initialize!\n" );
@@ -18,6 +17,8 @@ int main(int argc, char* args[]){
 		if(!Config::loadMedia())
 			printf( "Failed to load media!\n" );
 		else {	
+            // Gamecore
+            GameCore core;
 			//Main loop flag
 			bool quit = false;
             SDL_Event event;

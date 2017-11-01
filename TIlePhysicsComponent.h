@@ -61,5 +61,5 @@ void TilePhysicsComponent<obj_t>::receive(int message, int data, int *response) 
 
 template <class obj_t>
 void TilePhysicsComponent<obj_t>::update() {
-    
+     DEBUG_FUN_VAR("%p | %s\nxPos: %d, yPos: %d\n", this->getGameObject(), __PRETTY_FUNCTION__, this->xPos, this->yPos);
 }

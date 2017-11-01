@@ -1,5 +1,5 @@
-Debug/Civilian.cpp.o: Civilian.cpp Civilian.h GameObject.h Component.h \
- CivilianInputComponent.h sdl_includes.h \
+Debug/Civilian.cpp.o: Civilian.cpp Civilian.h GameObject.h \
+ game_object_types.h Component.h CivilianInputComponent.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -55,6 +55,8 @@ Debug/Civilian.cpp.o: Civilian.cpp Civilian.h GameObject.h Component.h \
 Civilian.h:
 
 GameObject.h:
+
+game_object_types.h:
 
 Component.h:
 

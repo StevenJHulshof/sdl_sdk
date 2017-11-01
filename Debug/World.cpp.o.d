@@ -1,6 +1,6 @@
-Debug/GameCore.cpp.o: GameCore.cpp GameCore.h Tile.h \
- TileGraphicsComponent.h tile_types.h GameObject.h game_object_types.h \
- Debug.h Component.h GraphicsComponent.h sdl_includes.h \
+Debug/World.cpp.o: World.cpp World.h world_types.h GameObject.h \
+ game_object_types.h Debug.h Component.h Tile.h TileGraphicsComponent.h \
+ tile_types.h GraphicsComponent.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -51,13 +51,9 @@ Debug/GameCore.cpp.o: GameCore.cpp GameCore.h Tile.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
  Texture.h texture_types.h TilePhysicsComponent.h PhysicsComponent.h
 
-GameCore.h:
+World.h:
 
-Tile.h:
-
-TileGraphicsComponent.h:
-
-tile_types.h:
+world_types.h:
 
 GameObject.h:
 
@@ -66,6 +62,12 @@ game_object_types.h:
 Debug.h:
 
 Component.h:
+
+Tile.h:
+
+TileGraphicsComponent.h:
+
+tile_types.h:
 
 GraphicsComponent.h:
 

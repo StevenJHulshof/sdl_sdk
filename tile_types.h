@@ -7,6 +7,7 @@ enum {
 };
 
 enum {
+    TILE_TYPE_EMPTY,
     TILE_TYPE_GRASS,
     TILE_TYPE_WATER
 };

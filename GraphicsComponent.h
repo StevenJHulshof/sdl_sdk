@@ -1,26 +1,37 @@
 #pragma once
 
 #include "sdl_includes.h"
+#include "Debug.h"
 #include "Component.h"
 #include "Texture.h"
 
 template <class obj_t>
-class GraphicsComponent: public Component<obj_t> {
-    
-private:
-
-protected:
-    SDL_RendererFlip flip;
-    int textureType;
+class GraphicsComponent: public Component<obj_t> 
+{    
 public:
 
+    SDL_RendererFlip flip;
+    int textureType;
+
     GraphicsComponent();
+    ~GraphicsComponent();
 };
 
 template <class obj_t>
 GraphicsComponent<obj_t>::GraphicsComponent():
-    Component<obj_t>() {
-    
-    flip = SDL_FLIP_NONE;
-    textureType = 0;
+    Component<obj_t>(),
+    flip(SDL_FLIP_NONE),
+    textureType(0)
+{
+#if (1 == DEBUG_ALLOC_COMP_ENABLE)
+    DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
+#endif
+}
+
+template <class obj_t>
+GraphicsComponent<obj_t>::~GraphicsComponent()
+{
+#if (1 == DEBUG_ALLOC_COMP_ENABLE)
+    DEBUG_ALLOC("Deallocate | %p | %s\n", this, __PRETTY_FUNCTION__);
+#endif
 }
