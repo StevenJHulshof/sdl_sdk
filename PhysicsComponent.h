@@ -6,14 +6,12 @@ class PhysicsComponent: public Component<obj_t>
 public:
     PhysicsComponent();
     ~PhysicsComponent();
-    int xPos, yPos, velocity;
+    int velocity;
 };
 
 template <class obj_t>
 PhysicsComponent<obj_t>::PhysicsComponent():
     Component<obj_t>(),
-    xPos(0),
-    yPos(0),
     velocity(0)
 {
 #if (1 == DEBUG_ALLOC_COMP_ENABLE)

@@ -3,6 +3,7 @@
 #include <string>
 
 enum {
+    TEXTURE_TILE_TEMPLATE,
     TEXTURE_UNIT_CIVILIAN_0000,
     TEXTURE_UNIT_CIVILIAN_0001,
     TEXTURE_UNIT_CIVILIAN_0002,
@@ -31,6 +32,10 @@ enum {
     TEXTURE_UNIT_CIVILIAN_0025,
     TEXTURE_UNIT_CIVILIAN_0026,
     TEXTURE_TILE_GRASS_0000,
+    TEXTURE_TILE_GRASS_OVERLAY_0000,
+    TEXTURE_TILE_GRASS_OVERLAY_0001,
+    TEXTURE_TILE_GRASS_OVERLAY_0002,
+    TEXTURE_TILE_GRASS_OVERLAY_0003,
     TEXTURE_TILE_WATER_0000,
     TEXTURE_RESOURCE_RAW_WOOD_0000,
     TEXTURES_TOTAL,
@@ -40,6 +45,7 @@ enum {
 };
 
 const std::string gTextureStringNames[TEXTURES_TOTAL] = {
+    "tile_template",
     "civilian_0000",
     "civilian_0001",
     "civilian_0002",
@@ -68,6 +74,10 @@ const std::string gTextureStringNames[TEXTURES_TOTAL] = {
     "civilian_0025",
     "civilian_0026",
     "grass_0000",
+    "grass_overlay_0000",
+    "grass_overlay_0001",
+    "grass_overlay_0002",
+    "grass_overlay_0003",
     "water_0000",
     "wood_0000"
 };

@@ -3,7 +3,8 @@
 enum {
     MSG_TILE_TYPE,
     MSG_TILE_POS_X,
-    MSG_TILE_POS_Y
+    MSG_TILE_POS_Y,
+    MSG_TILE_POS_Z
 };
 
 enum {
@@ -18,5 +19,6 @@ enum {
 
 enum {
     TILE_POS_X,
-    TILE_POS_Y
+    TILE_POS_Y,
+    TILE_POS_Z
 };

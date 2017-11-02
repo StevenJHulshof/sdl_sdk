@@ -55,7 +55,6 @@
         <VirtualDirectory Name="tiles">
           <VirtualDirectory Name="base">
             <File Name="Tile.h"/>
-            <File Name="Tile.cpp"/>
             <File Name="TileGraphicsComponent.h"/>
             <File Name="tile_types.h"/>
             <File Name="TIlePhysicsComponent.h"/>
@@ -72,6 +71,10 @@
           </VirtualDirectory>
         </VirtualDirectory>
         <VirtualDirectory Name="buildings"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="container">
+        <File Name="Container.h"/>
+        <File Name="Container.cpp"/>
       </VirtualDirectory>
     </VirtualDirectory>
     <File Name="system_includes.h"/>

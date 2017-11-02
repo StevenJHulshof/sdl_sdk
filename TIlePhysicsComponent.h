@@ -6,6 +6,10 @@
 
 template <class obj_t>
 class TilePhysicsComponent: public PhysicsComponent<obj_t> {
+
+private:
+    int tilePosX, tilePosY, tilePosZ;
+
 public:
     TilePhysicsComponent();
     ~TilePhysicsComponent();
@@ -34,11 +38,15 @@ void TilePhysicsComponent<obj_t>::receive(int message, int data, int *response) 
         switch(data) {
 
             case TILE_POS_X:
-            *response = this->xPos;
+            *response = tilePosX;
             break;
             
             case TILE_POS_Y:
-            *response = this->yPos;
+            *response = tilePosY;
+            break;
+            
+            case TILE_POS_Z:
+            *response = tilePosZ;
             break;
             
             default:
@@ -47,11 +55,15 @@ void TilePhysicsComponent<obj_t>::receive(int message, int data, int *response) 
         break;
         
         case MSG_TILE_POS_Y:
-        this->yPos = data;
+        tilePosY = data;
         break;
         
         case MSG_TILE_POS_X:
-        this->xPos = data;
+        tilePosX = data;
+        break;
+        
+        case MSG_TILE_POS_Z:
+        tilePosZ = data;
         break;
 
         default:
@@ -61,5 +73,5 @@ void TilePhysicsComponent<obj_t>::receive(int message, int data, int *response) 
 
 template <class obj_t>
 void TilePhysicsComponent<obj_t>::update() {
-     DEBUG_FUN_VAR("%p | %s\nxPos: %d, yPos: %d\n", this->getGameObject(), __PRETTY_FUNCTION__, this->xPos, this->yPos);
+     DEBUG_FUN_VAR("%p | %s\nvelocity: %d\n", this->getGameObject(), __PRETTY_FUNCTION__, this->velocity);
 }

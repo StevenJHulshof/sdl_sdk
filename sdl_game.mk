@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=steve
-Date                   :=01/11/2017
+Date                   :=02/11/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/Container.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) 
 
 
 
@@ -141,6 +141,14 @@ $(IntermediateDirectory)/time_user.cpp$(DependSuffix): time_user.cpp
 $(IntermediateDirectory)/time_user.cpp$(PreprocessSuffix): time_user.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/time_user.cpp$(PreprocessSuffix) time_user.cpp
 
+$(IntermediateDirectory)/Container.cpp$(ObjectSuffix): Container.cpp $(IntermediateDirectory)/Container.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Container.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Container.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Container.cpp$(DependSuffix): Container.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Container.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Container.cpp$(DependSuffix) -MM Container.cpp
+
+$(IntermediateDirectory)/Container.cpp$(PreprocessSuffix): Container.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Container.cpp$(PreprocessSuffix) Container.cpp
+
 $(IntermediateDirectory)/World.cpp$(ObjectSuffix): World.cpp $(IntermediateDirectory)/World.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/World.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/World.cpp$(DependSuffix): World.cpp
@@ -148,14 +156,6 @@ $(IntermediateDirectory)/World.cpp$(DependSuffix): World.cpp
 
 $(IntermediateDirectory)/World.cpp$(PreprocessSuffix): World.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/World.cpp$(PreprocessSuffix) World.cpp
-
-$(IntermediateDirectory)/Tile.cpp$(ObjectSuffix): Tile.cpp $(IntermediateDirectory)/Tile.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Tile.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Tile.cpp$(DependSuffix): Tile.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Tile.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Tile.cpp$(DependSuffix) -MM Tile.cpp
-
-$(IntermediateDirectory)/Tile.cpp$(PreprocessSuffix): Tile.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tile.cpp$(PreprocessSuffix) Tile.cpp
 
 $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix): Civilian.cpp $(IntermediateDirectory)/Civilian.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Civilian.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) $(IncludePath)
