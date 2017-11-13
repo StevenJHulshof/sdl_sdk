@@ -10,7 +10,7 @@ class GraphicsComponent: public Component<obj_t>
 {    
 protected:
     SDL_RendererFlip flip;
-    int textureType, screenPosX, screenPosY;
+    int textureType, screenPosX, screenPosY, offsetX, offsetY;
     float zoom;
        
 public:
@@ -37,6 +37,8 @@ GraphicsComponent<obj_t>::GraphicsComponent():
     textureType(0),
     screenPosX(0),
     screenPosY(0),
+    offsetX(0),
+    offsetY(0),
     zoom(1)
 {
 #if (1 == DEBUG_ALLOC_COMP_ENABLE)
@@ -69,7 +71,15 @@ void GraphicsComponent<obj_t>::receive(int message, int data, int *response)
             break;
             
             case MSG_DATA_GRAPHICS_SCREEN_POS_Y:
-            *response = screenPosY;
+            *response = screenPosY; 
+            break;
+
+            case MSG_DATA_GRAPHICS_OFFSET_X:
+            *response = offsetX;
+            break;
+            
+            case MSG_DATA_GRAPHICS_OFFSET_Y:
+            *response = offsetY;
             break;
             
             case MSG_DATA_GRAPHICS_FLIP:
@@ -91,6 +101,14 @@ void GraphicsComponent<obj_t>::receive(int message, int data, int *response)
         
         case MSG_SET_GRAPHICS_SCREEN_POS_Y:
         screenPosY = data;
+        break;
+        
+        case MSG_SET_GRAPHICS_OFFSET_X:
+        offsetX = data;
+        break;
+        
+        case MSG_SET_GRAPHICS_OFFSET_Y:
+        offsetY = data;
         break;
 
         default:
@@ -180,11 +198,11 @@ void GraphicsComponent<obj_t>::update()
     int w = gTextures[TEXTURE_TEMPLATE].getWidth() * zoom;
     int h = gTextures[TEXTURE_TEMPLATE].getHeight() * zoom;
     
-    this->screenPosX = x * w * 0.5 - y * h * 0.5 + 600;
-    this->screenPosY = x * h * 0.25 + y * h * 0.25;
+    screenPosX = x * w * 0.5 - y * h * 0.5 + offsetX;
+    screenPosY = x * h * 0.25 + y * h * 0.25 + offsetY;
     
-    DEBUG_FUN_VAR("%p | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, zoom: %d\n",
-        this->getGameObject(), __PRETTY_FUNCTION__, textureType, screenPosX, screenPosY, zoom);
+    DEBUG_FUN_VAR("%p | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, offsetX: %d, offsetY: %d, zoom: %0.2f\n",
+        this->getGameObject(), __PRETTY_FUNCTION__, textureType, screenPosX, screenPosY, offsetX, offsetY,  zoom);
 }
 
 template <class obj_t>

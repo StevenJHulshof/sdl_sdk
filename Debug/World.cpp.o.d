@@ -48,9 +48,10 @@ Debug/World.cpp.o: World.cpp World.h world_types.h Container.h Tile.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- component_msg_types.h TileGraphicsComponent.h GraphicsComponent.h \
- Texture.h texture_types.h TilePhysicsComponent.h PhysicsComponent.h \
- Camera.h
+ component_msg_types.h TilePhysicsComponent.h PhysicsComponent.h \
+ TileGraphicsComponent.h GraphicsComponent.h Texture.h texture_types.h \
+ Camera.h CameraInputComponent.h InputComponent.h \
+ CameraPhysicsComponent.h CameraGraphicsComponent.h
 
 World.h:
 
@@ -166,6 +167,10 @@ C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf
 
 component_msg_types.h:
 
+TilePhysicsComponent.h:
+
+PhysicsComponent.h:
+
 TileGraphicsComponent.h:
 
 GraphicsComponent.h:
@@ -174,8 +179,12 @@ Texture.h:
 
 texture_types.h:
 
-TilePhysicsComponent.h:
-
-PhysicsComponent.h:
-
 Camera.h:
+
+CameraInputComponent.h:
+
+InputComponent.h:
+
+CameraPhysicsComponent.h:
+
+CameraGraphicsComponent.h:

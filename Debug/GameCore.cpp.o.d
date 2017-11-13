@@ -1,6 +1,5 @@
 Debug/GameCore.cpp.o: GameCore.cpp GameCore.h World.h world_types.h \
- Container.h Tile.h TileGraphicsComponent.h GraphicsComponent.h \
- sdl_includes.h \
+ Container.h Tile.h GameObject.h Debug.h Component.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -49,7 +48,10 @@ Debug/GameCore.cpp.o: GameCore.cpp GameCore.h World.h world_types.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- Debug.h Component.h component_msg_types.h Texture.h texture_types.h
+ component_msg_types.h TilePhysicsComponent.h PhysicsComponent.h \
+ TileGraphicsComponent.h GraphicsComponent.h Texture.h texture_types.h \
+ Camera.h CameraInputComponent.h InputComponent.h \
+ CameraPhysicsComponent.h CameraGraphicsComponent.h
 
 GameCore.h:
 
@@ -61,9 +63,11 @@ Container.h:
 
 Tile.h:
 
-TileGraphicsComponent.h:
+GameObject.h:
 
-GraphicsComponent.h:
+Debug.h:
+
+Component.h:
 
 sdl_includes.h:
 
@@ -163,12 +167,26 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_co
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
 
-Debug.h:
-
-Component.h:
-
 component_msg_types.h:
+
+TilePhysicsComponent.h:
+
+PhysicsComponent.h:
+
+TileGraphicsComponent.h:
+
+GraphicsComponent.h:
 
 Texture.h:
 
 texture_types.h:
+
+Camera.h:
+
+CameraInputComponent.h:
+
+InputComponent.h:
+
+CameraPhysicsComponent.h:
+
+CameraGraphicsComponent.h:

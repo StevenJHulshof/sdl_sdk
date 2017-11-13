@@ -72,6 +72,9 @@
         <VirtualDirectory Name="buildings"/>
         <VirtualDirectory Name="camera">
           <File Name="Camera.h"/>
+          <File Name="CameraInputComponent.h"/>
+          <File Name="CameraGraphicsComponent.h"/>
+          <File Name="CameraPhysicsComponent.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="container">

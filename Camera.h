@@ -1,13 +1,23 @@
 #pragma once
 
 #include "GameObject.h"
+#include "CameraInputComponent.h"
+#include "CameraPhysicsComponent.h"
+#include "CameraGraphicsComponent.h"
 
+enum
+{
+    CAMERA_VELOCITY = 10
+};
 
 template <class con_t>
-class Camera: public GameObject<Tile<con_t>, con_t>
+class Camera: public GameObject<Camera<con_t>, con_t>
 {
 private:
-
+    CameraInputComponent<Camera> cameraInputComponent;
+    CameraPhysicsComponent<Camera> cameraPhysicsComponent;
+    CameraGraphicsComponent<Camera> cameraGraphicsComponent;
+    
 public:
     
     Camera(int x, int y);
@@ -22,12 +32,13 @@ Camera<con_t>::Camera(int x, int y):
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
         
-//    this->addComponent(this, &physicsComponent);
-//    this->addComponent(this, &graphicsComponent);
-//    
-//    this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
-//    this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
-//    this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->addComponent(this, &cameraInputComponent);
+    this->addComponent(this, &cameraPhysicsComponent);
+    this->addComponent(this, &cameraGraphicsComponent);
+    
+    this->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x);
+    this->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y);
+    this->template send<int, int>(MSG_SET_PHYSICS_VELOCITY, CAMERA_VELOCITY);
 }
 
 template <class con_t>

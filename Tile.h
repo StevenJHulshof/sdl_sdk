@@ -1,16 +1,16 @@
 #pragma once
 
 #include "GameObject.h"
-#include "TileGraphicsComponent.h"
 #include "TilePhysicsComponent.h"
+#include "TileGraphicsComponent.h"
 
 template <class con_t>
 class Tile: public GameObject<Tile<con_t>, con_t>
 {
 private:
-
-    TilePhysicsComponent<Tile> physicsComponent;
-    TileGraphicsComponent<Tile> graphicsComponent;
+    TilePhysicsComponent<Tile> tilePhysicsComponent;
+    TileGraphicsComponent<Tile> tileGraphicsComponent;
+    
 public:
     
     Tile(int x, int y, int textureType);
@@ -25,8 +25,8 @@ Tile<con_t>::Tile(int x, int y, int textureType):
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
         
-    this->addComponent(this, &physicsComponent);
-    this->addComponent(this, &graphicsComponent);
+    this->addComponent(this, &tilePhysicsComponent);
+    this->addComponent(this, &tileGraphicsComponent);
     
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);

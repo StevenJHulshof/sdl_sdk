@@ -15,6 +15,7 @@ public:
     World();
     ~World();
 
+    Camera<World> camera;
     int _tileGrid[TILE_GRID_X][TILE_GRID_Y];
     int _heightMap[TILE_GRID_X][TILE_GRID_Y];
     std::vector<Tile<World>> _tilePool;

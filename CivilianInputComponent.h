@@ -52,26 +52,7 @@
 //
 //
 //     this->getGameObject()->send(MSG_CIVILIAN_MOVE, _direction);
-//     if(_direction != _direction2)
-//        this->getGameObject()->send(MSG_CIVILIAN_MOVE, _direction2);
-//    
-//    
-//    if(GetAsyncKeyState(VK_UP) & 0x8000) {
-//        this->getGameObject()->send(MSG_CIVILIAN_MOVE, CIVILIAN_MOVE_UP);
-//    } 
-//    
-//    if(GetAsyncKeyState(VK_DOWN) & 0x8000) {
-//        this->getGameObject()->send(MSG_CIVILIAN_MOVE, CIVILIAN_MOVE_DOWN);
-//    }
-//    
-//    if(GetAsyncKeyState(VK_LEFT) & 0x8000) {
-//        this->getGameObject()->send(MSG_CIVILIAN_MOVE, CIVILIAN_MOVE_LEFT);
-//    }
-//    
-//    if(GetAsyncKeyState(VK_RIGHT) & 0x8000) {
-//        this->getGameObject()->send(MSG_CIVILIAN_MOVE, CIVILIAN_MOVE_RIGHT);
-//
-//    }
+
 //}
 //
 //

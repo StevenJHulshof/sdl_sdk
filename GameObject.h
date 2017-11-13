@@ -11,8 +11,6 @@ class GameObject
 private:
     std::vector<Component<obj_t>*> _components;
     con_t *_container;
-protected:
-
 public:
 
     GameObject();

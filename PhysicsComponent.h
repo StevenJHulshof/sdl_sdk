@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Component.h"
 
 template <class obj_t>
@@ -66,7 +68,7 @@ void PhysicsComponent<obj_t>::receive(int message, int data, int *response)
         yPos = data;
         break;
         
-        case MSG_DATA_PHYSICS_VELOCITY:
+        case MSG_SET_PHYSICS_VELOCITY:
         velocity = data;
         break;
 
