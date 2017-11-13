@@ -5,6 +5,7 @@
 #include "world_types.h"
 #include "Container.h"
 #include "Tile.h"
+#include "Camera.h"
 
 class World: public Container 
 {
@@ -14,7 +15,7 @@ public:
     World();
     ~World();
 
-    int _tileGrid[TILE_GRID_X][TILE_GRID_Y][TILE_GRID_Z];
+    int _tileGrid[TILE_GRID_X][TILE_GRID_Y];
     int _heightMap[TILE_GRID_X][TILE_GRID_Y];
     std::vector<Tile<World>> _tilePool;
 

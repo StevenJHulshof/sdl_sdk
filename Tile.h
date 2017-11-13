@@ -1,5 +1,6 @@
 #pragma once
 
+#include "GameObject.h"
 #include "TileGraphicsComponent.h"
 #include "TilePhysicsComponent.h"
 
@@ -12,13 +13,13 @@ private:
     TileGraphicsComponent<Tile> graphicsComponent;
 public:
     
-    Tile(int x, int y, int z, int tileType);
+    Tile(int x, int y, int textureType);
     ~Tile();
 };
 
 template <class con_t>
-Tile<con_t>::Tile(int x, int y, int z, int tileType):
-    GameObject<Tile, con_t>()
+Tile<con_t>::Tile(int x, int y, int textureType):
+    GameObject<Tile<con_t>, con_t>()
 {
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
@@ -27,10 +28,9 @@ Tile<con_t>::Tile(int x, int y, int z, int tileType):
     this->addComponent(this, &physicsComponent);
     this->addComponent(this, &graphicsComponent);
     
-    this->send(MSG_TILE_TYPE, tileType);
-    this->send(MSG_TILE_POS_X, x);
-    this->send(MSG_TILE_POS_Y, y);
-    this->send(MSG_TILE_POS_Z, z);
+    this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
+    this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
+    this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
 }
 
 template <class con_t>

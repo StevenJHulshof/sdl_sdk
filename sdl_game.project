@@ -41,10 +41,10 @@
           <File Name="PhysicsComponent.h"/>
         </VirtualDirectory>
         <File Name="Component.h"/>
+        <File Name="component_msg_types.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="game_object">
         <File Name="GameObject.h"/>
-        <File Name="game_object_types.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="sandbox">
         <VirtualDirectory Name="world">
@@ -56,8 +56,7 @@
           <VirtualDirectory Name="base">
             <File Name="Tile.h"/>
             <File Name="TileGraphicsComponent.h"/>
-            <File Name="tile_types.h"/>
-            <File Name="TIlePhysicsComponent.h"/>
+            <File Name="TilePhysicsComponent.h"/>
           </VirtualDirectory>
         </VirtualDirectory>
         <VirtualDirectory Name="units">
@@ -71,6 +70,9 @@
           </VirtualDirectory>
         </VirtualDirectory>
         <VirtualDirectory Name="buildings"/>
+        <VirtualDirectory Name="camera">
+          <File Name="Camera.h"/>
+        </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="container">
         <File Name="Container.h"/>

@@ -1,5 +1,4 @@
 #pragma once
 
-#define TILE_GRID_X 30
-#define TILE_GRID_Y 20
-#define TILE_GRID_Z 6
+#define TILE_GRID_X 100
+#define TILE_GRID_Y 100

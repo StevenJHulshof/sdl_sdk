@@ -19,7 +19,7 @@ public:
     //Deallocates texture
     void free();
     //Renders texture at given point
-    void render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip);
+    void render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip, float zoom);
     Uint32 getPixelColor(int x, int y);
     SDL_PixelFormat *getPixelFormat();
     //Gets image dimensions
