@@ -48,9 +48,10 @@ Debug/GameCore.cpp.o: GameCore.cpp GameCore.h World.h world_types.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- component_msg_types.h TilePhysicsComponent.h PhysicsComponent.h \
- TileGraphicsComponent.h GraphicsComponent.h Texture.h texture_types.h \
- Camera.h CameraInputComponent.h InputComponent.h \
+ component_msg_types.h TileInputComponent.h Input.h InputComponent.h \
+ TilePhysicsComponent.h PhysicsComponent.h TileGraphicsComponent.h \
+ GraphicsComponent.h Translate.h config_types.h Texture.h texture_types.h \
+ assets_structs.h Camera.h CameraInputComponent.h \
  CameraPhysicsComponent.h CameraGraphicsComponent.h
 
 GameCore.h:
@@ -169,6 +170,12 @@ C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf
 
 component_msg_types.h:
 
+TileInputComponent.h:
+
+Input.h:
+
+InputComponent.h:
+
 TilePhysicsComponent.h:
 
 PhysicsComponent.h:
@@ -177,15 +184,19 @@ TileGraphicsComponent.h:
 
 GraphicsComponent.h:
 
+Translate.h:
+
+config_types.h:
+
 Texture.h:
 
 texture_types.h:
 
+assets_structs.h:
+
 Camera.h:
 
 CameraInputComponent.h:
-
-InputComponent.h:
 
 CameraPhysicsComponent.h:
 

@@ -26,9 +26,9 @@ int main(int argc, char* args[]){
 			while( !quit ) {
 				//Handle events on queue
 				while(SDL_PollEvent( &event ) != 0) {
-					if(event.type == SDL_QUIT){
+					if(event.type == SDL_QUIT) {
 						quit = true;
-					}
+                    }
 				}
                 core.update();
                 //Clear screen

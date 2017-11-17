@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameObject.h"
+#include "TileInputComponent.h"
 #include "TilePhysicsComponent.h"
 #include "TileGraphicsComponent.h"
 
@@ -8,6 +9,7 @@ template <class con_t>
 class Tile: public GameObject<Tile<con_t>, con_t>
 {
 private:
+    TileInputComponent<Tile> tileInputComponent;
     TilePhysicsComponent<Tile> tilePhysicsComponent;
     TileGraphicsComponent<Tile> tileGraphicsComponent;
     
@@ -24,7 +26,8 @@ Tile<con_t>::Tile(int x, int y, int textureType):
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
-        
+    
+    this->addComponent(this, &tileInputComponent);
     this->addComponent(this, &tilePhysicsComponent);
     this->addComponent(this, &tileGraphicsComponent);
     

@@ -13,6 +13,9 @@ private:
 
 public:
 
+    virtual void update();
+    virtual void render();
+
     virtual void receive(int message, int data, int *response);
 
     virtual void receive(int message, SDL_RendererFlip data, int *response);
@@ -20,13 +23,23 @@ public:
 
     virtual void receive(int message, float data, int *response);
     virtual void receive(int message, int data, float *response);
-
-    virtual void update();
-    virtual void render();
+    
+    virtual void receive(int message, bool data, int *response);
+    virtual void receive(int message, int data, bool *response);
     
     void setGameObject(obj_t *gameObject);
     obj_t *getGameObject();
 };
+
+template <class obj_t>
+void Component<obj_t>::update() {
+ 
+}
+
+template <class obj_t>
+void Component<obj_t>::render() {
+
+}
 
 template <class obj_t>
 void Component<obj_t>::receive(int message, int data, int *response) {
@@ -54,12 +67,12 @@ void Component<obj_t>::receive(int message, int data, float *response) {
 }
 
 template <class obj_t>
-void Component<obj_t>::update() {
- 
+void Component<obj_t>::receive(int message, bool data, int *response) {
+
 }
 
 template <class obj_t>
-void Component<obj_t>::render() {
+void Component<obj_t>::receive(int message, int data, bool *response) {
 
 }
 

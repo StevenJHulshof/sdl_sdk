@@ -8,7 +8,7 @@ class Translate {
 public:
     Translate();
     ~Translate();
-  //  static void toIsometric(ScreenPos *inPos, ScreenPos *outPos);
+    static void gridToScreenPos(int xPos, int yPos, int w, int h, int *screenPosX, int *screenPosY);
     template <class assetType>
     void insertionSort(std::vector<assetType> *asset);
 };

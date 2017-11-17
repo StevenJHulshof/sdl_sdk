@@ -30,6 +30,10 @@
       <VirtualDirectory Name="debug">
         <File Name="Debug.h"/>
       </VirtualDirectory>
+      <VirtualDirectory Name="input">
+        <File Name="Input.h"/>
+        <File Name="Input.cpp"/>
+      </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="assets">
       <File Name="assets_includes.h"/>
@@ -57,6 +61,7 @@
             <File Name="Tile.h"/>
             <File Name="TileGraphicsComponent.h"/>
             <File Name="TilePhysicsComponent.h"/>
+            <File Name="TileInputComponent.h"/>
           </VirtualDirectory>
         </VirtualDirectory>
         <VirtualDirectory Name="units">
@@ -68,6 +73,12 @@
             <File Name="civilian_types.h"/>
             <File Name="CivilianPhysicsComponent.h"/>
           </VirtualDirectory>
+          <VirtualDirectory Name="base">
+            <File Name="Unit.h"/>
+            <File Name="UnitInputComponent.h"/>
+            <File Name="UnitPhysicsComponent.h"/>
+            <File Name="UnitGraphicsComponent.h"/>
+          </VirtualDirectory>
         </VirtualDirectory>
         <VirtualDirectory Name="buildings"/>
         <VirtualDirectory Name="camera">
@@ -75,6 +86,14 @@
           <File Name="CameraInputComponent.h"/>
           <File Name="CameraGraphicsComponent.h"/>
           <File Name="CameraPhysicsComponent.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="resources">
+          <VirtualDirectory Name="base">
+            <File Name="Resource.h"/>
+            <File Name="ResourceGraphicsComponent.h"/>
+            <File Name="ResourceInputComponent.h"/>
+            <File Name="ResourcePhysicsComponent.h"/>
+          </VirtualDirectory>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="container">

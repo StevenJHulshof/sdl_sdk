@@ -6,9 +6,10 @@ Translate::Translate() {
 Translate::~Translate() {
 }
 
-//void Translate::toIsometric(ScreenPos *inPos, ScreenPos *outPos) {
-//
-//}
+void Translate::gridToScreenPos(int xPos, int yPos, int w, int h, int *screenPosX, int *screenPosY) {
+     *screenPosX = xPos * w * 0.75;
+     *screenPosY = (xPos % 2) * -1 * h * 0.25 + yPos * h * 0.5;
+}
 
 template <class assetType>
 void Translate::insertionSort(std::vector<assetType> *asset) {

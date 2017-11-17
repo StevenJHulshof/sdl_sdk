@@ -1,5 +1,4 @@
-Debug/World.cpp.o: World.cpp World.h world_types.h Container.h Tile.h \
- GameObject.h Debug.h Component.h sdl_includes.h \
+Debug/Input.cpp.o: Input.cpp Input.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -47,29 +46,9 @@ Debug/World.cpp.o: World.cpp World.h world_types.h Container.h Tile.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_version.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
- C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- component_msg_types.h TileInputComponent.h InputComponent.h Texture.h \
- texture_types.h Input.h TilePhysicsComponent.h PhysicsComponent.h \
- TileGraphicsComponent.h GraphicsComponent.h Translate.h config_types.h \
- assets_structs.h Resource.h ResourceInputComponent.h \
- ResourcePhysicsComponent.h ResourceGraphicsComponent.h Unit.h \
- UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
- Camera.h CameraInputComponent.h CameraPhysicsComponent.h \
- CameraGraphicsComponent.h
+ C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h
 
-World.h:
-
-world_types.h:
-
-Container.h:
-
-Tile.h:
-
-GameObject.h:
-
-Debug.h:
-
-Component.h:
+Input.h:
 
 sdl_includes.h:
 
@@ -168,53 +147,3 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_co
 C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h:
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
-
-component_msg_types.h:
-
-TileInputComponent.h:
-
-InputComponent.h:
-
-Texture.h:
-
-texture_types.h:
-
-Input.h:
-
-TilePhysicsComponent.h:
-
-PhysicsComponent.h:
-
-TileGraphicsComponent.h:
-
-GraphicsComponent.h:
-
-Translate.h:
-
-config_types.h:
-
-assets_structs.h:
-
-Resource.h:
-
-ResourceInputComponent.h:
-
-ResourcePhysicsComponent.h:
-
-ResourceGraphicsComponent.h:
-
-Unit.h:
-
-UnitInputComponent.h:
-
-UnitPhysicsComponent.h:
-
-UnitGraphicsComponent.h:
-
-Camera.h:
-
-CameraInputComponent.h:
-
-CameraPhysicsComponent.h:
-
-CameraGraphicsComponent.h:
