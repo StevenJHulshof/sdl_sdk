@@ -95,6 +95,10 @@
             <File Name="ResourcePhysicsComponent.h"/>
           </VirtualDirectory>
         </VirtualDirectory>
+        <VirtualDirectory Name="generator">
+          <File Name="Generator.h"/>
+          <File Name="Generator.cpp"/>
+        </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="container">
         <File Name="Container.h"/>

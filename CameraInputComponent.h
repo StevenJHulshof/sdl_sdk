@@ -12,7 +12,7 @@ private:
 
 public:
     CameraInputComponent();
-    ~CameraInputComponent();
+    virtual ~CameraInputComponent();
     
     virtual void update();
 };

@@ -7,7 +7,7 @@ class CameraGraphicsComponent: public GraphicsComponent<obj_t>
 {  
 public:
     CameraGraphicsComponent();
-    ~CameraGraphicsComponent();
+    virtual ~CameraGraphicsComponent();
 };
 
 template <class obj_t>

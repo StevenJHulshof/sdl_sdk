@@ -12,6 +12,8 @@ private:
     obj_t *_gameObject;
 
 public:
+    Component();
+    virtual ~Component();
 
     virtual void update();
     virtual void render();
@@ -30,6 +32,16 @@ public:
     void setGameObject(obj_t *gameObject);
     obj_t *getGameObject();
 };
+
+template <class obj_t>
+Component<obj_t>::Component() {
+ 
+}
+
+template <class obj_t>
+Component<obj_t>::~Component() {
+ 
+}
 
 template <class obj_t>
 void Component<obj_t>::update() {

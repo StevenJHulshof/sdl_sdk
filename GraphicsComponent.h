@@ -17,7 +17,7 @@ protected:
 public:
 
     GraphicsComponent();
-    ~GraphicsComponent();
+    virtual ~GraphicsComponent();
     
     virtual void update();
     virtual void render();
@@ -69,8 +69,8 @@ void GraphicsComponent<obj_t>::update()
     screenPosX += offsetX;
     screenPosY += offsetY;
     
-    DEBUG_FUN_VAR("%p | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, offsetX: %d, offsetY: %d, layer: %d, zoom: %0.2f\n",
-        this->getGameObject(), __PRETTY_FUNCTION__, textureType, screenPosX, screenPosY, offsetX, offsetY, layer,  zoom);
+    DEBUG_FUN_VAR("%p | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, offsetX: %d, offsetY: %d, zoom: %0.2f\n",
+        this->getGameObject(), __PRETTY_FUNCTION__, textureType, screenPosX, screenPosY, offsetX, offsetY, zoom);
 }
 
 template <class obj_t>
@@ -106,11 +106,7 @@ void GraphicsComponent<obj_t>::receive(int message, int data, int *response)
             case MSG_DATA_GRAPHICS_OFFSET_Y:
             *response = offsetY;
             break;
-            
-            case MSG_DATA_GRAPHICS_LAYER:
-            *response = layer;
-            break;
-            
+                        
             default:
             break;
         }
@@ -134,10 +130,6 @@ void GraphicsComponent<obj_t>::receive(int message, int data, int *response)
         
         case MSG_SET_GRAPHICS_OFFSET_Y:
         offsetY = data;
-        break;
-        
-        case MSG_SET_GRAPHICS_LAYER:
-        layer = data;
         break;
 
         default:

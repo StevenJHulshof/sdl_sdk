@@ -9,7 +9,7 @@ class ResourceInputComponent: public InputComponent<obj_t>
 {  
 public:
     ResourceInputComponent();
-    ~ResourceInputComponent();
+    virtual ~ResourceInputComponent();
     
     virtual void update();
 };

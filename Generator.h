@@ -1,16 +1,24 @@
 #pragma once
 
-#include "Tile.h"
+#include <stdlib.h>
+#include "world_types.h"
 
-class Generator {
+enum {
+    GENERATOR_UP,
+    GENERATOR_DOWN,
+    GENERATOR_LEFT,
+    GENERATOR_RIGHT
+};
 
-private:
-    static int _gridWidth, _gridLength;
-    
+class Generator
+{
 public:
-    Generator(int gridWidth, int gridLength);
+    Generator();
     ~Generator();
 
-    void fill(Tile tileGrid[_gridWidth][_gridLength], Tile *tile);
+    void fillGrid(int grid[TILE_GRID_X][TILE_GRID_Y], int type);
+    void generatePatch( int grid[TILE_GRID_X][TILE_GRID_Y], 
+                        int type, int size, int density, 
+                        int baseGrid[TILE_GRID_X][TILE_GRID_Y] = NULL, int baseType = 0);
 };
 

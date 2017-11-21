@@ -48,12 +48,15 @@ Debug/main.cpp.o: main.cpp GameCore.h World.h world_types.h Container.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- component_msg_types.h TileInputComponent.h Input.h InputComponent.h \
- Texture.h texture_types.h TilePhysicsComponent.h PhysicsComponent.h \
+ component_msg_types.h TileInputComponent.h InputComponent.h Texture.h \
+ texture_types.h Input.h TilePhysicsComponent.h PhysicsComponent.h \
  TileGraphicsComponent.h GraphicsComponent.h Translate.h config_types.h \
- assets_structs.h Camera.h CameraInputComponent.h \
- CameraPhysicsComponent.h CameraGraphicsComponent.h system_includes.h \
- Config.h assets_includes.h
+ assets_structs.h Resource.h ResourceInputComponent.h \
+ ResourcePhysicsComponent.h ResourceGraphicsComponent.h Unit.h \
+ UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
+ Camera.h CameraInputComponent.h CameraPhysicsComponent.h \
+ CameraGraphicsComponent.h Sort.h Generator.h system_includes.h Config.h \
+ assets_includes.h
 
 GameCore.h:
 
@@ -173,13 +176,13 @@ component_msg_types.h:
 
 TileInputComponent.h:
 
-Input.h:
-
 InputComponent.h:
 
 Texture.h:
 
 texture_types.h:
+
+Input.h:
 
 TilePhysicsComponent.h:
 
@@ -195,6 +198,22 @@ config_types.h:
 
 assets_structs.h:
 
+Resource.h:
+
+ResourceInputComponent.h:
+
+ResourcePhysicsComponent.h:
+
+ResourceGraphicsComponent.h:
+
+Unit.h:
+
+UnitInputComponent.h:
+
+UnitPhysicsComponent.h:
+
+UnitGraphicsComponent.h:
+
 Camera.h:
 
 CameraInputComponent.h:
@@ -202,6 +221,10 @@ CameraInputComponent.h:
 CameraPhysicsComponent.h:
 
 CameraGraphicsComponent.h:
+
+Sort.h:
+
+Generator.h:
 
 system_includes.h:
 

@@ -7,7 +7,7 @@ class UnitPhysicsComponent: public PhysicsComponent<obj_t>
 {
 public:
     UnitPhysicsComponent();
-    ~UnitPhysicsComponent();
+    virtual ~UnitPhysicsComponent();
 };
 
 template <class obj_t>

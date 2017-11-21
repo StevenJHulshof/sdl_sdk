@@ -7,7 +7,7 @@ class ResourcePhysicsComponent: public PhysicsComponent<obj_t>
 {
 public:
     ResourcePhysicsComponent();
-    ~ResourcePhysicsComponent();
+    virtual ~ResourcePhysicsComponent();
 };
 
 template <class obj_t>

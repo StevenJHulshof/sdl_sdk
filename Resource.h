@@ -16,7 +16,7 @@ private:
 public:
     
     Resource(int x, int y, int textureType);
-    ~Resource();
+    virtual ~Resource();
 };
 
 template <class con_t>

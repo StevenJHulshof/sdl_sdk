@@ -3,11 +3,10 @@
 #include "system_includes.h"
 #include "assets_includes.h"
 #include <time.h>
-
-
-
-int main(int argc, char* args[]){
-    
+#include <algorithm>
+ 
+int main(int argc, char* args[])
+{       
     srand(time(NULL));
    	//Start up SDL and create window
 	if(!Config::init())
@@ -17,6 +16,12 @@ int main(int argc, char* args[]){
 		if(!Config::loadMedia())
 			printf( "Failed to load media!\n" );
 		else {	
+            
+            SDL_SetRenderDrawBlendMode(gRenderer, SDL_BLENDMODE_BLEND); 
+            SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
+            SDL_RenderClear( gRenderer );
+            gTextures[TEXTURE_LOADING_SCREEN].render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1.0);
+            SDL_RenderPresent( gRenderer );
             // Gamecore
             GameCore core;
 			//Main loop flag

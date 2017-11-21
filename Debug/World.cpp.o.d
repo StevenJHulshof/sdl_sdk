@@ -55,7 +55,7 @@ Debug/World.cpp.o: World.cpp World.h world_types.h Container.h Tile.h \
  ResourcePhysicsComponent.h ResourceGraphicsComponent.h Unit.h \
  UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
  Camera.h CameraInputComponent.h CameraPhysicsComponent.h \
- CameraGraphicsComponent.h
+ CameraGraphicsComponent.h Sort.h Generator.h
 
 World.h:
 
@@ -218,3 +218,7 @@ CameraInputComponent.h:
 CameraPhysicsComponent.h:
 
 CameraGraphicsComponent.h:
+
+Sort.h:
+
+Generator.h:

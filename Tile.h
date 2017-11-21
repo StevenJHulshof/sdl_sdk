@@ -16,7 +16,7 @@ private:
 public:
     
     Tile(int x, int y, int textureType);
-    ~Tile();
+    virtual ~Tile();
 };
 
 template <class con_t>

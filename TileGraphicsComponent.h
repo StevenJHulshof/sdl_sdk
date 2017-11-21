@@ -7,7 +7,7 @@ class TileGraphicsComponent: public GraphicsComponent<obj_t>
 {  
 public:
     TileGraphicsComponent();
-    ~TileGraphicsComponent();
+    virtual ~TileGraphicsComponent();
     
     virtual void render();
 };

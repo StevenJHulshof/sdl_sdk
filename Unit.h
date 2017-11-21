@@ -16,7 +16,7 @@ private:
 public:
     
     Unit(int x, int y, int textureType);
-    ~Unit();
+    virtual ~Unit();
 };
 
 template <class con_t>

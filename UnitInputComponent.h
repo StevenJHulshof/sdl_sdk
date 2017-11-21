@@ -7,7 +7,7 @@ class UnitInputComponent: public InputComponent<obj_t>
 {  
 public:
     UnitInputComponent();
-    ~UnitInputComponent();
+    virtual ~UnitInputComponent();
     
     virtual void update();
 };

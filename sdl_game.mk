@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=steve
-Date                   :=17/11/2017
+Date                   :=21/11/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,8 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Container.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) \
-	
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Container.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IntermediateDirectory)/Generator.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) 
 
 
 
@@ -165,6 +165,14 @@ $(IntermediateDirectory)/World.cpp$(DependSuffix): World.cpp
 
 $(IntermediateDirectory)/World.cpp$(PreprocessSuffix): World.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/World.cpp$(PreprocessSuffix) World.cpp
+
+$(IntermediateDirectory)/Generator.cpp$(ObjectSuffix): Generator.cpp $(IntermediateDirectory)/Generator.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Generator.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Generator.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Generator.cpp$(DependSuffix): Generator.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Generator.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Generator.cpp$(DependSuffix) -MM Generator.cpp
+
+$(IntermediateDirectory)/Generator.cpp$(PreprocessSuffix): Generator.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Generator.cpp$(PreprocessSuffix) Generator.cpp
 
 $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix): Civilian.cpp $(IntermediateDirectory)/Civilian.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Civilian.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) $(IncludePath)

@@ -1,5 +1,8 @@
 #include "World.h"
 
+bool pre = true;
+bool post = false;
+
 World::World():
     Container(),
     camera(CAMERA_OFFSET_X_START, CAMERA_OFFSET_Y_START)
@@ -7,29 +10,13 @@ World::World():
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
-    
-    for(int y = 0; y < TILE_GRID_Y; y++) 
-    {
-        for(int x = 0; x < TILE_GRID_X; x++) 
-        {
-            _tileGrid[x][y] = TEXTURE_TILE_GRASS_0000;
-            
-            int r = rand() % 100;
-            
-            if(r < 25)
-            {
-                _resourceGrid[x][y] = TEXTURE_RESOURCE_WOOD;               
-            }
-            else if(r < 40)
-            {
-                _resourceGrid[x][y] = TEXTURE_RESOURCE_STONE;
-            }
-            else
-            {
-                _resourceGrid[x][y] = TEXTURE_TYPE_EMPTY;
-            }
-        }
-    }
+    generator.fillGrid(_tileGrid, TEXTURE_TILE_GRASS_0000);
+    generator.fillGrid(_resourceGrid, TEXTURE_TYPE_EMPTY);
+    generator.generatePatch(_tileGrid, TEXTURE_TILE_SAND_0000, 40, 20);
+    generator.generatePatch(_tileGrid, TEXTURE_TILE_WATER_0000, 40, 20);
+    generator.generatePatch(_resourceGrid, TEXTURE_RESOURCE_WOOD, 10, 50, _tileGrid, TEXTURE_TILE_GRASS_0000);
+    generator.generatePatch(_resourceGrid, TEXTURE_RESOURCE_STONE, 5, 30, _tileGrid, TEXTURE_TILE_GRASS_0000);
+  
 
     for(int x = 0; x < TILE_GRID_X; x++) 
     {
@@ -37,26 +24,64 @@ World::World():
         {
             if(_resourceGrid[x][y] != TEXTURE_TYPE_EMPTY)
             {
-                Resource<World> *resource = new Resource<World>(x, y, _resourceGrid[x][y]);
-                resource->setContainer(this);
-                _resourcePool.push_back(*resource);
+                GameObjectUnion<World> gameObjectUnion;
+                gameObjectUnion.resource = new Resource<World>(x, y, _resourceGrid[x][y]);
+                gameObjectUnion.resource->setContainer(this);
+                gameObjectUnion.tag = GAME_OBJECT_RESOURCE;
+                _playablePool.push_back(gameObjectUnion);
             }
             
-            Tile<World> *tile = new Tile<World>(x, y, _tileGrid[x][y]);
-            tile->setContainer(this);
-            _tilePool.push_back(*tile);
+            GameObjectUnion<World> gameObjectUnion;
+            gameObjectUnion.tile = new Tile<World>(x, y, _tileGrid[x][y]);
+            gameObjectUnion.tile->setContainer(this);
+            gameObjectUnion.tag = GAME_OBJECT_TILE;
+            _tilePool.push_back(gameObjectUnion);
         }
     }
     
-    Unit<World> *unit = new Unit<World>(10, 10, TEXTURE_UNIT_WARRIOR);
-    unit->setContainer(this);
-    _unitPool.push_back(*unit);
+    for(int i = 0; i < 100; i++)
+    {
+        int xRand = rand() % TILE_GRID_X;
+        int yRand = rand() % TILE_GRID_Y;
+        if(_tileGrid[xRand][yRand] != TEXTURE_TILE_WATER_0000 && _resourceGrid[xRand][yRand] == TEXTURE_TYPE_EMPTY)
+        {
+            GameObjectUnion<World> gameObjectUnion;
+            gameObjectUnion.unit = new Unit<World>(xRand, yRand, TEXTURE_UNIT_WARRIOR);
+            gameObjectUnion.unit->setContainer(this);
+            gameObjectUnion.tag = GAME_OBJECT_UNIT;
+            _playablePool.push_back(gameObjectUnion);
+        }
+    }
+
+    _objectPool.push_back(_tilePool);
+    _objectPool.push_back(_playablePool);
 }
 
 World::~World() {
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
     DEBUG_ALLOC("Deallocate | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
+}
+
+void World::updateGameObjectUnion(GameObjectUnion<World> *object)
+{
+    switch(object->tag)
+    {
+        case GAME_OBJECT_TILE:
+        object->tile->update();
+        break;
+        
+        case GAME_OBJECT_RESOURCE:
+        object->resource->update();
+        break;
+        
+        case GAME_OBJECT_UNIT:
+        object->unit->update();
+        break;
+        
+        default:
+        break;
+    }
 }
 
 void World::update() 
@@ -70,41 +95,66 @@ void World::update()
     camera.template send<int, int>(MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_OFFSET_Y, &offsetY);
     camera.template send<int, float>(MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_ZOOM, &zoom);
     
-    for(Tile<World> tile: _tilePool) 
+    for(size_t i = 0; i < _objectPool.size(); i++)
     {
-        tile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, offsetX);
-        tile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
-        tile.template send<float, int>(MSG_SET_GRAPHICS_ZOOM, zoom);
-        tile.update();
-    }  
-    for(Resource<World> resource: _resourcePool) 
-    {
-        resource.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, offsetX);
-        resource.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
-        resource.template send<float, int>(MSG_SET_GRAPHICS_ZOOM, zoom);
-        resource.update();
+        for(size_t l = 0; l < _objectPool[i].size(); l++) 
+        {
+            sendToGameObjectUnion<int, int>(&_objectPool[i][l], MSG_SET_GRAPHICS_OFFSET_X, offsetX);
+            sendToGameObjectUnion<int, int>(&_objectPool[i][l], MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
+            sendToGameObjectUnion<float, int>(&_objectPool[i][l], MSG_SET_GRAPHICS_ZOOM, zoom);
+           
+            updateGameObjectUnion(&_objectPool[i][l]);
+        }
+        sortGameObjects(_objectPool[i]);
     }
-    for(Unit<World> unit: _unitPool) 
+}
+
+void World::renderGameObjectUnion(GameObjectUnion<World> *object)
+{
+    switch(object->tag)
     {
-        unit.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, offsetX);
-        unit.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
-        unit.template send<float, int>(MSG_SET_GRAPHICS_ZOOM, zoom);
-        unit.update();
+        case GAME_OBJECT_TILE:
+        object->tile->render();
+        break;
+        
+        case GAME_OBJECT_RESOURCE:
+        object->resource->render();
+        break;
+        
+        case GAME_OBJECT_UNIT:
+        object->unit->render();
+        break;
+        
+        default:
+        break;
     }
 }
 
 void World::render() 
 {    
-    for(Tile<World> tile: _tilePool) 
+    for(size_t i = 0; i < _objectPool.size(); i++)
     {
-        tile.render();
+        for(int l = _objectPool[i].size() - 1; l >= 0; l--)
+        {
+            renderGameObjectUnion(&_objectPool[i][l]);
+        }  
     }
-    for(Resource<World> resource: _resourcePool) 
+}
+
+void World::sortGameObjects(std::vector<GameObjectUnion<World>> &objectPool)
+{
+    for(size_t i = 1; i < objectPool.size(); i++) 
     {
-        resource.render();
-    }
-    for(Unit<World> unit: _unitPool) 
-    {
-        unit.render();
+        GameObjectUnion<World> index = objectPool[i];
+        int j = i - 1;
+        int indexScreenPosY;
+        sendToGameObjectUnion<int, int>(&index, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_SCREEN_POS_Y, &indexScreenPosY);
+        
+        for(;j >= 0 && fastSendToGameObjectUnion<int, int>(&objectPool[j], MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_SCREEN_POS_Y) < indexScreenPosY; j--)
+        {
+            objectPool[j + 1] = objectPool[j];
+            
+        }
+        objectPool[j + 1] = index;
     }
 }

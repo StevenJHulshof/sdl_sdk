@@ -7,7 +7,7 @@ class UnitGraphicsComponent: public GraphicsComponent<obj_t>
 {  
 public:
     UnitGraphicsComponent();
-    ~UnitGraphicsComponent();
+    virtual ~UnitGraphicsComponent();
     
     virtual void update();
     virtual void render();
@@ -30,8 +30,6 @@ template <class obj_t>
 void UnitGraphicsComponent<obj_t>::update()
 {
     GraphicsComponent<obj_t>::update();
-        
-    this->screenPosY -= (gTextures[this->textureType].getHeight() * 0.5 * this->zoom);
 }
 
 template <class obj_t>

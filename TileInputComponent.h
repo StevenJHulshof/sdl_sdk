@@ -7,7 +7,7 @@ class TileInputComponent: public InputComponent<obj_t>
 {  
 public:
     TileInputComponent();
-    ~TileInputComponent();
+    virtual ~TileInputComponent();
     
     virtual void update();
 };

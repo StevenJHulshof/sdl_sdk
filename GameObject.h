@@ -11,10 +11,11 @@ class GameObject
 private:
     std::vector<Component<obj_t>*> _components;
     con_t *_container;
+    
 public:
 
     GameObject();
-    ~GameObject();
+    virtual ~GameObject();
     
     template <class data_t, class response_t>
     void send(int message, data_t data, response_t *response = NULL);

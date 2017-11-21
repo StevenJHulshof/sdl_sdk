@@ -6,10 +6,10 @@ template <class obj_t>
 class PhysicsComponent: public Component<obj_t> 
 {
 protected:
-    int velocity, xPos, yPos;
+    int velocity, xPos, yPos, zPos;
 public:
     PhysicsComponent();
-    ~PhysicsComponent();
+    virtual ~PhysicsComponent();
 
     virtual void receive(int message, int data, int *response);
     
@@ -21,7 +21,8 @@ PhysicsComponent<obj_t>::PhysicsComponent():
     Component<obj_t>(),
     velocity(0),
     xPos(0),
-    yPos(0)
+    yPos(0),
+    zPos(0)
 {
 #if (1 == DEBUG_ALLOC_COMP_ENABLE)
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
@@ -51,6 +52,10 @@ void PhysicsComponent<obj_t>::receive(int message, int data, int *response)
             *response = yPos;
             break;
             
+            case MSG_DATA_PHYSICS_Z_POS:
+            *response = zPos;
+            break;
+            
             case MSG_DATA_PHYSICS_VELOCITY:
             *response = velocity;
             break;
@@ -67,6 +72,10 @@ void PhysicsComponent<obj_t>::receive(int message, int data, int *response)
         case MSG_SET_PHYSICS_Y_POS:
         yPos = data;
         break;
+
+        case MSG_SET_PHYSICS_Z_POS:
+        zPos = data;
+        break;
         
         case MSG_SET_PHYSICS_VELOCITY:
         velocity = data;
@@ -80,5 +89,5 @@ void PhysicsComponent<obj_t>::receive(int message, int data, int *response)
 template <class obj_t>
 void PhysicsComponent<obj_t>::update()
 {
-     DEBUG_FUN_VAR("%p | %s\nxPos: %d, yPos: %d, velocity: %d\n", this->getGameObject(), __PRETTY_FUNCTION__, xPos, yPos, velocity);
+     DEBUG_FUN_VAR("%p | %s\nxPos: %d, yPos: %d, zPos: %d, velocity: %d\n", this->getGameObject(), __PRETTY_FUNCTION__, xPos, yPos, zPos, velocity);
 }

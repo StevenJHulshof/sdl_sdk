@@ -34,3 +34,19 @@ bool Input::onLeftMouseClickDown(int *x, int *y)
     return clicked;
 }
 
+bool Input::onRightMouseClickDown(int *x, int *y)
+{
+    bool clicked = false;
+
+    if(GetAsyncKeyState(VK_RBUTTON) & 0x8000)
+    {
+        POINT cursorPos;
+        GetCursorPos(&cursorPos);
+        *x = cursorPos.x;
+        *y = cursorPos.y;
+        clicked = true;
+    }
+    
+    return clicked;
+}
+

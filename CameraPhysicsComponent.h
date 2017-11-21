@@ -7,7 +7,7 @@ class CameraPhysicsComponent: public PhysicsComponent<obj_t>
 {  
 public:
     CameraPhysicsComponent();
-    ~CameraPhysicsComponent();
+    virtual ~CameraPhysicsComponent();
 };
 
 template <class obj_t>

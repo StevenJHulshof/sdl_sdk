@@ -7,7 +7,7 @@ class TilePhysicsComponent: public PhysicsComponent<obj_t>
 {
 public:
     TilePhysicsComponent();
-    ~TilePhysicsComponent();
+    virtual ~TilePhysicsComponent();
 };
 
 template <class obj_t>

@@ -21,7 +21,7 @@ private:
 public:
     
     Camera(int x, int y);
-    ~Camera();
+    virtual ~Camera();
 };
 
 template <class con_t>

@@ -4,6 +4,7 @@
 #include "windows.h"
 #include "Texture.h"
 #include "Input.h"
+#include "Translate.h"
 
 template <class obj_t>
 class InputComponent: public Component<obj_t> 
@@ -13,7 +14,7 @@ protected:
 
 public:
     InputComponent();
-    ~InputComponent();
+    virtual ~InputComponent();
             
     virtual void update();
     
@@ -60,6 +61,8 @@ void InputComponent<obj_t>::update()
         {
             if(gTextures[textureType].getPixelColor(x - screenPosX, y - screenPosY) != 0xFFFFFF00)
             {
+                int xPos, yPos;
+                Translate::screenPosToGrid(screenPosX, screenPosY, w, h, &xPos, &yPos);
                 selected = true;
             }
             else
