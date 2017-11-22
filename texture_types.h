@@ -72,11 +72,16 @@ enum {
     TEXTURE_TILE_OVERLAY_0060,
     TEXTURE_TILE_OVERLAY_0061,
     TEXTURE_TILE_OVERLAY_0062,
-    TEXTURE_RESOURCE_WOOD,
-    TEXTURE_RESOURCE_STONE,
     TEXTURE_TILE_SELECTED,
+    TEXTURE_TILE_HOVERED,
+    TEXTURE_RESOURCE_RAW_WOOD,
+    TEXTURE_RESOURCE_RAW_WOOD_HOVERED,
+    TEXTURE_RESOURCE_RAW_STONE,
     TEXTURE_UNIT_WARRIOR,
     TEXTURE_UNIT_WARRIOR_SELECTED,
+    TEXTURE_UNIT_WARRIOR_HOVERED,
+    TEXTURE_OBJECT_SELECTION_MENU,
+    TEXTURE_CURSOR_DOT,
     TEXTURES_TOTAL,
     TEXTURE_TYPE_EMPTY
 };
@@ -151,9 +156,14 @@ const std::string gTextureStringNames[TEXTURES_TOTAL] = {
     "tile_overlay_0060",
     "tile_overlay_0061",
     "tile_overlay_0062",
-    "resource_wood",
-    "resource_stone",
     "tile_selected",
+    "tile_hovered",
+    "resource_raw_wood",
+    "resource_raw_wood_hovered",
+    "resource_raw_stone",
     "unit_warrior",
-    "unit_warrior_selected"
+    "unit_warrior_selected",
+    "unit_warrior_hovered",
+    "object_selection_menu",
+    "cursor_dot"
 };

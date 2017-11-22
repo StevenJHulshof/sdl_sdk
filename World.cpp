@@ -12,14 +12,21 @@ World::World():
     generator.fillGrid(_playableGrid, TEXTURE_TYPE_EMPTY);
     generator.generatePatch(_tileGrid, TEXTURE_TILE_SAND_0000, 40, 20);
     generator.generatePatch(_tileGrid, TEXTURE_TILE_WATER_0000, 40, 20);
-    generator.generatePatch(_playableGrid, TEXTURE_RESOURCE_WOOD, 10, 50, _tileGrid, TEXTURE_TILE_GRASS_0000);
-    generator.generatePatch(_playableGrid, TEXTURE_RESOURCE_STONE, 5, 10, _tileGrid, TEXTURE_TILE_GRASS_0000);  
+    generator.generatePatch(_playableGrid, TEXTURE_RESOURCE_RAW_WOOD, 10, 50, _tileGrid, TEXTURE_TILE_GRASS_0000);
+    generator.generatePatch(_playableGrid, TEXTURE_RESOURCE_RAW_STONE, 5, 10, _tileGrid, TEXTURE_TILE_GRASS_0000);  
 
     for(int x = 0; x < TILE_GRID_X; x++) 
     {
         for(int y = 0; y < TILE_GRID_Y; y++) 
         {
-            if(_playableGrid[x][y] != TEXTURE_TYPE_EMPTY)
+            if(_playableGrid[x][y] == TEXTURE_RESOURCE_RAW_WOOD)
+            {
+                GameObjectUnion<World> gameObjectUnion;
+                gameObjectUnion.rawWood = new RawWood<World>(x, y);
+                setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_RAW_WOOD, this);
+                _playablePool.push_back(gameObjectUnion);
+            }
+            if(_playableGrid[x][y] == TEXTURE_RESOURCE_RAW_STONE)
             {
                 GameObjectUnion<World> gameObjectUnion;
                 gameObjectUnion.resource = new Resource<World>(x, y, _playableGrid[x][y]);
@@ -79,7 +86,11 @@ void World::update()
             
             if(fastSendToGameObjectUnion<GameObjectUnion<World>, int, bool>(&_objectPool[i][l], MSG_GET_INPUT, MSG_DATA_INPUT_SELECTED))
             {
-                selection.addCandidate(&_objectPool[i][l]);
+                selection.addSelectedCandidate(&_objectPool[i][l]);
+            }
+            if(fastSendToGameObjectUnion<GameObjectUnion<World>, int, bool>(&_objectPool[i][l], MSG_GET_INPUT, MSG_DATA_INPUT_HOVERED))
+            {
+                selection.addHoveredCandidate(&_objectPool[i][l]);
             }
         }
         
@@ -98,6 +109,9 @@ void World::render()
             renderGameObjectUnion<GameObjectUnion<World>>(&_objectPool[i][l]);
         }  
     }
+    
+    selection.render();
+    gTextTexture.render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1);
 }
 
 void World::sortGameObjects(std::vector<GameObjectUnion<World>> &objectPool)

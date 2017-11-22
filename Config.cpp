@@ -8,8 +8,6 @@ SDL_Renderer* gRenderer = NULL;
 /** Globally used font. */
 TTF_Font *gFont = NULL;
 
-Texture gTextTexture;
-
 bool Config::init() {
 	//Initialization flag
 	bool success = true;
@@ -71,12 +69,22 @@ bool Config::loadMedia() {
         if(!gTextures[i].loadFromFile("../textures/" + gTextureStringNames[i] + ".png")) 
             success = false;
 	}
-    //Open the font
+//    //Open the font
 //    gFont = TTF_OpenFont("../true_type_fonts/Courier Prime Italic.ttf", 16);
-//    if(gFont == NULL) {
+//    if(gFont == NULL) 
+//    {
 //        printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );
 //        success = false;
-//    }   
+//    } 
+//    else
+//    {
+//        SDL_Color textColor = { 0, 0, 0 };
+//        if( !gTextTexture.loadFromRenderedText("FPS", textColor ) )
+//        {
+//            printf( "Failed to render text texture!\n" );
+//            success = false;
+//        }
+//    }
 	return success;
 }
 
@@ -84,6 +92,10 @@ void Config::closeMedia() {
     
     for(int i; i < TEXTURES_TOTAL; i++)
         gTextures[i].free();
+//    gTextTexture.free();
+//    //Free global font
+//    TTF_CloseFont( gFont );
+//    gFont = NULL;
 	//Destroy window	
 	SDL_DestroyRenderer( gRenderer );
 	SDL_DestroyWindow( gWindow );

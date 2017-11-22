@@ -3,6 +3,7 @@
 #include "system_includes.h"
 #include "assets_includes.h"
 #include <time.h>
+#include <time_user.h>
 #include <algorithm>
  
 int main(int argc, char* args[])
@@ -27,10 +28,20 @@ int main(int argc, char* args[])
 			//Main loop flag
 			bool quit = false;
             SDL_Event event;
+            ShowCursor(false);
 			//While application is running
+            uint64_t frameTime = 1;
 			while( !quit ) {
+                uint64_t startTime = getTimeMilliSec();
 				//Handle events on queue
 				while(SDL_PollEvent( &event ) != 0) {
+                    switch( event.key.keysym.sym )
+                    {
+                        case SDLK_ESCAPE: 
+                        std::cout << "FPS: " << (int)(1000 / frameTime) << std::endl;
+                        quit = true; 
+                        break;
+                    }
 					if(event.type == SDL_QUIT) {
 						quit = true;
                     }
@@ -43,6 +54,7 @@ int main(int argc, char* args[])
 				//Update screen
                 core.render();
 				SDL_RenderPresent( gRenderer );
+                frameTime = getTimeMilliSec() - startTime;
 			}
 		}
 	}

@@ -1,12 +1,13 @@
 #pragma once
 
 #include "Tile.h"
-#include "Resource.h"
+#include "RawWood.h"
 #include "Warrior.h"
 
 enum {
     GAME_OBJECT_TILE, 
     GAME_OBJECT_RESOURCE,
+    GAME_OBJECT_RAW_WOOD,
     GAME_OBJECT_UNIT,
     GAME_OBJECT_WARRIOR,
     GAME_OBJECT_TOTAL
@@ -18,6 +19,7 @@ struct GameObjectUnion{
     union {
         Tile<con_t> *tile;
         Resource<con_t> *resource;
+        RawWood<con_t> *rawWood;
         Unit<con_t> *unit;
         Warrior<con_t> *warrior;
     };
@@ -54,6 +56,10 @@ void GameObjectUnionUtility::updateGameObjectUnion(obj_t *object)
         object->resource->update();
         break;
         
+        case GAME_OBJECT_RAW_WOOD:
+        object->rawWood->update();
+        break;
+        
         case GAME_OBJECT_UNIT:
         object->unit->update();
         break;
@@ -80,6 +86,10 @@ void GameObjectUnionUtility::setGameObjectUnion(obj_t *gameObjectUnion, int tag,
         
         case GAME_OBJECT_RESOURCE:
         gameObjectUnion->resource->setContainer(container);
+        break;       
+        
+        case GAME_OBJECT_RAW_WOOD:
+        gameObjectUnion->rawWood->setContainer(container);
         break;
         
         case GAME_OBJECT_UNIT:
@@ -108,6 +118,10 @@ void GameObjectUnionUtility::renderGameObjectUnion(obj_t *object)
         object->resource->render();
         break;
         
+        case GAME_OBJECT_RAW_WOOD:
+        object->rawWood->render();
+        break;
+        
         case GAME_OBJECT_UNIT:
         object->unit->render();
         break;
@@ -134,6 +148,10 @@ void GameObjectUnionUtility::sendToGameObjectUnion(obj_t *object, int message, d
         object->resource->template send<data_t, response_t>(message, data, response);
         break;
 
+        case GAME_OBJECT_RAW_WOOD:
+        object->rawWood->template send<data_t, response_t>(message, data, response);
+        break;
+
         case GAME_OBJECT_UNIT:
         object->unit->template send<data_t, response_t>(message, data, response);
         break;
@@ -150,7 +168,7 @@ void GameObjectUnionUtility::sendToGameObjectUnion(obj_t *object, int message, d
 template <class obj_t, class data_t, class response_t>
 response_t GameObjectUnionUtility::fastSendToGameObjectUnion(obj_t *object, int message, data_t data)
 {
-    response_t response = 0;
+    response_t response = (response_t) 0;
     sendToGameObjectUnion<obj_t, data_t, response_t>(object, message, data, &response);
     return response;
 }

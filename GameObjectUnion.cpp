@@ -5,7 +5,6 @@ GameObjectUnionUtility::GameObjectUnionUtility()
     
 }
 
-
 GameObjectUnionUtility::~GameObjectUnionUtility()
 {
     

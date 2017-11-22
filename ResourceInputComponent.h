@@ -1,8 +1,6 @@
 #pragma once
 
-#include "Input.h"
 #include "InputComponent.h"
-#include "Texture.h"
 
 template <class obj_t>
 class ResourceInputComponent: public InputComponent<obj_t>

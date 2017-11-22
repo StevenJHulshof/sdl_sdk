@@ -1,5 +1,5 @@
 Debug/main.cpp.o: main.cpp GameCore.h World.h world_types.h Container.h \
- Tile.h GameObject.h Debug.h Component.h sdl_includes.h \
+ Camera.h GameObject.h Debug.h Component.h sdl_includes.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_main.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_stdinc.h \
@@ -48,15 +48,19 @@ Debug/main.cpp.o: main.cpp GameCore.h World.h world_types.h Container.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- component_msg_types.h TileInputComponent.h InputComponent.h Texture.h \
- texture_types.h Input.h TilePhysicsComponent.h PhysicsComponent.h \
- TileGraphicsComponent.h GraphicsComponent.h Translate.h config_types.h \
- assets_structs.h Resource.h ResourceInputComponent.h \
- ResourcePhysicsComponent.h ResourceGraphicsComponent.h Unit.h \
+ component_msg_types.h CameraInputComponent.h Input.h InputComponent.h \
+ Texture.h texture_types.h Translate.h config_types.h assets_structs.h \
+ CameraPhysicsComponent.h PhysicsComponent.h CameraGraphicsComponent.h \
+ GraphicsComponent.h Sort.h Generator.h GameObjectUnion.h Tile.h \
+ priority.h TileInputComponent.h TilePhysicsComponent.h \
+ TileGraphicsComponent.h Overlay.h RawWood.h Resource.h \
+ ResourceInputComponent.h ResourcePhysicsComponent.h \
+ ResourceGraphicsComponent.h RawWoodInputComponent.h \
+ RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h Warrior.h Unit.h \
  UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
- Camera.h CameraInputComponent.h CameraPhysicsComponent.h \
- CameraGraphicsComponent.h Sort.h Generator.h system_includes.h Config.h \
- assets_includes.h
+ WarriorInputComponent.h WarriorPhysicsComponent.h \
+ WarriorGraphicsComponent.h Selection.h system_includes.h Config.h \
+ assets_includes.h time_user.h
 
 GameCore.h:
 
@@ -66,7 +70,7 @@ world_types.h:
 
 Container.h:
 
-Tile.h:
+Camera.h:
 
 GameObject.h:
 
@@ -174,7 +178,9 @@ C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf
 
 component_msg_types.h:
 
-TileInputComponent.h:
+CameraInputComponent.h:
+
+Input.h:
 
 InputComponent.h:
 
@@ -182,21 +188,39 @@ Texture.h:
 
 texture_types.h:
 
-Input.h:
-
-TilePhysicsComponent.h:
-
-PhysicsComponent.h:
-
-TileGraphicsComponent.h:
-
-GraphicsComponent.h:
-
 Translate.h:
 
 config_types.h:
 
 assets_structs.h:
+
+CameraPhysicsComponent.h:
+
+PhysicsComponent.h:
+
+CameraGraphicsComponent.h:
+
+GraphicsComponent.h:
+
+Sort.h:
+
+Generator.h:
+
+GameObjectUnion.h:
+
+Tile.h:
+
+priority.h:
+
+TileInputComponent.h:
+
+TilePhysicsComponent.h:
+
+TileGraphicsComponent.h:
+
+Overlay.h:
+
+RawWood.h:
 
 Resource.h:
 
@@ -206,6 +230,14 @@ ResourcePhysicsComponent.h:
 
 ResourceGraphicsComponent.h:
 
+RawWoodInputComponent.h:
+
+RawWoodPhysicsComponent.h:
+
+RawWoodGraphicsComponent.h:
+
+Warrior.h:
+
 Unit.h:
 
 UnitInputComponent.h:
@@ -214,20 +246,18 @@ UnitPhysicsComponent.h:
 
 UnitGraphicsComponent.h:
 
-Camera.h:
+WarriorInputComponent.h:
 
-CameraInputComponent.h:
+WarriorPhysicsComponent.h:
 
-CameraPhysicsComponent.h:
+WarriorGraphicsComponent.h:
 
-CameraGraphicsComponent.h:
-
-Sort.h:
-
-Generator.h:
+Selection.h:
 
 system_includes.h:
 
 Config.h:
 
 assets_includes.h:
+
+time_user.h:

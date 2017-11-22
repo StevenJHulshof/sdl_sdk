@@ -53,8 +53,10 @@ Debug/World.cpp.o: World.cpp World.h world_types.h Container.h Camera.h \
  CameraPhysicsComponent.h PhysicsComponent.h CameraGraphicsComponent.h \
  GraphicsComponent.h Sort.h Generator.h GameObjectUnion.h Tile.h \
  priority.h TileInputComponent.h TilePhysicsComponent.h \
- TileGraphicsComponent.h Overlay.h Resource.h ResourceInputComponent.h \
- ResourcePhysicsComponent.h ResourceGraphicsComponent.h Warrior.h Unit.h \
+ TileGraphicsComponent.h Overlay.h RawWood.h Resource.h \
+ ResourceInputComponent.h ResourcePhysicsComponent.h \
+ ResourceGraphicsComponent.h RawWoodInputComponent.h \
+ RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h Warrior.h Unit.h \
  UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
  WarriorInputComponent.h WarriorPhysicsComponent.h \
  WarriorGraphicsComponent.h Selection.h
@@ -215,6 +217,8 @@ TileGraphicsComponent.h:
 
 Overlay.h:
 
+RawWood.h:
+
 Resource.h:
 
 ResourceInputComponent.h:
@@ -222,6 +226,12 @@ ResourceInputComponent.h:
 ResourcePhysicsComponent.h:
 
 ResourceGraphicsComponent.h:
+
+RawWoodInputComponent.h:
+
+RawWoodPhysicsComponent.h:
+
+RawWoodGraphicsComponent.h:
 
 Warrior.h:
 

@@ -39,3 +39,4 @@ private:
 };
 
 extern Texture gTextures[TEXTURES_TOTAL];
+extern Texture gTextTexture;

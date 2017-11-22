@@ -13,10 +13,10 @@ public:
     Input();
     ~Input();
 
-
+    static void getMousePos(int *x, int *y);
     static bool onKeyPressed(int key);
     static bool onKeyPressed(char key);
-    static bool onLeftMouseClickDown(int *x, int *y);
-    static bool onRightMouseClickDown(int *x, int *y);
+    static bool onLeftMouseClickDown();
+    static bool onRightMouseClickDown();
 };
 

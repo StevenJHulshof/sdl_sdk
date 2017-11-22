@@ -31,8 +31,8 @@ void TileGraphicsComponent<obj_t>::render()
 {
     GraphicsComponent<obj_t>::render();
     
-    bool selected = false;
-    this->getGameObject()->template send(MSG_GET_INPUT, MSG_DATA_INPUT_SELECTED, &selected);
+    bool hovered = false;
+    this->getGameObject()->template send(MSG_GET_INPUT, MSG_DATA_INPUT_HOVERED, &hovered);
     
     if(this->textureType == TEXTURE_TILE_WATER_0000 || this->textureType == TEXTURE_TILE_SAND_0000)
     {
@@ -48,8 +48,8 @@ void TileGraphicsComponent<obj_t>::render()
         }
     }
     
-    if(selected)
+    if(hovered)
     {
-        gTextures[TEXTURE_TILE_SELECTED].render(this->screenPosX, this->screenPosY, NULL, 0, NULL, this->flip, this->zoom);
+        gTextures[TEXTURE_TILE_HOVERED].render(this->screenPosX, this->screenPosY, NULL, 0, NULL, this->flip, this->zoom);
     }
 }

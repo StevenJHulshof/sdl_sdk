@@ -37,8 +37,14 @@ void WarriorGraphicsComponent<obj_t>::render()
 {
     GraphicsComponent<obj_t>::render();
     
-    bool selected = false;
+    bool selected = false, hovered = false;
     this->getGameObject()->template send<int, bool>(MSG_GET_INPUT, MSG_DATA_INPUT_SELECTED, &selected);
+    this->getGameObject()->template send<int, bool>(MSG_GET_INPUT, MSG_DATA_INPUT_HOVERED, &hovered);
+    
+    if(hovered)
+    {
+        gTextures[TEXTURE_UNIT_WARRIOR_HOVERED].render(this->screenPosX, this->screenPosY, NULL, 0, NULL, this->flip, this->zoom);
+    }
     
     if(selected)
     {

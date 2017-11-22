@@ -10,8 +10,8 @@ template <class obj_t>
 class InputComponent: public Component<obj_t> 
 {
 protected:
-    bool selected;
-    int priority;
+    bool selected, hovered;
+    int priority, basePriority;
     
 public:
     InputComponent();
@@ -29,6 +29,7 @@ template <class obj_t>
 InputComponent<obj_t>::InputComponent():
     Component<obj_t>(),
     selected(false),
+    hovered(false),
     priority(0)
 {
 #if (1 == DEBUG_ALLOC_COMP_ENABLE)
@@ -58,7 +59,8 @@ void InputComponent<obj_t>::update()
     int w = gTextures[TEXTURE_TEMPLATE].getWidth() * zoom;
     int h = gTextures[TEXTURE_TEMPLATE].getHeight() * zoom;
     
-    if(Input::onLeftMouseClickDown(&x, &y))
+    Input::getMousePos(&x, &y);
+    if(Input::onLeftMouseClickDown())
     {   
         if( (x > screenPosX) && (x < (screenPosX + w)) &&
             (y > screenPosY) && (y < (screenPosY + h))) 
@@ -77,6 +79,27 @@ void InputComponent<obj_t>::update()
             selected = false;
         }
     }
+    
+    if( (x > screenPosX) && (x < (screenPosX + w)) &&
+            (y > screenPosY) && (y < (screenPosY + h))) 
+    {
+        if(gTextures[textureType].getPixelColor(x - screenPosX, y - screenPosY) != 0xFFFFFF00)
+        {
+            hovered = true;
+        }
+        else
+        {
+            hovered = false;
+        }
+    }
+    else
+    {
+        hovered = false;
+    }
+    
+    int yPos;
+    this->getGameObject()->template send<int, int>(MSG_GET_PHYSICS, MSG_DATA_PHYSICS_Y_POS, &yPos);
+    priority = basePriority + yPos;
     
     DEBUG_FUN_VAR("%p | %s\nselected: %s\n", this->getGameObject(), __PRETTY_FUNCTION__, (selected) ? "true" : "false");
 }
@@ -100,6 +123,7 @@ void InputComponent<obj_t>::receive(int message, int data, int *response)
          
         case MSG_SET_INPUT_PRIORITY:
         priority = data;
+        basePriority = priority;
         break;
 
         default:
@@ -114,6 +138,10 @@ void InputComponent<obj_t>::receive(int message, bool data, int *response)
     {  
         case MSG_SET_INPUT_SELECTED:
         selected = data;
+        break;
+        
+        case MSG_SET_INPUT_HOVERED:
+        hovered = data;
         break;
         
         default:
@@ -131,6 +159,10 @@ void InputComponent<obj_t>::receive(int message, int data, bool *response)
         {           
             case MSG_DATA_INPUT_SELECTED:
             *response = selected;
+            break;
+        
+            case MSG_DATA_INPUT_HOVERED:
+            *response = hovered;
             break;
             
             default:

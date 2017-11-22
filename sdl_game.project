@@ -74,6 +74,14 @@
               <File Name="ResourceInputComponent.h"/>
               <File Name="ResourcePhysicsComponent.h"/>
             </VirtualDirectory>
+            <VirtualDirectory Name="raw">
+              <VirtualDirectory Name="wood">
+                <File Name="RawWood.h"/>
+                <File Name="RawWoodGraphicsComponent.h"/>
+                <File Name="RawWoodInputComponent.h"/>
+                <File Name="RawWoodPhysicsComponent.h"/>
+              </VirtualDirectory>
+            </VirtualDirectory>
           </VirtualDirectory>
           <VirtualDirectory Name="tiles">
             <VirtualDirectory Name="base">

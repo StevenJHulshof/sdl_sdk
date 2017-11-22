@@ -149,3 +149,4 @@ SDL_PixelFormat* Texture::getPixelFormat()
 
 /** Create texture buffer. */
 Texture gTextures[TEXTURES_TOTAL];
+Texture gTextTexture;
