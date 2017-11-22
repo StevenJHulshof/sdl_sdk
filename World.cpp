@@ -15,7 +15,7 @@ World::World():
     generator.generatePatch(_tileGrid, TEXTURE_TILE_SAND_0000, 40, 20);
     generator.generatePatch(_tileGrid, TEXTURE_TILE_WATER_0000, 40, 20);
     generator.generatePatch(_resourceGrid, TEXTURE_RESOURCE_WOOD, 10, 50, _tileGrid, TEXTURE_TILE_GRASS_0000);
-    generator.generatePatch(_resourceGrid, TEXTURE_RESOURCE_STONE, 5, 30, _tileGrid, TEXTURE_TILE_GRASS_0000);
+    generator.generatePatch(_resourceGrid, TEXTURE_RESOURCE_STONE, 5, 10, _tileGrid, TEXTURE_TILE_GRASS_0000);
   
 
     for(int x = 0; x < TILE_GRID_X; x++) 

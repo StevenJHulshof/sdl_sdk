@@ -104,6 +104,10 @@
         <File Name="Container.h"/>
         <File Name="Container.cpp"/>
       </VirtualDirectory>
+      <VirtualDirectory Name="overlay">
+        <File Name="Overlay.h"/>
+        <File Name="Overlay.cpp"/>
+      </VirtualDirectory>
     </VirtualDirectory>
     <File Name="system_includes.h"/>
     <File Name="sdl_includes.h"/>

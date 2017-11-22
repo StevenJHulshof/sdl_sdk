@@ -2,6 +2,7 @@
 
 #include "Input.h"
 #include "InputComponent.h"
+#include "config_types.h"
 
 template <class obj_t>
 class CameraInputComponent: public InputComponent<obj_t>
@@ -36,25 +37,42 @@ void CameraInputComponent<obj_t>::update()
     InputComponent<obj_t>::update();
     
     int x, y, velocity;
+    float zoom;
     this->getGameObject()->template send<int, int>(MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_OFFSET_Y, &y);
     this->getGameObject()->template send<int, int>(MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_OFFSET_X, &x);
+    this->getGameObject()->template send<int, float>(MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_ZOOM, &zoom);
     this->getGameObject()->template send<int, int>(MSG_GET_PHYSICS, MSG_DATA_PHYSICS_VELOCITY, &velocity);
+    
+    int w = (int) gTextures[TEXTURE_TEMPLATE].getWidth() * zoom;
+    int h = (int) gTextures[TEXTURE_TEMPLATE].getHeight() * zoom;
     
     if(Input::onKeyPressed(VK_UP)) 
     {
-        this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
+        if(y < -96)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
+        }
     } 
     if(Input::onKeyPressed(VK_DOWN)) 
     {
-        this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y - velocity);
+        if(y - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y - velocity);
+        }
     }
     if(Input::onKeyPressed(VK_LEFT)) 
     {
-        this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
+        if(x < -16)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
+        }
     }
     if(Input::onKeyPressed(VK_RIGHT)) 
     {
-        this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
+        if(x - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
+        }
     }
     if(Input::onKeyPressed('Z')) 
     {
