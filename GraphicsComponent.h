@@ -11,7 +11,7 @@ class GraphicsComponent: public Component<obj_t>
 {    
 protected:
     SDL_RendererFlip flip;
-    int textureType, screenPosX, screenPosY, offsetX, offsetY, layer;
+    int textureType, screenPosX, screenPosY, offsetX, offsetY;
     float zoom;
        
 public:

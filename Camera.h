@@ -14,9 +14,9 @@ template <class con_t>
 class Camera: public GameObject<Camera<con_t>, con_t>
 {
 private:
-    CameraInputComponent<Camera> cameraInputComponent;
-    CameraPhysicsComponent<Camera> cameraPhysicsComponent;
-    CameraGraphicsComponent<Camera> cameraGraphicsComponent;
+    CameraInputComponent<Camera<con_t>> cameraInputComponent;
+    CameraPhysicsComponent<Camera<con_t>> cameraPhysicsComponent;
+    CameraGraphicsComponent<Camera<con_t>> cameraGraphicsComponent;
     
 public:
     

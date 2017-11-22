@@ -1,5 +1,6 @@
 #pragma once
 
+#include "priority.h"
 #include "GameObject.h"
 #include "TileInputComponent.h"
 #include "TilePhysicsComponent.h"
@@ -9,9 +10,9 @@ template <class con_t>
 class Tile: public GameObject<Tile<con_t>, con_t>
 {
 private:
-    TileInputComponent<Tile> tileInputComponent;
-    TilePhysicsComponent<Tile> tilePhysicsComponent;
-    TileGraphicsComponent<Tile> tileGraphicsComponent;
+    TileInputComponent<Tile<con_t>> tileInputComponent;
+    TilePhysicsComponent<Tile<con_t>> tilePhysicsComponent;
+    TileGraphicsComponent<Tile<con_t>> tileGraphicsComponent;
     
 public:
     
@@ -34,6 +35,7 @@ Tile<con_t>::Tile(int x, int y, int textureType):
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_TILE);
 }
 
 template <class con_t>

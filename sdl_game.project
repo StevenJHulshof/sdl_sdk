@@ -56,57 +56,66 @@
           <File Name="World.cpp"/>
           <File Name="world_types.h"/>
         </VirtualDirectory>
-        <VirtualDirectory Name="tiles">
-          <VirtualDirectory Name="base">
-            <File Name="Tile.h"/>
-            <File Name="TileGraphicsComponent.h"/>
-            <File Name="TilePhysicsComponent.h"/>
-            <File Name="TileInputComponent.h"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
-        <VirtualDirectory Name="units">
-          <VirtualDirectory Name="civilian">
-            <File Name="Civilian.cpp"/>
-            <File Name="Civilian.h"/>
-            <File Name="CivilianGraphicsComponent.h"/>
-            <File Name="CivilianInputComponent.h"/>
-            <File Name="civilian_types.h"/>
-            <File Name="CivilianPhysicsComponent.h"/>
-          </VirtualDirectory>
-          <VirtualDirectory Name="base">
-            <File Name="Unit.h"/>
-            <File Name="UnitInputComponent.h"/>
-            <File Name="UnitPhysicsComponent.h"/>
-            <File Name="UnitGraphicsComponent.h"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
-        <VirtualDirectory Name="buildings"/>
         <VirtualDirectory Name="camera">
           <File Name="Camera.h"/>
           <File Name="CameraInputComponent.h"/>
           <File Name="CameraGraphicsComponent.h"/>
           <File Name="CameraPhysicsComponent.h"/>
         </VirtualDirectory>
-        <VirtualDirectory Name="resources">
-          <VirtualDirectory Name="base">
-            <File Name="Resource.h"/>
-            <File Name="ResourceGraphicsComponent.h"/>
-            <File Name="ResourceInputComponent.h"/>
-            <File Name="ResourcePhysicsComponent.h"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
         <VirtualDirectory Name="generator">
           <File Name="Generator.h"/>
           <File Name="Generator.cpp"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="assets">
+          <VirtualDirectory Name="resources">
+            <VirtualDirectory Name="base">
+              <File Name="Resource.h"/>
+              <File Name="ResourceGraphicsComponent.h"/>
+              <File Name="ResourceInputComponent.h"/>
+              <File Name="ResourcePhysicsComponent.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="tiles">
+            <VirtualDirectory Name="base">
+              <File Name="Tile.h"/>
+              <File Name="TileGraphicsComponent.h"/>
+              <File Name="TileInputComponent.h"/>
+              <File Name="TilePhysicsComponent.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="units">
+            <VirtualDirectory Name="base">
+              <File Name="Unit.h"/>
+              <File Name="UnitGraphicsComponent.h"/>
+              <File Name="UnitInputComponent.h"/>
+              <File Name="UnitPhysicsComponent.h"/>
+            </VirtualDirectory>
+            <VirtualDirectory Name="warrior">
+              <File Name="Warrior.h"/>
+              <File Name="WarriorGraphicsComponent.h"/>
+              <File Name="WarriorInputComponent.h"/>
+              <File Name="WarriorPhysicsComponent.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="priority">
+            <File Name="priority.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="overlay">
+          <File Name="Overlay.cpp"/>
+          <File Name="Overlay.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="selection">
+          <File Name="Selection.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="game_object_union">
+          <File Name="GameObjectUnion.h"/>
+          <File Name="GameObjectUnion.cpp"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="container">
         <File Name="Container.h"/>
         <File Name="Container.cpp"/>
-      </VirtualDirectory>
-      <VirtualDirectory Name="overlay">
-        <File Name="Overlay.h"/>
-        <File Name="Overlay.cpp"/>
       </VirtualDirectory>
     </VirtualDirectory>
     <File Name="system_includes.h"/>

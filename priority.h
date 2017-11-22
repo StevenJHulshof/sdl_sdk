@@ -1,0 +1,8 @@
+#pragma once
+
+enum {
+    PRIORITY_TILE = 0,
+    PRIORITY_RESOURCE = 1000,
+    PRIORITY_BUILDING = 2000,
+    PRIORITY_UNIT = 3000,
+};

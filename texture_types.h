@@ -76,6 +76,7 @@ enum {
     TEXTURE_RESOURCE_STONE,
     TEXTURE_TILE_SELECTED,
     TEXTURE_UNIT_WARRIOR,
+    TEXTURE_UNIT_WARRIOR_SELECTED,
     TEXTURES_TOTAL,
     TEXTURE_TYPE_EMPTY
 };
@@ -153,5 +154,6 @@ const std::string gTextureStringNames[TEXTURES_TOTAL] = {
     "resource_wood",
     "resource_stone",
     "tile_selected",
-    "unit_warrior"
+    "unit_warrior",
+    "unit_warrior_selected"
 };

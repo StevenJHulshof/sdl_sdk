@@ -11,13 +11,16 @@ class InputComponent: public Component<obj_t>
 {
 protected:
     bool selected;
-
+    int priority;
+    
 public:
     InputComponent();
     virtual ~InputComponent();
             
     virtual void update();
-    
+  
+    virtual void receive(int message, int data, int *response);
+  
     virtual void receive(int message, bool data, int *response);
     virtual void receive(int message, int data, bool *response);
 };
@@ -25,7 +28,8 @@ public:
 template <class obj_t>
 InputComponent<obj_t>::InputComponent():
     Component<obj_t>(),
-    selected(false)
+    selected(false),
+    priority(0)
 {
 #if (1 == DEBUG_ALLOC_COMP_ENABLE)
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
@@ -61,8 +65,6 @@ void InputComponent<obj_t>::update()
         {
             if(gTextures[textureType].getPixelColor(x - screenPosX, y - screenPosY) != 0xFFFFFF00)
             {
-                int xPos, yPos;
-                Translate::screenPosToGrid(screenPosX, screenPosY, w, h, &xPos, &yPos);
                 selected = true;
             }
             else
@@ -77,6 +79,32 @@ void InputComponent<obj_t>::update()
     }
     
     DEBUG_FUN_VAR("%p | %s\nselected: %s\n", this->getGameObject(), __PRETTY_FUNCTION__, (selected) ? "true" : "false");
+}
+
+template <class obj_t>
+void InputComponent<obj_t>::receive(int message, int data, int *response)
+{
+    switch(message) 
+    {    
+        case MSG_GET_INPUT:
+        switch(data) 
+        {
+            case MSG_DATA_INPUT_PRIORITY:
+            *response = priority;
+            break;
+
+            default:
+            break;
+        }
+        break;
+         
+        case MSG_SET_INPUT_PRIORITY:
+        priority = data;
+        break;
+
+        default:
+        break;
+    }
 }
 
 template <class obj_t>

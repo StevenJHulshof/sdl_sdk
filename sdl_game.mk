@@ -62,8 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Container.cpp$(ObjectSuffix) $(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Generator.cpp$(ObjectSuffix) $(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameCore.cpp$(ObjectSuffix) $(IntermediateDirectory)/Texture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Config.cpp$(ObjectSuffix) $(IntermediateDirectory)/Translate.cpp$(ObjectSuffix) $(IntermediateDirectory)/time_user.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Container.cpp$(ObjectSuffix) $(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IntermediateDirectory)/Generator.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameObjectUnion.cpp$(ObjectSuffix) 
 
 
 
@@ -158,14 +158,6 @@ $(IntermediateDirectory)/Container.cpp$(DependSuffix): Container.cpp
 $(IntermediateDirectory)/Container.cpp$(PreprocessSuffix): Container.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Container.cpp$(PreprocessSuffix) Container.cpp
 
-$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix): Overlay.cpp $(IntermediateDirectory)/Overlay.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Overlay.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Overlay.cpp$(DependSuffix): Overlay.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Overlay.cpp$(DependSuffix) -MM Overlay.cpp
-
-$(IntermediateDirectory)/Overlay.cpp$(PreprocessSuffix): Overlay.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Overlay.cpp$(PreprocessSuffix) Overlay.cpp
-
 $(IntermediateDirectory)/World.cpp$(ObjectSuffix): World.cpp $(IntermediateDirectory)/World.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/World.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/World.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/World.cpp$(DependSuffix): World.cpp
@@ -182,13 +174,21 @@ $(IntermediateDirectory)/Generator.cpp$(DependSuffix): Generator.cpp
 $(IntermediateDirectory)/Generator.cpp$(PreprocessSuffix): Generator.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Generator.cpp$(PreprocessSuffix) Generator.cpp
 
-$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix): Civilian.cpp $(IntermediateDirectory)/Civilian.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Civilian.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Civilian.cpp$(DependSuffix): Civilian.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Civilian.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Civilian.cpp$(DependSuffix) -MM Civilian.cpp
+$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix): Overlay.cpp $(IntermediateDirectory)/Overlay.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/Overlay.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Overlay.cpp$(DependSuffix): Overlay.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Overlay.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Overlay.cpp$(DependSuffix) -MM Overlay.cpp
 
-$(IntermediateDirectory)/Civilian.cpp$(PreprocessSuffix): Civilian.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Civilian.cpp$(PreprocessSuffix) Civilian.cpp
+$(IntermediateDirectory)/Overlay.cpp$(PreprocessSuffix): Overlay.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Overlay.cpp$(PreprocessSuffix) Overlay.cpp
+
+$(IntermediateDirectory)/GameObjectUnion.cpp$(ObjectSuffix): GameObjectUnion.cpp $(IntermediateDirectory)/GameObjectUnion.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/steve/Documents/GitHub/sdl_sdk/GameObjectUnion.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GameObjectUnion.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/GameObjectUnion.cpp$(DependSuffix): GameObjectUnion.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GameObjectUnion.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GameObjectUnion.cpp$(DependSuffix) -MM GameObjectUnion.cpp
+
+$(IntermediateDirectory)/GameObjectUnion.cpp$(PreprocessSuffix): GameObjectUnion.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GameObjectUnion.cpp$(PreprocessSuffix) GameObjectUnion.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

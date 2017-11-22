@@ -1,5 +1,6 @@
 #pragma once
 
+#include "priority.h"
 #include "GameObject.h"
 #include "ResourceInputComponent.h"
 #include "ResourcePhysicsComponent.h"
@@ -9,9 +10,9 @@ template <class con_t>
 class Resource: public GameObject<Resource<con_t>, con_t>
 {
 private:
-    ResourceInputComponent<Resource> resourceInputComponent;
-    ResourcePhysicsComponent<Resource> resourcePhysicsComponent;
-    ResourceGraphicsComponent<Resource> resourceGraphicsComponent;
+    ResourceInputComponent<Resource<con_t>> resourceInputComponent;
+    ResourcePhysicsComponent<Resource<con_t>> resourcePhysicsComponent;
+    ResourceGraphicsComponent<Resource<con_t>> resourceGraphicsComponent;
     
 public:
     
@@ -34,6 +35,7 @@ Resource<con_t>::Resource(int x, int y, int textureType):
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_RESOURCE);
 }
 
 template <class con_t>
