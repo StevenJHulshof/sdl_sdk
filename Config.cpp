@@ -52,6 +52,12 @@ bool Config::init()
                     printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
                     success = false;
                 }
+                //Initialize SDL_ttf
+                if( TTF_Init() == -1 )
+                {
+                    printf( "SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError() );
+                    success = false;
+                }
             }
         }
     }
@@ -68,22 +74,13 @@ bool Config::loadMedia()
         if(!gTextures[i].loadFromFile("../textures/" + gTextureStringNames[i] + ".png"))
             success = false;
     }
-    //    //Open the font
-    //    gFont = TTF_OpenFont("../true_type_fonts/Courier Prime Italic.ttf", 16);
-    //    if(gFont == NULL)
-    //    {
-    //        printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );
-    //        success = false;
-    //    }
-    //    else
-    //    {
-    //        SDL_Color textColor = { 0, 0, 0 };
-    //        if( !gTextTexture.loadFromRenderedText("FPS", textColor ) )
-    //        {
-    //            printf( "Failed to render text texture!\n" );
-    //            success = false;
-    //        }
-    //    }
+    //Open the font
+    gFont = TTF_OpenFont("../true_type_fonts/Courier Prime Italic.ttf", 16);
+    if(gFont == NULL)
+    {
+        printf( "Failed to load font! SDL_ttf Error: %s\n", TTF_GetError() );
+        success = false;
+    }
     return success;
 }
 
@@ -92,16 +89,17 @@ void Config::closeMedia()
 
     for(int i; i < TEXTURES_TOTAL; i++)
         gTextures[i].free();
-    //    gTextTexture.free();
+    gTextTexture.free();
     //    //Free global font
-    //    TTF_CloseFont( gFont );
-    //    gFont = NULL;
+    TTF_CloseFont( gFont );
+    gFont = NULL;
     // Destroy window
     SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);
     gWindow = NULL;
     gRenderer = NULL;
     // Quit SDL subsystems
+    TTF_Quit();
     IMG_Quit();
     SDL_Quit();
 }

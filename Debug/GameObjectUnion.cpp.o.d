@@ -48,8 +48,9 @@ Debug/GameObjectUnion.cpp.o: GameObjectUnion.cpp GameObjectUnion.h Tile.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
+ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_syswm.h \
  component_msg_types.h Container.h TileInputComponent.h InputComponent.h \
- Texture.h texture_types.h Input.h Translate.h config_types.h \
+ Texture.h texture_types.h Input.h Config.h config_types.h Translate.h \
  assets_structs.h TilePhysicsComponent.h PhysicsComponent.h \
  TileGraphicsComponent.h GraphicsComponent.h Overlay.h world_types.h \
  RawWood.h Resource.h ResourceInputComponent.h ResourcePhysicsComponent.h \
@@ -169,6 +170,8 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_co
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
 
+C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_syswm.h:
+
 component_msg_types.h:
 
 Container.h:
@@ -183,9 +186,11 @@ texture_types.h:
 
 Input.h:
 
-Translate.h:
+Config.h:
 
 config_types.h:
+
+Translate.h:
 
 assets_structs.h:
 

@@ -48,13 +48,14 @@ Debug/World.cpp.o: World.cpp World.h world_types.h Container.h Camera.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
- component_msg_types.h CameraInputComponent.h Input.h InputComponent.h \
- Texture.h texture_types.h Translate.h config_types.h assets_structs.h \
- CameraPhysicsComponent.h PhysicsComponent.h CameraGraphicsComponent.h \
- GraphicsComponent.h Sort.h Generator.h GameObjectUnion.h Tile.h \
- priority.h TileInputComponent.h TilePhysicsComponent.h \
- TileGraphicsComponent.h Overlay.h RawWood.h Resource.h \
- ResourceInputComponent.h ResourcePhysicsComponent.h \
+ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_syswm.h \
+ component_msg_types.h CameraInputComponent.h Input.h Config.h \
+ texture_types.h config_types.h Texture.h InputComponent.h Translate.h \
+ assets_structs.h CameraPhysicsComponent.h PhysicsComponent.h \
+ CameraGraphicsComponent.h GraphicsComponent.h Sort.h Generator.h \
+ GameObjectUnion.h Tile.h priority.h TileInputComponent.h \
+ TilePhysicsComponent.h TileGraphicsComponent.h Overlay.h RawWood.h \
+ Resource.h ResourceInputComponent.h ResourcePhysicsComponent.h \
  ResourceGraphicsComponent.h RawWoodInputComponent.h \
  RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h Warrior.h Unit.h \
  UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
@@ -173,21 +174,25 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_co
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
 
+C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_syswm.h:
+
 component_msg_types.h:
 
 CameraInputComponent.h:
 
 Input.h:
 
-InputComponent.h:
-
-Texture.h:
+Config.h:
 
 texture_types.h:
 
-Translate.h:
-
 config_types.h:
+
+Texture.h:
+
+InputComponent.h:
+
+Translate.h:
 
 assets_structs.h:
 

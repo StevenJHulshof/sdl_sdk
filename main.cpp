@@ -32,13 +32,14 @@ int main(int argc, char* args[])
 			//While application is running
             uint64_t frameTime = 1;
 			while( !quit ) {
-                uint64_t startTime = getTimeMilliSec();
+                uint64_t startTime = getTimeMicroSec();
+                SDL_Color textColor = { 0, 255, 0 };
+                gTextTexture.loadFromRenderedText("FPS: " + std::to_string((int)(1000000 / frameTime)), textColor);
 //				Handle events on queue
 				while(SDL_PollEvent( &event ) != 0) {
                     switch( event.key.keysym.sym )
                     {
                         case SDLK_ESCAPE: 
-                        std::cout << "FPS: " << (int)(1000 / frameTime) << std::endl;
                         quit = true; 
                         break;
                         
@@ -56,8 +57,9 @@ int main(int argc, char* args[])
 				SDL_RenderClear( gRenderer );
 				// Update screen
                 core.render();
+                gTextTexture.render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1);
 				SDL_RenderPresent( gRenderer );
-                frameTime = getTimeMilliSec() - startTime;
+                frameTime = getTimeMicroSec() - startTime;
 			}
 		}
 	}

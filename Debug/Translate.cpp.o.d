@@ -48,6 +48,7 @@ Debug/Translate.cpp.o: Translate.cpp Translate.h config_types.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h \
  C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h \
+ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_syswm.h \
  Texture.h texture_types.h assets_structs.h
 
 Translate.h:
@@ -151,6 +152,8 @@ C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/begin_co
 C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/close_code.h:
 
 C:\Users\steve\Downloads\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2/SDL_ttf.h:
+
+C:\Users\steve\Documents\sdl\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2/SDL_syswm.h:
 
 Texture.h:
 
