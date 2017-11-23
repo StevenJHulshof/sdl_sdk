@@ -33,7 +33,7 @@ int main(int argc, char* args[])
             uint64_t frameTime = 1;
 			while( !quit ) {
                 uint64_t startTime = getTimeMilliSec();
-				//Handle events on queue
+//				Handle events on queue
 				while(SDL_PollEvent( &event ) != 0) {
                     switch( event.key.keysym.sym )
                     {
@@ -41,17 +41,20 @@ int main(int argc, char* args[])
                         std::cout << "FPS: " << (int)(1000 / frameTime) << std::endl;
                         quit = true; 
                         break;
+                        
+                        default:
+                        break;
                     }
 					if(event.type == SDL_QUIT) {
 						quit = true;
                     }
 				}
                 core.update();
-                //Clear screen
+                // Clear screen
                 SDL_SetRenderDrawBlendMode(gRenderer, SDL_BLENDMODE_BLEND); 
 				SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
 				SDL_RenderClear( gRenderer );
-				//Update screen
+				// Update screen
                 core.render();
 				SDL_RenderPresent( gRenderer );
                 frameTime = getTimeMilliSec() - startTime;

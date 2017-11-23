@@ -1,6 +1,6 @@
 #pragma once
 
-#include "windows.h"
+#include "Config.h"
 #include <iostream>
 #include "sdl_includes.h"
 

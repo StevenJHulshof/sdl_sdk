@@ -2,6 +2,9 @@
 
 #include "texture_types.h"
 #include "config_types.h"
+#include "windows.h"
+
+extern HWND hwnd;
 
 class Config {
 public:

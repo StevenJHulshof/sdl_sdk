@@ -12,6 +12,7 @@ void Input::getMousePos(int *x, int *y)
 {
     POINT cursorPos;
     GetCursorPos(&cursorPos);
+    ScreenToClient(hwnd, &cursorPos);
     *x = cursorPos.x;
     *y = cursorPos.y;
 }
