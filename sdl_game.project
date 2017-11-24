@@ -81,6 +81,12 @@
                 <File Name="RawWoodInputComponent.h"/>
                 <File Name="RawWoodPhysicsComponent.h"/>
               </VirtualDirectory>
+              <VirtualDirectory Name="stone">
+                <File Name="RawStone.h"/>
+                <File Name="RawStoneGraphicsComponent.h"/>
+                <File Name="RawStoneInputComponent.h"/>
+                <File Name="RawStonePhysicsComponent.h"/>
+              </VirtualDirectory>
             </VirtualDirectory>
           </VirtualDirectory>
           <VirtualDirectory Name="tiles">

@@ -4,8 +4,8 @@
 #include "Texture.h"
 
 enum {
-    SCREEN_WIDTH = 1600,
-    SCREEN_HEIGHT = 900
+    SCREEN_WIDTH = 1920,
+    SCREEN_HEIGHT = 1080
 };
 
 /** The SDL window. */

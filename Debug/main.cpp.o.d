@@ -57,11 +57,12 @@ Debug/main.cpp.o: main.cpp GameCore.h World.h world_types.h Container.h \
  TilePhysicsComponent.h TileGraphicsComponent.h Overlay.h RawWood.h \
  Resource.h ResourceInputComponent.h ResourcePhysicsComponent.h \
  ResourceGraphicsComponent.h RawWoodInputComponent.h \
- RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h Warrior.h Unit.h \
- UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
- WarriorInputComponent.h WarriorPhysicsComponent.h \
- WarriorGraphicsComponent.h Selection.h system_includes.h \
- assets_includes.h time_user.h
+ RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h RawStone.h \
+ RawStoneInputComponent.h RawStonePhysicsComponent.h \
+ RawStoneGraphicsComponent.h Warrior.h Unit.h UnitInputComponent.h \
+ UnitPhysicsComponent.h UnitGraphicsComponent.h WarriorInputComponent.h \
+ WarriorPhysicsComponent.h WarriorGraphicsComponent.h Selection.h \
+ system_includes.h assets_includes.h time_user.h
 
 GameCore.h:
 
@@ -240,6 +241,14 @@ RawWoodInputComponent.h:
 RawWoodPhysicsComponent.h:
 
 RawWoodGraphicsComponent.h:
+
+RawStone.h:
+
+RawStoneInputComponent.h:
+
+RawStonePhysicsComponent.h:
+
+RawStoneGraphicsComponent.h:
 
 Warrior.h:
 

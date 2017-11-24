@@ -37,8 +37,8 @@ World::World():
             }
             if(_playableGrid[x][y] == WORLD_RESOURCE_RAW_STONE)
             {
-                gameObjectUnion.resource = new Resource<World>(x, y, WORLD_RESOURCE_RAW_STONE, TEXTURE_RESOURCE_RAW_STONE);
-                setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_RESOURCE, this);
+                gameObjectUnion.rawStone = new RawStone<World>(x, y);
+                setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_RAW_STONE, this);
                 _playablePool.push_back(gameObjectUnion);
             }
         }

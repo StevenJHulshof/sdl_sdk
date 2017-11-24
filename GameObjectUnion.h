@@ -2,11 +2,13 @@
 
 #include "Tile.h"
 #include "RawWood.h"
+#include "RawStone.h"
 #include "Warrior.h"
 
 enum {
     GAME_OBJECT_RESOURCE,
     GAME_OBJECT_RAW_WOOD,
+    GAME_OBJECT_RAW_STONE,
     GAME_OBJECT_UNIT,
     GAME_OBJECT_WARRIOR,
     GAME_OBJECT_TOTAL
@@ -18,6 +20,7 @@ struct GameObjectUnion{
     union {
         Resource<con_t> *resource;
         RawWood<con_t> *rawWood;
+        RawStone<con_t> *rawStone;
         Unit<con_t> *unit;
         Warrior<con_t> *warrior;
     };
@@ -54,6 +57,10 @@ void GameObjectUnionUtility::updateGameObjectUnion(obj_t *object)
         object->rawWood->update();
         break;
         
+        case GAME_OBJECT_RAW_STONE:
+        object->rawStone->update();
+        break;
+        
         case GAME_OBJECT_UNIT:
         object->unit->update();
         break;
@@ -80,6 +87,10 @@ void GameObjectUnionUtility::setGameObjectUnion(obj_t *gameObjectUnion, int tag,
         
         case GAME_OBJECT_RAW_WOOD:
         gameObjectUnion->rawWood->setContainer(container);
+        break;       
+        
+        case GAME_OBJECT_RAW_STONE:
+        gameObjectUnion->rawStone->setContainer(container);
         break;
         
         case GAME_OBJECT_UNIT:
@@ -108,6 +119,10 @@ void GameObjectUnionUtility::renderGameObjectUnion(obj_t *object)
         object->rawWood->render();
         break;
         
+        case GAME_OBJECT_RAW_STONE:
+        object->rawStone->render();
+        break;
+        
         case GAME_OBJECT_UNIT:
         object->unit->render();
         break;
@@ -132,6 +147,10 @@ void GameObjectUnionUtility::sendToGameObjectUnion(obj_t *object, int message, d
 
         case GAME_OBJECT_RAW_WOOD:
         object->rawWood->template send<data_t, response_t>(message, data, response);
+        break;
+
+        case GAME_OBJECT_RAW_STONE:
+        object->rawStone->template send<data_t, response_t>(message, data, response);
         break;
 
         case GAME_OBJECT_UNIT:
