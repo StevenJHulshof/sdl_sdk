@@ -8,7 +8,7 @@
 template <class obj_t, class con_t>
 class GameObject 
 {
-private:
+protected:
     std::vector<Component<obj_t>*> _components;
     con_t *_container;
     

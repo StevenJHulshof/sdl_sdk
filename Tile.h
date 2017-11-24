@@ -18,6 +18,8 @@ public:
     
     Tile(int x, int y, int type, int textureType);
     virtual ~Tile();
+    
+    void render(int xPos, int yPos);
 };
 
 template <class con_t>
@@ -45,4 +47,13 @@ Tile<con_t>::~Tile()
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
     DEBUG_ALLOC("Deallocate | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
+}
+
+template <class con_t>
+void Tile<con_t>::render(int xPos, int yPos) 
+{
+    for(Component<Tile<con_t>> *component : this->_components) 
+    {
+        component->render(xPos, yPos);
+    }
 }

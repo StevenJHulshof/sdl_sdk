@@ -52,7 +52,7 @@ Debug/GameObjectUnion.cpp.o: GameObjectUnion.cpp GameObjectUnion.h Tile.h \
  component_msg_types.h Container.h TileInputComponent.h InputComponent.h \
  Texture.h texture_types.h Input.h Config.h config_types.h Translate.h \
  assets_structs.h TilePhysicsComponent.h PhysicsComponent.h \
- TileGraphicsComponent.h GraphicsComponent.h Overlay.h world_types.h \
+ TileGraphicsComponent.h world_types.h GraphicsComponent.h Overlay.h \
  RawWood.h Resource.h ResourceInputComponent.h ResourcePhysicsComponent.h \
  ResourceGraphicsComponent.h RawWoodInputComponent.h \
  RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h Warrior.h Unit.h \
@@ -200,11 +200,11 @@ PhysicsComponent.h:
 
 TileGraphicsComponent.h:
 
+world_types.h:
+
 GraphicsComponent.h:
 
 Overlay.h:
-
-world_types.h:
 
 RawWood.h:
 

@@ -8,6 +8,8 @@ class TilePhysicsComponent: public PhysicsComponent<obj_t>
 public:
     TilePhysicsComponent();
     virtual ~TilePhysicsComponent();
+    
+    virtual void render(int xPos, int yPos);
 };
 
 template <class obj_t>
@@ -19,6 +21,12 @@ TilePhysicsComponent<obj_t>::TilePhysicsComponent():
 
 template <class obj_t>
 TilePhysicsComponent<obj_t>::~TilePhysicsComponent()
+{
+    
+}
+
+template <class obj_t>
+void TilePhysicsComponent<obj_t>::render(int xPos, int yPos)
 {
     
 }

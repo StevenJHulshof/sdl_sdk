@@ -17,6 +17,7 @@ public:
 
     virtual void update();
     virtual void render();
+    virtual void render(int x, int y);
 
     virtual void receive(int message, int data, int *response);
     
@@ -53,6 +54,11 @@ void Component<obj_t>::update() {
 
 template <class obj_t>
 void Component<obj_t>::render() {
+
+}
+
+template <class obj_t>
+void Component<obj_t>::render(int x, int y) {
 
 }
 

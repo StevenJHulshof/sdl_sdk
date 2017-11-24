@@ -5,7 +5,6 @@
 #include "Warrior.h"
 
 enum {
-    GAME_OBJECT_TILE, 
     GAME_OBJECT_RESOURCE,
     GAME_OBJECT_RAW_WOOD,
     GAME_OBJECT_UNIT,
@@ -17,7 +16,6 @@ template <class con_t>
 struct GameObjectUnion{
     int tag;
     union {
-        Tile<con_t> *tile;
         Resource<con_t> *resource;
         RawWood<con_t> *rawWood;
         Unit<con_t> *unit;
@@ -47,11 +45,7 @@ template <class obj_t>
 void GameObjectUnionUtility::updateGameObjectUnion(obj_t *object)
 {
     switch(object->tag)
-    {
-        case GAME_OBJECT_TILE:
-        object->tile->update();
-        break;
-        
+    {        
         case GAME_OBJECT_RESOURCE:
         object->resource->update();
         break;
@@ -79,11 +73,7 @@ void GameObjectUnionUtility::setGameObjectUnion(obj_t *gameObjectUnion, int tag,
     gameObjectUnion->tag = tag;
     
     switch(gameObjectUnion->tag)
-    {
-        case GAME_OBJECT_TILE:
-        gameObjectUnion->tile->setContainer(container);
-        break;
-        
+    {        
         case GAME_OBJECT_RESOURCE:
         gameObjectUnion->resource->setContainer(container);
         break;       
@@ -109,11 +99,7 @@ template <class obj_t>
 void GameObjectUnionUtility::renderGameObjectUnion(obj_t *object)
 {
     switch(object->tag)
-    {
-        case GAME_OBJECT_TILE:
-        object->tile->render();
-        break;
-        
+    {        
         case GAME_OBJECT_RESOURCE:
         object->resource->render();
         break;
@@ -140,10 +126,6 @@ void GameObjectUnionUtility::sendToGameObjectUnion(obj_t *object, int message, d
 {
     switch(object->tag)
     {
-        case GAME_OBJECT_TILE:
-        object->tile->template send<data_t, response_t>(message, data, response);
-        break;
-
         case GAME_OBJECT_RESOURCE:
         object->resource->template send<data_t, response_t>(message, data, response);
         break;

@@ -27,7 +27,6 @@ int main(int argc, char* args[])
             GameCore core;
 			//Main loop flag
 			bool quit = false;
-            SDL_Event event;
             ShowCursor(false);
 			//While application is running
             uint64_t frameTime = 1;
@@ -36,20 +35,7 @@ int main(int argc, char* args[])
                 SDL_Color textColor = { 0, 255, 0 };
                 gTextTexture.loadFromRenderedText("FPS: " + std::to_string((int)(1000000 / frameTime)), textColor);
 //				Handle events on queue
-				while(SDL_PollEvent( &event ) != 0) {
-                    switch( event.key.keysym.sym )
-                    {
-                        case SDLK_ESCAPE: 
-                        quit = true; 
-                        break;
-                        
-                        default:
-                        break;
-                    }
-					if(event.type == SDL_QUIT) {
-						quit = true;
-                    }
-				}
+                quit = Input::onKeyPressed(VK_ESCAPE);
                 core.update();
                 // Clear screen
                 SDL_SetRenderDrawBlendMode(gRenderer, SDL_BLENDMODE_BLEND); 

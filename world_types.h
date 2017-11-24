@@ -6,7 +6,12 @@
 #define TILE_GRID_Y (int) 100
 
 enum {
-    WORLD_LAYER_TILES,
+    TILE_GRASS,
+    TILE_SAND,
+    TILE_WATER
+};
+
+enum {
     WORLD_LAYER_PLAYABLES,
     WORLD_LAYER_TOTAL
 };
