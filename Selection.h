@@ -69,9 +69,7 @@ void Selection<gbu_t>::render()
 
     int x, y;
     Input::getMousePos(&x, &y);
-    gTextures[TEXTURE_CURSOR_DOT].render(x - (int)(gTextures[TEXTURE_CURSOR_DOT].getWidth() / 2), 
-                                         y - (int)(gTextures[TEXTURE_CURSOR_DOT].getHeight() / 2), 
-                                         NULL, 0, NULL, SDL_FLIP_NONE, 1);
+    gTextures[TEXTURE_CURSOR_ARROW].render(x, y, NULL, 0, NULL, SDL_FLIP_NONE, 1);
 }
 
 template <class gbu_t>
