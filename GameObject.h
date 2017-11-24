@@ -43,7 +43,7 @@ GameObject<obj_t, con_t>::~GameObject()
 template <class obj_t, class con_t>
 template <class data_t, class response_t>
 void GameObject<obj_t, con_t>::send(int message, data_t data, response_t *response) 
-{
+{    
     for(Component<obj_t> *component : _components) 
     {
         component->receive(message, data, response);

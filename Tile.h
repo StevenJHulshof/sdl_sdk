@@ -16,12 +16,12 @@ private:
     
 public:
     
-    Tile(int x, int y, int textureType);
+    Tile(int x, int y, int type, int textureType);
     virtual ~Tile();
 };
 
 template <class con_t>
-Tile<con_t>::Tile(int x, int y, int textureType):
+Tile<con_t>::Tile(int x, int y, int type, int textureType):
     GameObject<Tile<con_t>, con_t>()
 {
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
@@ -35,6 +35,7 @@ Tile<con_t>::Tile(int x, int y, int textureType):
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->template send<int, int>(MSG_SET_PHYSICS_TYPE, type);
     this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_TILE);
 }
 

@@ -16,12 +16,12 @@ private:
     
 public:
     
-    Unit(int x, int y, int textureType);
+    Unit(int x, int y, int type, int textureType);
     virtual ~Unit();
 };
 
 template <class con_t>
-Unit<con_t>::Unit(int x, int y, int textureType):
+Unit<con_t>::Unit(int x, int y, int type, int textureType):
     GameObject<Unit<con_t>, con_t>()
 {
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
@@ -35,6 +35,7 @@ Unit<con_t>::Unit(int x, int y, int textureType):
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->template send<int, int>(MSG_SET_PHYSICS_TYPE, type);
     this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_UNIT);
 }
 

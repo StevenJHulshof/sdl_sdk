@@ -66,7 +66,7 @@ void Selection<gbu_t>::render()
             SCREEN_WIDTH - (int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getWidth() * 3 / 4) - 16, -(int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getHeight() / 4) + 16, NULL, 0, NULL,
             GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, SDL_RendererFlip>(selectedObject, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_FLIP), 1);
     }
-    
+
     int x, y;
     Input::getMousePos(&x, &y);
     gTextures[TEXTURE_CURSOR_DOT].render(x - (int)(gTextures[TEXTURE_CURSOR_DOT].getWidth() / 2), 
@@ -81,8 +81,7 @@ void Selection<gbu_t>::prioritizeSelected()
     
     for(size_t i = 0; i < selectedPool.size(); i++)
     {
-        int priority = GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, int>(selectedPool[i], MSG_GET_INPUT, MSG_DATA_INPUT_PRIORITY)/* +
-                       GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, int>(selectedPool[i], MSG_GET_PHYSICS, MSG_DATA_PHYSICS_Y_POS)*/;
+        int priority = GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, int>(selectedPool[i], MSG_GET_INPUT, MSG_DATA_INPUT_PRIORITY);
 
         if(priority > maxPriority)
         {

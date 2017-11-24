@@ -1,6 +1,7 @@
 #pragma once
 
 #include "priority.h"
+#include "world_types.h"
 #include "Resource.h"
 #include "RawWoodInputComponent.h"
 #include "RawWoodPhysicsComponent.h"
@@ -35,6 +36,7 @@ RawWood<con_t>::RawWood(int x, int y):
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, TEXTURE_RESOURCE_RAW_WOOD);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->template send<int, int>(MSG_SET_PHYSICS_TYPE, WORLD_RESOURCE_RAW_WOOD);
     this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_RESOURCE);
 }
 

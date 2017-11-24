@@ -19,6 +19,9 @@ public:
     virtual void render();
 
     virtual void receive(int message, int data, int *response);
+    
+    virtual void receive(int message, unsigned long int data, int *response);
+    virtual void receive(int message, int data, unsigned long int *response);
 
     virtual void receive(int message, SDL_RendererFlip data, int *response);
     virtual void receive(int message, int data, SDL_RendererFlip *response);
@@ -55,6 +58,16 @@ void Component<obj_t>::render() {
 
 template <class obj_t>
 void Component<obj_t>::receive(int message, int data, int *response) {
+
+}
+
+template <class obj_t>
+void Component<obj_t>::receive(int message, unsigned long int data, int *response) {
+
+}
+
+template <class obj_t>
+void Component<obj_t>::receive(int message, int data, unsigned long int *response) {
 
 }
 

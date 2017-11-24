@@ -48,6 +48,10 @@ InputComponent<obj_t>::~InputComponent()
 template <class obj_t>
 void InputComponent<obj_t>::update()
 {
+    DEBUG_FUN_VAR("%p | START | %s\nselected: %s, hovered: %s, priority: %d, basePriority: %d\n", 
+        this->getGameObject(), __PRETTY_FUNCTION__, (selected) ? "true" : "false", (hovered) ? "true" : "false",
+        priority, basePriority);
+        
     int x = 0, y = 0, screenPosX = 0, screenPosY = 0, textureType = 0;
     float zoom = 0.0;
 
@@ -101,7 +105,9 @@ void InputComponent<obj_t>::update()
     this->getGameObject()->template send<int, int>(MSG_GET_PHYSICS, MSG_DATA_PHYSICS_Y_POS, &yPos);
     priority = basePriority + yPos;
     
-    DEBUG_FUN_VAR("%p | %s\nselected: %s\n", this->getGameObject(), __PRETTY_FUNCTION__, (selected) ? "true" : "false");
+    DEBUG_FUN_VAR("%p | STOP  | %s\nselected: %s, hovered: %s, priority: %d, basePriority: %d\n", 
+        this->getGameObject(), __PRETTY_FUNCTION__, (selected) ? "true" : "false", (hovered) ? "true" : "false",
+        priority, basePriority);
 }
 
 template <class obj_t>

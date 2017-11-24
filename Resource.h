@@ -16,12 +16,12 @@ private:
     
 public:
     
-    Resource(int x, int y, int textureType);
+    Resource(int x, int y, int type, int textureType);
     virtual ~Resource();
 };
 
 template <class con_t>
-Resource<con_t>::Resource(int x, int y, int textureType):
+Resource<con_t>::Resource(int x, int y, int type, int textureType):
     GameObject<Resource<con_t>, con_t>()
 {
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
@@ -33,8 +33,12 @@ Resource<con_t>::Resource(int x, int y, int textureType):
     this->addComponent(this, &resourceGraphicsComponent);
     
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, textureType);
+    
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    
+    this->template send<int, int>(MSG_SET_PHYSICS_TYPE, type);
+    
     this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_RESOURCE);
 }
 

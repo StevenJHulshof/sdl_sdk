@@ -19,7 +19,7 @@ void Generator::fillGrid(int grid[TILE_GRID_X][TILE_GRID_Y], int type)
     }
 }
 
-void Generator::generatePatch(int grid[TILE_GRID_X][TILE_GRID_Y], int type, int size, int density, int baseGrid[TILE_GRID_X][TILE_GRID_Y], int baseType)
+void Generator::generatePatch(int grid[TILE_GRID_X][TILE_GRID_Y],  int type, int size, int density, int baseGrid[TILE_GRID_X][TILE_GRID_Y], int baseType)
 {
     float densFactor = (float) density * 0.01;
     long int tilesTotal = TILE_GRID_X * TILE_GRID_Y;

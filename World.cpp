@@ -8,36 +8,49 @@ World::World():
 #if (1 == DEBUG_ALLOC_GAME_OBJECT_ENABLE)
     DEBUG_ALLOC("Allocate   | %p | %s\n", this, __PRETTY_FUNCTION__);
 #endif
-    generator.fillGrid(_tileGrid, TEXTURE_TILE_GRASS_0000);
-    generator.fillGrid(_playableGrid, TEXTURE_TYPE_EMPTY);
-    generator.generatePatch(_tileGrid, TEXTURE_TILE_SAND_0000, 40, 20);
-    generator.generatePatch(_tileGrid, TEXTURE_TILE_WATER_0000, 40, 20);
-    generator.generatePatch(_playableGrid, TEXTURE_RESOURCE_RAW_WOOD, 10, 50, _tileGrid, TEXTURE_TILE_GRASS_0000);
-    generator.generatePatch(_playableGrid, TEXTURE_RESOURCE_RAW_STONE, 5, 10, _tileGrid, TEXTURE_TILE_GRASS_0000);  
-
+    DEBUG_FUN_VAR("%p | START | %s\n", this, __PRETTY_FUNCTION__);
+    generator.fillGrid(_tileGrid, WORLD_TILE_GRASS);
+    generator.fillGrid(_playableGrid, WORLD_EMPTY);
+    generator.generatePatch(_tileGrid, WORLD_TILE_SAND, 40, 20);
+    generator.generatePatch(_tileGrid, WORLD_TILE_WATER, 40, 20);
+    generator.generatePatch(_playableGrid, WORLD_RESOURCE_RAW_WOOD, 10, 50, _tileGrid, WORLD_TILE_GRASS);
+    generator.generatePatch(_playableGrid, WORLD_RESOURCE_RAW_STONE, 5, 10, _tileGrid, WORLD_TILE_GRASS);  
     for(int x = 0; x < TILE_GRID_X; x++) 
     {
         for(int y = 0; y < TILE_GRID_Y; y++) 
         {
-            if(_playableGrid[x][y] == TEXTURE_RESOURCE_RAW_WOOD)
+            GameObjectUnion<World> gameObjectUnion;
+            if(_playableGrid[x][y] == WORLD_RESOURCE_RAW_WOOD)
             {
-                GameObjectUnion<World> gameObjectUnion;
                 gameObjectUnion.rawWood = new RawWood<World>(x, y);
                 setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_RAW_WOOD, this);
                 _playablePool.push_back(gameObjectUnion);
             }
-            if(_playableGrid[x][y] == TEXTURE_RESOURCE_RAW_STONE)
+            if(_playableGrid[x][y] == WORLD_RESOURCE_RAW_STONE)
             {
-                GameObjectUnion<World> gameObjectUnion;
-                gameObjectUnion.resource = new Resource<World>(x, y, _playableGrid[x][y]);
+                gameObjectUnion.resource = new Resource<World>(x, y, WORLD_RESOURCE_RAW_STONE, TEXTURE_RESOURCE_RAW_STONE);
                 setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_RESOURCE, this);
                 _playablePool.push_back(gameObjectUnion);
             }
             
-            GameObjectUnion<World> gameObjectUnion;
-            gameObjectUnion.tile = new Tile<World>(x, y, _tileGrid[x][y]);
-            setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_TILE, this);
-            _tilePool.push_back(gameObjectUnion);
+            if(_tileGrid[x][y] == WORLD_TILE_GRASS)
+            {
+                gameObjectUnion.tile = new Tile<World>(x, y, WORLD_TILE_GRASS, TEXTURE_TILE_GRASS_0000);
+                setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_TILE, this);
+                _tilePool.push_back(gameObjectUnion);
+            }
+            if(_tileGrid[x][y] == WORLD_TILE_SAND)
+            {
+                gameObjectUnion.tile = new Tile<World>(x, y, WORLD_TILE_SAND, TEXTURE_TILE_SAND_0000);
+                setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_TILE, this);
+                _tilePool.push_back(gameObjectUnion);
+            }
+            if(_tileGrid[x][y] == WORLD_TILE_WATER)
+            {
+                gameObjectUnion.tile = new Tile<World>(x, y, WORLD_TILE_WATER, TEXTURE_TILE_WATER_0000);
+                setGameObjectUnion(&gameObjectUnion, GAME_OBJECT_TILE, this);
+                _tilePool.push_back(gameObjectUnion);
+            }
         }
     }
     
@@ -45,7 +58,7 @@ World::World():
     {
         int xRand = rand() % TILE_GRID_X;
         int yRand = rand() % TILE_GRID_Y;
-        if(_tileGrid[xRand][yRand] != TEXTURE_TILE_WATER_0000 && _playableGrid[xRand][yRand] == TEXTURE_TYPE_EMPTY)
+        if(_tileGrid[xRand][yRand] != WORLD_TILE_WATER && _playableGrid[xRand][yRand] == WORLD_EMPTY)
         {
             GameObjectUnion<World> gameObjectUnion;
             gameObjectUnion.warrior = new Warrior<World>(xRand, yRand);
@@ -53,9 +66,10 @@ World::World():
             _playablePool.push_back(gameObjectUnion);
         }
     }
-
+    
     _objectPool.push_back(_tilePool);
     _objectPool.push_back(_playablePool);
+    DEBUG_FUN_VAR("%p | STOP | %s\n", this, __PRETTY_FUNCTION__);
 }
 
 World::~World() {
@@ -66,6 +80,8 @@ World::~World() {
 
 void World::update() 
 {
+    DEBUG_FUN_VAR("%p | START | %s\n", this, __PRETTY_FUNCTION__);
+    
     camera.update();
     
     int offsetX, offsetY;
@@ -83,7 +99,7 @@ void World::update()
             sendToGameObjectUnion<GameObjectUnion<World>, int, int>(&_objectPool[i][l], MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
             sendToGameObjectUnion<GameObjectUnion<World>, float, int>(&_objectPool[i][l], MSG_SET_GRAPHICS_ZOOM, zoom);
             updateGameObjectUnion(&_objectPool[i][l]);
-            
+                   
             if(fastSendToGameObjectUnion<GameObjectUnion<World>, int, bool>(&_objectPool[i][l], MSG_GET_INPUT, MSG_DATA_INPUT_SELECTED))
             {
                 selection.addSelectedCandidate(&_objectPool[i][l]);
@@ -93,15 +109,16 @@ void World::update()
                 selection.addHoveredCandidate(&_objectPool[i][l]);
             }
         }
-        
+
         sortGameObjects(_objectPool[i]);
     }
-    
-   selection.update();
+    selection.update();
+    DEBUG_FUN_VAR("%p | STOP | %s\n", this, __PRETTY_FUNCTION__);
 }
 
 void World::render() 
 {    
+    DEBUG_FUN_VAR("%p | START | %s\n", this, __PRETTY_FUNCTION__);
     for(size_t i = 0; i < _objectPool.size(); i++)
     {
         for(int l = _objectPool[i].size() - 1; l >= 0; l--)
@@ -112,6 +129,7 @@ void World::render()
     
     selection.render();
     gTextTexture.render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1);
+    DEBUG_FUN_VAR("%p | STOP  | %s\n", this, __PRETTY_FUNCTION__);
 }
 
 void World::sortGameObjects(std::vector<GameObjectUnion<World>> &objectPool)

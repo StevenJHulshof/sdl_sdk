@@ -1,6 +1,7 @@
 #pragma once
 
 #include "priority.h"
+#include "world_types.h"
 #include "Unit.h"
 #include "WarriorInputComponent.h"
 #include "WarriorPhysicsComponent.h"
@@ -35,6 +36,7 @@ Warrior<con_t>::Warrior(int x, int y):
     this->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, TEXTURE_UNIT_WARRIOR);
     this->template send<int, int>(MSG_SET_PHYSICS_X_POS, x);
     this->template send<int, int>(MSG_SET_PHYSICS_Y_POS, y);
+    this->template send<int, int>(MSG_SET_PHYSICS_TYPE, WORLD_UNIT_WARRIOR);
     this->template send<int, int>(MSG_SET_INPUT_PRIORITY, PRIORITY_UNIT);
 }
 

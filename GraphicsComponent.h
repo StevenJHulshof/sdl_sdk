@@ -58,6 +58,9 @@ GraphicsComponent<obj_t>::~GraphicsComponent()
 template <class obj_t>
 void GraphicsComponent<obj_t>::update() 
 {
+    DEBUG_FUN_VAR("%p | START | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, offsetX: %d, offsetY: %d, zoom: %0.2f\n",
+        this->getGameObject(), __PRETTY_FUNCTION__, textureType, screenPosX, screenPosY, offsetX, offsetY, zoom);
+        
     int x, y = 0;
     this->getGameObject()->send(MSG_GET_PHYSICS, MSG_DATA_PHYSICS_X_POS, &x);
     this->getGameObject()->send(MSG_GET_PHYSICS, MSG_DATA_PHYSICS_Y_POS, &y);
@@ -69,7 +72,7 @@ void GraphicsComponent<obj_t>::update()
     screenPosX += offsetX;
     screenPosY += offsetY;
     
-    DEBUG_FUN_VAR("%p | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, offsetX: %d, offsetY: %d, zoom: %0.2f\n",
+    DEBUG_FUN_VAR("%p | STOP  | %s\ntextureType: %d, screenPosX: %d, screenPosY: %d, offsetX: %d, offsetY: %d, zoom: %0.2f\n",
         this->getGameObject(), __PRETTY_FUNCTION__, textureType, screenPosX, screenPosY, offsetX, offsetY, zoom);
 }
 

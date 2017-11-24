@@ -22,3 +22,10 @@
 #else
 #define DEBUG_FUN_VAR(f_, ...)
 #endif
+
+/** Macro to enable disable memory usage of the Debug class. */
+#if DEBUG_FUN_VAR_ENABLE
+#define DEBUG_FUN_VAR_COUT(out) std::cout << out;
+#else
+#define DEBUG_FUN_VAR_COUT(out)
+#endif

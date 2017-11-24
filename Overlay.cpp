@@ -8,20 +8,20 @@ Overlay::~Overlay()
 {
 }
 
-int Overlay::getTileOverlay(int tileGrid[TILE_GRID_X][TILE_GRID_Y], int xPos, int yPos, int textureType)
+int Overlay::getTileOverlay(int tileGrid[TILE_GRID_X][TILE_GRID_Y], int xPos, int yPos, int type)
 {
     int overlay = 0;
     
     if(yPos > 0)
     {
-        if(tileGrid[xPos][yPos - 1] == textureType)
+        if(tileGrid[xPos][yPos - 1] == type)
         {
              overlay |= 0x01;
         }
     }
     if(yPos < TILE_GRID_Y - 1)
     {
-        if(tileGrid[xPos][yPos + 1] == textureType)
+        if(tileGrid[xPos][yPos + 1] == type)
         {
             overlay |= 0x08;
         }
@@ -30,14 +30,14 @@ int Overlay::getTileOverlay(int tileGrid[TILE_GRID_X][TILE_GRID_Y], int xPos, in
     {
         if(xPos < TILE_GRID_X - 1) 
         {
-            if(tileGrid[xPos + 1][yPos] == textureType) 
+            if(tileGrid[xPos + 1][yPos] == type) 
             {
                 overlay |= 0x02;  
             }
         }
         if(xPos < TILE_GRID_X - 1 && yPos < TILE_GRID_Y - 1) 
         {     
-            if(tileGrid[xPos + 1][yPos + 1] == textureType)
+            if(tileGrid[xPos + 1][yPos + 1] == type)
             {
                 overlay |= 0x04;
             }
@@ -45,14 +45,14 @@ int Overlay::getTileOverlay(int tileGrid[TILE_GRID_X][TILE_GRID_Y], int xPos, in
 
         if(xPos > 0 && yPos < TILE_GRID_Y - 1)
         {
-            if(tileGrid[xPos - 1][yPos + 1] == textureType)
+            if(tileGrid[xPos - 1][yPos + 1] == type)
             {
                 overlay |= 0x10;
             }
         }
         if(xPos > 0)
         {
-            if(tileGrid[xPos - 1][yPos] == textureType)
+            if(tileGrid[xPos - 1][yPos] == type)
             {
                 overlay |= 0x20;        
             }
@@ -62,14 +62,14 @@ int Overlay::getTileOverlay(int tileGrid[TILE_GRID_X][TILE_GRID_Y], int xPos, in
     {
         if(xPos < TILE_GRID_X - 1 && yPos > 0) 
         {
-            if(tileGrid[xPos + 1][yPos - 1] == textureType) 
+            if(tileGrid[xPos + 1][yPos - 1] == type) 
             {
                 overlay |= 0x02;  
             }
         }
         if(xPos < TILE_GRID_X - 1) 
         {     
-            if(tileGrid[xPos + 1][yPos] == textureType)
+            if(tileGrid[xPos + 1][yPos] == type)
             {
                 overlay |= 0x04;
             }
@@ -77,14 +77,14 @@ int Overlay::getTileOverlay(int tileGrid[TILE_GRID_X][TILE_GRID_Y], int xPos, in
 
         if(xPos > 0)
         {
-            if(tileGrid[xPos - 1][yPos] == textureType)
+            if(tileGrid[xPos - 1][yPos] == type)
             {
                 overlay |= 0x10;
             }
         }
         if(xPos > 0 && yPos > 0)
         {
-            if(tileGrid[xPos - 1][yPos - 1] == textureType)
+            if(tileGrid[xPos - 1][yPos - 1] == type)
             {
                 overlay |= 0x20;        
             }
