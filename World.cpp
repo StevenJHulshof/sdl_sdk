@@ -13,12 +13,16 @@ World::World():
 #endif
     DEBUG_FUN_VAR("%p | START | %s\n", this, __PRETTY_FUNCTION__);
 
+    grassTile.setContainer(this);
+    sandTile.setContainer(this);
+    waterTile.setContainer(this);
+
     generator.fillGrid(_tileGrid, WORLD_TILE_GRASS);
     generator.fillGrid(_playableGrid, WORLD_EMPTY);
     generator.generatePatch(_tileGrid, WORLD_TILE_SAND, 40, 20);
-    generator.generatePatch(_tileGrid, WORLD_TILE_WATER, 40, 20);
+    generator.generatePatch(_tileGrid, WORLD_TILE_WATER, 40, 30);
     generator.generatePatch(_playableGrid, WORLD_RESOURCE_RAW_WOOD, 10, 50, _tileGrid, WORLD_TILE_GRASS);
-    generator.generatePatch(_playableGrid, WORLD_RESOURCE_RAW_STONE, 5, 10, _tileGrid, WORLD_TILE_GRASS);  
+    generator.generatePatch(_playableGrid, WORLD_RESOURCE_RAW_STONE, 5, 10, _tileGrid, WORLD_TILE_GRASS);
     
     for(int x = 0; x < TILE_GRID_X; x++) 
     {
@@ -79,16 +83,19 @@ void World::update()
     // FlyWeight
     grassTile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, offsetX);
     grassTile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
+    grassTile.template send<float, int>(MSG_SET_GRAPHICS_ZOOM, zoom);
     grassTile.update();
     
     sandTile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, offsetX);
     sandTile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
+    sandTile.template send<float, int>(MSG_SET_GRAPHICS_ZOOM, zoom);
     sandTile.update();
     
     waterTile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, offsetX);
     waterTile.template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, offsetY);
+    waterTile.template send<float, int>(MSG_SET_GRAPHICS_ZOOM, zoom);
     waterTile.update();
- 
+  
     // GameObjects
     for(size_t i = 0; i < _objectPool.size(); i++)
     {
@@ -101,7 +108,7 @@ void World::update()
                    
             if(fastSendToGameObjectUnion<GameObjectUnion<World>, int, bool>(&_objectPool[i][l], MSG_GET_INPUT, MSG_DATA_INPUT_SELECTED))
             {
-              //  selection.addSelectedCandidate(&_objectPool[i][l]);
+                selection.addSelectedCandidate(&_objectPool[i][l]);
             }
             if(fastSendToGameObjectUnion<GameObjectUnion<World>, int, bool>(&_objectPool[i][l], MSG_GET_INPUT, MSG_DATA_INPUT_HOVERED))
             {
@@ -111,7 +118,7 @@ void World::update()
 
         sortGameObjects(_objectPool[i]);
     }
-    //selection.update();
+    selection.update();
     DEBUG_FUN_VAR("%p | STOP | %s\n", this, __PRETTY_FUNCTION__);
 }
 
@@ -130,7 +137,7 @@ void World::render()
                 case WORLD_TILE_SAND:
                 sandTile.render(x, y);
                 break;
-
+ 
                 case WORLD_TILE_WATER:
                 waterTile.render(x, y);
                 break;                

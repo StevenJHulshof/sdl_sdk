@@ -58,14 +58,14 @@ void Selection<gbu_t>::update()
 template <class gbu_t>
 void Selection<gbu_t>::render()
 {
-//    if(selectedObject != NULL)
-//    {
-//        gTextures[TEXTURE_OBJECT_SELECTION_MENU].render(SCREEN_WIDTH - gTextures[TEXTURE_OBJECT_SELECTION_MENU].getWidth() - 16,
-//                                                        16, NULL, 0, NULL, SDL_FLIP_NONE, 1);
-//        gTextures[GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, int>(selectedObject, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_TEXTURE_TYPE)].render(
-//            SCREEN_WIDTH - (int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getWidth() * 3 / 4) - 16, -(int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getHeight() / 4) + 16, NULL, 0, NULL,
-//            GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, SDL_RendererFlip>(selectedObject, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_FLIP), 1);
-//    }
+    if(selectedObject != NULL)
+    {
+        gTextures[TEXTURE_OBJECT_SELECTION_MENU].render(SCREEN_WIDTH - gTextures[TEXTURE_OBJECT_SELECTION_MENU].getWidth() - 16,
+                                                        16, NULL, 0, NULL, SDL_FLIP_NONE, 1);
+        gTextures[GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, int>(selectedObject, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_TEXTURE_TYPE)].render(
+            SCREEN_WIDTH - (int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getWidth() * 3 / 4) - 16, -(int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getHeight() / 4) + 16, NULL, 0, NULL,
+            GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, SDL_RendererFlip>(selectedObject, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_FLIP), 1);
+    }
 
     int x, y;
     Input::getMousePos(&x, &y);
@@ -78,7 +78,7 @@ template <class gbu_t>
 void Selection<gbu_t>::prioritizeSelected()
 {
     int maxPriority = 0;
-    
+        
     for(size_t i = 0; i < selectedPool.size(); i++)
     {
         int priority = GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, int>(selectedPool[i], MSG_GET_INPUT, MSG_DATA_INPUT_PRIORITY);
@@ -97,6 +97,11 @@ void Selection<gbu_t>::prioritizeSelected()
         {
             GameObjectUnionUtility::sendToGameObjectUnion<gbu_t, bool, int>(selectedPool[i], MSG_SET_INPUT_SELECTED, false);
         }
+    }
+    
+    if(!selectedPool.size())
+    {
+        selectedObject = NULL;
     }
     
     selectedPool.clear();

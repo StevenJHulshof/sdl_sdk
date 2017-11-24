@@ -27,10 +27,14 @@ int main(int argc, char* args[])
             GameCore core;
 			//Main loop flag
 			bool quit = false;
+            SDL_Event event;
             ShowCursor(false);
 			//While application is running
             uint64_t frameTime = 1;
 			while( !quit ) {
+                while(SDL_PollEvent( &event ) != 0) {
+
+				}
                 uint64_t startTime = getTimeMicroSec();
                 SDL_Color textColor = { 0, 255, 0 };
                 gTextTexture.loadFromRenderedText("FPS: " + std::to_string((int)(1000000 / frameTime)), textColor);

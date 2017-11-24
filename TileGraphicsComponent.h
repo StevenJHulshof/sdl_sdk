@@ -30,9 +30,7 @@ TileGraphicsComponent<obj_t>::~TileGraphicsComponent()
 template <class obj_t>
 void TileGraphicsComponent<obj_t>::render(int xPos, int yPos)
 {    
-//    bool hovered = false;
     int type = 0;
-//    this->getGameObject()->template send<int, bool>(MSG_GET_INPUT, MSG_DATA_INPUT_HOVERED, &hovered);
     this->getGameObject()->template send<int, int>(MSG_GET_PHYSICS, MSG_DATA_PHYSICS_TYPE, &type);
     
     int screenPosX = 0, screenPosY = 0;
@@ -44,15 +42,10 @@ void TileGraphicsComponent<obj_t>::render(int xPos, int yPos)
     gTextures[this->textureType].render(screenPosX + this->offsetX, screenPosY + this->offsetY, NULL, 0, NULL, this->flip, this->zoom);   
     if(type == WORLD_TILE_WATER || type == WORLD_TILE_SAND)
     {        
-//        int overlay = Overlay::getTileOverlay(this->getGameObject()->getContainer()->_tileGrid, xPos, yPos, type);
-//        if(overlay < 63)
-//        {
-//            gTextures[TEXTURE_TILE_OVERLAY_0000 + overlay].render(screenPosX, screenPosY, NULL, 0, NULL, this->flip, this->zoom);
-//        }
+        int overlay = Overlay::getTileOverlay(this->getGameObject()->getContainer()->_tileGrid, xPos, yPos, type);
+        if(overlay < 63)
+        {
+            gTextures[TEXTURE_TILE_OVERLAY_0000 + overlay].render(screenPosX + this->offsetX, screenPosY + this->offsetY, NULL, 0, NULL, this->flip, this->zoom);
+        }
     }
-//    
-//    if(hovered)
-//    {
-//        gTextures[TEXTURE_TILE_HOVERED].render(screenPosX, screenPosY, NULL, 0, NULL, this->flip, this->zoom);
-//    }
 }
