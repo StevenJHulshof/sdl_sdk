@@ -50,94 +50,55 @@ void CameraInputComponent<obj_t>::update()
     
     int w = (int) gTextures[TEXTURE_TEMPLATE].getWidth() * zoom;
     int h = (int) gTextures[TEXTURE_TEMPLATE].getHeight() * zoom;
-    
-    if(Input::onKeyPressed(VK_UP)) 
-    {
-        if(y < -96)
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
-        }
-    } 
-    if(Input::onKeyPressed(VK_DOWN)) 
-    {
-        if(y - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y - velocity);
-        }
-    }
-    if(Input::onKeyPressed(VK_LEFT)) 
-    {
-        if(x < -16)
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
-        }
-    }
-    if(Input::onKeyPressed(VK_RIGHT)) 
-    {
-        if(x - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75)
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
-        }
-    }
-    if(Input::onKeyPressed('Z')) 
-    {
-        this->getGameObject()->template send<float, int>(MSG_SET_GRAPHICS_ZOOM, ZOOM_FACTOR_0);
-    }
-    if(Input::onKeyPressed('X')) 
-    {
-        this->getGameObject()->template send<float, int>(MSG_SET_GRAPHICS_ZOOM, ZOOM_FACTOR_1);
-    }
-    
-    int screenPosX, screenPosY;
-    Input::getMousePos(&screenPosX, &screenPosY);
-    if(screenPosX == 0)
-    {
-        if(x < -16)
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
-        }
-    }
-    if(screenPosX == SCREEN_WIDTH - 1)
-    {
-        if(x - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75)
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
-        }
-    }
-    if(screenPosY == 0)
-    {
-        if(y < -96)
-        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
-        }     
-    }
-    if(screenPosY == SCREEN_HEIGHT - 1)
-    {
-        if(y - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
-        {
-
-        }
-    }
-    
+     
     if(Input::onRightMouseClickDown())
     {
         int dragX = 0, dragY = 0;
         Input::getMousePos(&dragX, &dragY);
         if(!dragFlag)
         {
-            dragStartX = dragX + x;
-            dragStartY = dragY + y;
+            dragStartX = x - dragX;
+            dragStartY = y - dragY;
             dragFlag = true;
         }
-//        if( dragX < -16 && dragX - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75 &&
-//            dragY < -96 && dragY - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
-//        {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, dragStartY - dragY); 
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, dragStartX - dragX); 
-//        }   
+        if( dragStartX + dragX < -16 && dragStartX + dragX - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75 &&
+            dragStartY + dragY < -96 && dragStartY + dragY - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4) )
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, dragStartY + dragY); 
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, dragStartX + dragX); 
+        }   
     }
     else
     {
         dragFlag = false;
+        
+        if(Input::onKeyPressed(VK_UP)) 
+        {
+            if(y < -96)
+            {
+                this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
+            }
+        } 
+        if(Input::onKeyPressed(VK_DOWN)) 
+        {
+            if(y - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
+            {
+                this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y - velocity);
+            }
+        }
+        if(Input::onKeyPressed(VK_LEFT)) 
+        {
+            if(x < -16)
+            {
+                this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
+            }
+        }
+        if(Input::onKeyPressed(VK_RIGHT)) 
+        {
+            if(x - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75)
+            {
+                this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
+            }
+        }
     }
 }
