@@ -55,10 +55,11 @@ Debug/GameObjectUnion.cpp.o: GameObjectUnion.cpp GameObjectUnion.h Tile.h \
  TileGraphicsComponent.h world_types.h GraphicsComponent.h Overlay.h \
  RawWood.h Resource.h ResourceInputComponent.h ResourcePhysicsComponent.h \
  ResourceGraphicsComponent.h RawWoodInputComponent.h \
- RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h Warrior.h Unit.h \
- UnitInputComponent.h UnitPhysicsComponent.h UnitGraphicsComponent.h \
- WarriorInputComponent.h WarriorPhysicsComponent.h \
- WarriorGraphicsComponent.h
+ RawWoodPhysicsComponent.h RawWoodGraphicsComponent.h RawStone.h \
+ RawStoneInputComponent.h RawStonePhysicsComponent.h \
+ RawStoneGraphicsComponent.h Warrior.h Unit.h UnitInputComponent.h \
+ UnitPhysicsComponent.h UnitGraphicsComponent.h WarriorInputComponent.h \
+ WarriorPhysicsComponent.h WarriorGraphicsComponent.h
 
 GameObjectUnion.h:
 
@@ -221,6 +222,14 @@ RawWoodInputComponent.h:
 RawWoodPhysicsComponent.h:
 
 RawWoodGraphicsComponent.h:
+
+RawStone.h:
+
+RawStoneInputComponent.h:
+
+RawStonePhysicsComponent.h:
+
+RawStoneGraphicsComponent.h:
 
 Warrior.h:
 

@@ -50,23 +50,34 @@ void CameraInputComponent<obj_t>::update()
     
     int w = (int) gTextures[TEXTURE_TEMPLATE].getWidth() * zoom;
     int h = (int) gTextures[TEXTURE_TEMPLATE].getHeight() * zoom;
-     
-    if(Input::onRightMouseClickDown())
+    
+    int dragX = 0, dragY = 0;
+    Input::getMousePos(&dragX, &dragY);
+    
+    if(Input::onRightMouseClickDown() && !Input::onLeftMouseClickDown())
     {
-        int dragX = 0, dragY = 0;
-        Input::getMousePos(&dragX, &dragY);
         if(!dragFlag)
         {
             dragStartX = x - dragX;
             dragStartY = y - dragY;
             dragFlag = true;
         }
-        if( dragStartX + dragX < -16 && dragStartX + dragX - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75 &&
-            dragStartY + dragY < -96 && dragStartY + dragY - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4) )
+        if(dragStartY + dragY < -96 && dragStartY + dragY - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
         {
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, dragStartY + dragY); 
-            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, dragStartX + dragX); 
-        }   
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, dragStartY + dragY);   
+        }
+        else
+        {
+            dragStartY = y - dragY;
+        }
+        if(dragStartX + dragX < -16 && dragStartX + dragX - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, dragStartX + dragX);             
+        }
+        else
+        {
+            dragStartX = x - dragX;
+        }
     }
     else
     {

@@ -84,6 +84,7 @@ enum {
     TEXTURE_OBJECT_SELECTION_MENU,
     TEXTURE_CURSOR_DOT,
     TEXTURE_CURSOR_ARROW,
+    TEXTURE_CURSOR_DRAG,
     TEXTURES_TOTAL
 };
 
@@ -168,5 +169,6 @@ const std::string gTextureStringNames[TEXTURES_TOTAL] = {
     "unit_warrior_hovered",
     "object_selection_menu",
     "cursor_dot",
-    "cursor_arrow"
+    "cursor_arrow",
+    "cursor_drag"
 };

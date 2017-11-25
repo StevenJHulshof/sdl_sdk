@@ -64,7 +64,7 @@ void InputComponent<obj_t>::update()
     int h = gTextures[TEXTURE_TEMPLATE].getHeight() * zoom;
     
     Input::getMousePos(&x, &y);
-    if(Input::onLeftMouseClickDown())
+    if(Input::onLeftMouseClickDown() && !Input::onRightMouseClickDown())
     {   
         if( (x > screenPosX) && (x < (screenPosX + w)) &&
             (y > screenPosY) && (y < (screenPosY + h))) 

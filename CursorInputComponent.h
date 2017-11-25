@@ -38,4 +38,13 @@ void CursorInputComponent<obj_t>::update()
     Input::getMousePos(&screenPosX, &screenPosY);
     this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_SCREEN_POS_X, screenPosX);
     this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_SCREEN_POS_Y, screenPosY);
+    
+    if(Input::onRightMouseClickDown() && !Input::onLeftMouseClickDown())
+    {
+        this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, TEXTURE_CURSOR_DRAG);
+    }
+    else
+    {
+        this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_TEXTURE_TYPE, TEXTURE_CURSOR_ARROW);        
+    }
 }
