@@ -5,6 +5,7 @@
 #include "world_types.h"
 #include "Container.h"
 #include "Camera.h"
+#include "Cursor.h"
 #include "Sort.h"
 #include "Generator.h"
 #include "GameObjectUnion.h"
@@ -24,6 +25,7 @@ public:
     Tile<World> waterTile;
     
     Camera<World> camera;
+    Cursor<World> cursor;
     Generator generator;
     Selection<GameObjectUnion<World>> selection;
     int _tileGrid[TILE_GRID_X][TILE_GRID_Y];

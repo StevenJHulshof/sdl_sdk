@@ -66,10 +66,6 @@ void Selection<gbu_t>::render()
             SCREEN_WIDTH - (int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getWidth() * 3 / 4) - 16, -(int)(gTextures[TEXTURE_OBJECT_SELECTION_MENU].getHeight() / 4) + 16, NULL, 0, NULL,
             GameObjectUnionUtility::fastSendToGameObjectUnion<gbu_t, int, SDL_RendererFlip>(selectedObject, MSG_GET_GRAPHICS, MSG_DATA_GRAPHICS_FLIP), 1);
     }
-
-    int x, y;
-    Input::getMousePos(&x, &y);
-    gTextures[TEXTURE_CURSOR_ARROW].render(x, y, NULL, 0, NULL, SDL_FLIP_NONE, 1);
 }
 
 template <class gbu_t>

@@ -7,7 +7,7 @@
 
 enum
 {
-    CAMERA_VELOCITY = 20
+    CAMERA_VELOCITY = 15
 };
 
 template <class con_t>

@@ -118,7 +118,10 @@ void World::update()
 
         sortGameObjects(_objectPool[i]);
     }
+    
     selection.update();
+    cursor.update();
+    
     DEBUG_FUN_VAR("%p | STOP | %s\n", this, __PRETTY_FUNCTION__);
 }
 
@@ -157,6 +160,8 @@ void World::render()
     }
     
     selection.render();
+    cursor.render();
+    
     gTextTexture.render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1);
     DEBUG_FUN_VAR("%p | STOP  | %s\n", this, __PRETTY_FUNCTION__);
 }

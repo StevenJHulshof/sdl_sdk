@@ -10,6 +10,8 @@ class CameraInputComponent: public InputComponent<obj_t>
 private:
     const float ZOOM_FACTOR_0 = 1.00;
     const float ZOOM_FACTOR_1 = 0.5;
+    int dragStartX, dragStartY;
+    bool dragFlag;
 
 public:
     CameraInputComponent();
@@ -20,7 +22,10 @@ public:
 
 template <class obj_t>
 CameraInputComponent<obj_t>::CameraInputComponent():
-    InputComponent<obj_t>()
+    InputComponent<obj_t>(),
+    dragStartX(0),
+    dragStartY(0),
+    dragFlag(false)
 {
     
 }
@@ -81,5 +86,58 @@ void CameraInputComponent<obj_t>::update()
     if(Input::onKeyPressed('X')) 
     {
         this->getGameObject()->template send<float, int>(MSG_SET_GRAPHICS_ZOOM, ZOOM_FACTOR_1);
+    }
+    
+    int screenPosX, screenPosY;
+    Input::getMousePos(&screenPosX, &screenPosY);
+    if(screenPosX == 0)
+    {
+        if(x < -16)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
+        }
+    }
+    if(screenPosX == SCREEN_WIDTH - 1)
+    {
+        if(x - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
+        }
+    }
+    if(screenPosY == 0)
+    {
+        if(y < -96)
+        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
+        }     
+    }
+    if(screenPosY == SCREEN_HEIGHT - 1)
+    {
+        if(y - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
+        {
+
+        }
+    }
+    
+    if(Input::onRightMouseClickDown())
+    {
+        int dragX = 0, dragY = 0;
+        Input::getMousePos(&dragX, &dragY);
+        if(!dragFlag)
+        {
+            dragStartX = dragX + x;
+            dragStartY = dragY + y;
+            dragFlag = true;
+        }
+//        if( dragX < -16 && dragX - SCREEN_WIDTH - 16 > (int) -TILE_GRID_X * w * 0.75 &&
+//            dragY < -96 && dragY - SCREEN_HEIGHT + 64 > (int) -TILE_GRID_Y * (h / 4))
+//        {
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, dragStartY - dragY); 
+            this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, dragStartX - dragX); 
+//        }   
+    }
+    else
+    {
+        dragFlag = false;
     }
 }

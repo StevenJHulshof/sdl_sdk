@@ -126,6 +126,11 @@
           <File Name="GameObjectUnion.h"/>
           <File Name="GameObjectUnion.cpp"/>
         </VirtualDirectory>
+        <VirtualDirectory Name="cursor">
+          <File Name="Cursor.h"/>
+          <File Name="CursorGraphicsComponent.h"/>
+          <File Name="CursorInputComponent.h"/>
+        </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="container">
         <File Name="Container.h"/>
