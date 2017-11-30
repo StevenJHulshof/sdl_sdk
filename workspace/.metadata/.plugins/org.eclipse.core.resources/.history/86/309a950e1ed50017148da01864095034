@@ -1,0 +1,14 @@
+#include "GameObject.h"
+
+GameObject::GameObject():
+	_textureType(0);
+	_screenPosX(0);
+
+{
+
+}
+
+GameObject::~GameObject()
+{
+
+}

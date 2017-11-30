@@ -1,0 +1,12 @@
+#include "Cursor.h"
+
+Cursor::Cursor():
+	GameObject()
+{
+
+}
+
+Cursor::~Cursor()
+{
+
+}

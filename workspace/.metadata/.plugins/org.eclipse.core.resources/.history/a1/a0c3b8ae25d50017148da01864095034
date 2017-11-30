@@ -1,0 +1,12 @@
+#pragma once;
+
+#include "grid_types.h"
+
+class Grid {
+public:
+
+	static int _tileGrid
+
+	Grid();
+	virtual ~Grid();
+};

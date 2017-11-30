@@ -1,0 +1,31 @@
+#pragma once
+
+#include "container_types.h"
+#include "Generator.h"
+#include "GlobalObjectPool.h"
+#include "Grid.h"
+#include "Tile.h"
+#include "Unit.h"
+#include "Camera.h"
+#include "Cursor.h"
+
+class Container
+{
+private:
+	void generateWorld();
+
+public:
+	Container();
+	virtual ~Container();
+
+	Tile grassTile;
+	Tile sandTile;
+	Tile waterTile;
+
+    Generator generator;
+    Camera camera;
+    Cursor cursor;
+
+	virtual void update();
+	virtual void render();
+};

@@ -1,0 +1,13 @@
+#pragma once
+
+class Container {
+public:
+	Container();
+	virtual ~Container();
+
+    int _tileGrid[TILE_GRID_X][TILE_GRID_Y];
+    int _playableGrid[TILE_GRID_X][TILE_GRID_Y];
+
+	virtual void update();
+	virtual void render();
+};

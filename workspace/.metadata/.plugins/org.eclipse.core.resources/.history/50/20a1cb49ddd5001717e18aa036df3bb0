@@ -1,0 +1,60 @@
+#pragma once
+
+#include <vector>
+#include "grid_types.h"
+#include "Unit.h"
+
+class GlobalObjectPool
+{
+private:
+	static GlobalObjectPool *_pInstance;
+
+	GlobalObjectPool();
+	virtual ~GlobalObjectPool();
+
+	template <class object_t>
+	void renderPool(std::vector<object_t> &pool, int yPos, int *index);
+	template <class object_t>
+	void sortObjectPool(std::vector<object_t> &pool);
+
+public:
+	static GlobalObjectPool *pInstance()
+	{
+		if(!_pInstance)
+		{
+			_pInstance = new GlobalObjectPool();
+		}
+		return _pInstance;
+	}
+
+	std::vector<Unit*> _unitPool;
+
+	void update(int offsetX, int offsetY);
+	void render();
+};
+
+template <class object_t>
+void GlobalObjectPool::sortObjectPool(std::vector<object_t> &pool)
+{
+	for(size_t i = 1; i < pool.size(); i++)
+	{
+		object_t index = pool[i];
+		int j = i - 1;
+
+		for(;j >= 0 && pool[j]->_screenPosY < index->_screenPosY; j--)
+		{
+			pool[j + 1] = pool[j];
+		}
+		pool[j + 1] = index;
+	}
+}
+
+template <class object_t>
+void GlobalObjectPool::renderPool(std::vector<object_t> &pool, int yPos, int *index)
+{
+	for(;pool[*index]->_yPos == yPos && *index > 0; *index -= 1);
+	{
+		std::cout << "Y: " << yPos << " yPos: " << pool[*index]->_yPos << " index: " << *index << std::endl;
+		pool[*index]->render();
+	}
+}

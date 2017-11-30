@@ -1,0 +1,12 @@
+#include "Warrior.h"
+
+Warrior::Warrior(int xPos, int yPos):
+	Unit(xPos, yPos, TYPE_UNIT_WARRIOR)
+{
+
+}
+
+Warrior::~Warrior()
+{
+
+}

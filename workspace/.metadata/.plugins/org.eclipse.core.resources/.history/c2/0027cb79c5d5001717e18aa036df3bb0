@@ -1,0 +1,11 @@
+#include "Unit.h"
+
+Unit::Unit(int xPos, int yPos, int type)
+{
+
+}
+
+Unit::~Unit()
+{
+
+}

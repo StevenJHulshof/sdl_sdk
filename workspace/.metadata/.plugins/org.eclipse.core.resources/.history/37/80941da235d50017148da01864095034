@@ -1,0 +1,17 @@
+/*
+ * Cursor.cpp
+ *
+ *  Created on: Nov 29, 2017
+ *      Author: Steven
+ */
+
+#include "Cursor.h"
+
+Cursor::Cursor() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Cursor::~Cursor() {
+	// TODO Auto-generated destructor stub
+}

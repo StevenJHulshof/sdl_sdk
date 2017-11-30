@@ -1,0 +1,85 @@
+#include "Camera.h"
+
+Camera::Camera(int screenPosX, int screenPosY):
+	GameObject(),
+	_dragFlag(false),
+	_dragStartX(0),
+	_dragStartY(0)
+{
+	_screenPosX = screenPosX;
+	_screenPosY = screenPosY;
+	_velocity = CAMERA_VELOCITY;
+}
+
+Camera::~Camera()
+{
+
+}
+
+void Camera::updateInput()
+{
+	int w = gTextures[TEXTURE_TEMPLATE].getWidth() * _zoom;
+	int h = gTextures[TEXTURE_TEMPLATE].getHeight() * _zoom;
+
+	int dragX = 0, dragY = 0;
+	Input::getMousePos(&dragX, &dragY);
+
+	if(Input::onRightMouseClickDown() && !Input::onLeftMouseClickDown())
+	{
+		if(!_dragFlag)
+		{
+			_dragStartX = x - dragX;
+			_dragStartY = y - dragY;
+			_dragFlag = true;
+		}
+		if(_dragStartY + dragY < -96 && _dragStartY + dragY - SCREEN_HEIGHT + 64 > (int) -GRID_Y * (h / 4))
+		{
+			_offsetY = _dragStartY + dragY;
+		}
+		else
+		{
+			_dragStartY = y - dragY;
+		}
+		if(_dragStartX + dragX < -16 && _dragStartX + dragX - SCREEN_WIDTH - 16 > (int) -GRID_X * w * 0.75)
+		{
+			_offsetX = _dragStartX + dragX;
+		}
+		else
+		{
+			_dragStartX = x - dragX;
+		}
+	}
+	else
+	{
+		dragFlag = false;
+
+		if(Input::onKeyPressed(VK_UP))
+		{
+			if(y < -96)
+			{
+				this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y + velocity);
+			}
+		}
+		if(Input::onKeyPressed(VK_DOWN))
+		{
+			if(y - SCREEN_HEIGHT + 64 > (int) -GRID_Y * (h / 4))
+			{
+				this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_Y, y - velocity);
+			}
+		}
+		if(Input::onKeyPressed(VK_LEFT))
+		{
+			if(x < -16)
+			{
+				this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x + velocity);
+			}
+		}
+		if(Input::onKeyPressed(VK_RIGHT))
+		{
+			if(x - SCREEN_WIDTH - 16 > (int) -GRID_X * w * 0.75)
+			{
+				this->getGameObject()->template send<int, int>(MSG_SET_GRAPHICS_OFFSET_X, x - velocity);
+			}
+		}
+	}
+}

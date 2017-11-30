@@ -1,0 +1,31 @@
+#include "GlobalObjectPool.h"
+
+GlobalObjectPool *GlobalObjectPool::_pInstance = 0;
+
+GlobalObjectPool::GlobalObjectPool()
+{
+
+}
+
+GlobalObjectPool::~GlobalObjectPool()
+{
+
+}
+
+void GlobalObjectPool::update(int offsetX, int offsetY)
+{
+	updatePool(_unitPool, offsetX, offsetY);
+	updatePool(_warriorPool, offsetX, offsetY);
+}
+
+void GlobalObjectPool::render()
+{
+	int unitIndex = _unitPool.size() - 1;
+	int warriorIndex = _warriorPool.size() - 1;
+
+	for(int y = 0; y < GRID_Y; y++)
+	{
+		renderPool(_unitPool, y, &unitIndex);
+	}
+}
+

@@ -1,0 +1,18 @@
+/*
+ * Tile.cpp
+ *
+ *  Created on: Nov 29, 2017
+ *      Author: Steven
+ */
+
+#include "Tile.h"
+
+Tile::Tile()
+{
+
+}
+
+Tile::~Tile()
+{
+
+}

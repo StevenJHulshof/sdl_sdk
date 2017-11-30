@@ -1,0 +1,91 @@
+/*
+ * Container.cpp
+ *
+ *  Created on: Nov 29, 2017
+ *      Author: Steven
+ */
+
+#include "Container.h"
+
+Container::Container():
+	grassTile(TYPE_TILE_GRASS),
+	sandTile(TYPE_TILE_SAND),
+	waterTile(TYPE_TILE_WATER),
+	generator(),
+	camera(CAMERA_OFFSET_X_START, CAMERA_OFFSET_Y_START),
+	cursor(),
+	unit(10, 10, TYPE_UNIT_WARRIOR)
+{
+	generateWorld();
+}
+
+Container::~Container()
+{
+
+}
+
+void Container::update()
+{
+	camera.update();
+	grassTile._offsetX = camera._offsetX;
+	grassTile._offsetY = camera._offsetY;
+	sandTile._offsetX = camera._offsetX;
+	sandTile._offsetY = camera._offsetY;
+	waterTile._offsetX = camera._offsetX;
+	waterTile._offsetY = camera._offsetY;
+	unit._offsetX = camera._offsetX;
+	unit._offsetY = camera._offsetY;
+
+	unit.update();
+
+	cursor.update();
+}
+
+void Container::render()
+{
+	for(int y = 0; y < GRID_Y; y++)
+	{
+		for(int x = 0; x < GRID_X; x++)
+		{
+			switch(Grid::_tileGrid[x][y])
+			{
+			case TYPE_TILE_GRASS:
+				grassTile.render(x, y);
+				break;
+			case TYPE_TILE_SAND:
+				sandTile.render(x, y);
+				break;
+			case TYPE_TILE_WATER:
+				waterTile.render(x, y);
+				break;
+			default:
+				break;
+			}
+		}
+	}
+
+	unit.render();
+
+	cursor.render();
+}
+
+void Container::generateWorld()
+{
+	generator.fillGrid(Grid::_tileGrid, TYPE_TILE_GRASS);
+	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_SAND, 40, 20);
+	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_WATER, 40, 30);
+
+	generator.fillGrid(Grid::_playableGrid, TYPE_EMPTY);
+
+	for(int i = 0; i < 100; i++)
+	{
+		int xRand = rand() % GRID_X;
+		int yRand = rand() % GRID_Y;
+		if(Grid::_tileGrid[xRand][yRand] != TYPE_TILE_WATER && Grid::_playableGrid[xRand][yRand] == TYPE_EMPTY)
+		{
+			Unit *unit = new Unit(xRand, yRand, TYPE_UNIT_WARRIOR);
+			GlobalObjectPool::_unitPool.push_back(unit);
+			std::cout << GlobalObjectPool::_unitPool.size() << std::endl;
+		}
+	}
+}

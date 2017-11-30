@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="20" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="443" y="118">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
+<coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1511950421915" focus="true" label="Workspace - C/C++">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+<part id="38"/>
+<part id="39"/>
+<part id="40"/>
+<part id="41"/>
+<part id="42"/>
+<part id="43"/>
+<part id="44"/>
+<part id="45"/>
+<part id="46"/>
+<part id="47"/>
+<part id="48"/>
+<part id="49"/>
+<part id="50"/>
+<part id="51"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sdl_game.cpp" partName="sdl_game.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sdl_game.cpp" title="sdl_game.cpp" tooltip="sdl_game/src/sdl_game.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sdl_game.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="912" selectionTopPixel="224"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameCore.h" partName="GameCore.h" path="C:/Users/Steven/workspace/sdl_game/src/game/GameCore.h" title="GameCore.h" tooltip="sdl_game/src/game/GameCore.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/game/GameCore.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="80" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameCore.cpp" partName="GameCore.cpp" path="C:/Users/Steven/workspace/sdl_game/src/game/GameCore.cpp" title="GameCore.cpp" tooltip="sdl_game/src/game/GameCore.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/game/GameCore.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="106" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Texture.cpp" partName="Texture.cpp" path="C:/Users/Steven/workspace/sdl_game/src/system/texture_loading/Texture.cpp" title="Texture.cpp" tooltip="sdl_game/src/system/texture_loading/Texture.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/texture_loading/Texture.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2207" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sdl_includes.h" partName="sdl_includes.h" path="C:/Users/Steven/workspace/sdl_game/src/system/sdl/sdl_includes.h" title="sdl_includes.h" tooltip="sdl_game/src/system/sdl/sdl_includes.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/sdl/sdl_includes.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="106" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Texture.h" partName="Texture.h" path="C:/Users/Steven/workspace/sdl_game/src/system/texture_loading/Texture.h" title="Texture.h" tooltip="sdl_game/src/system/texture_loading/Texture.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/texture_loading/Texture.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="199" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Config.h" partName="Config.h" path="C:/Users/Steven/workspace/sdl_game/src/system/config/Config.h" title="Config.h" tooltip="sdl_game/src/system/config/Config.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/config/Config.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="59" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Config.cpp" partName="Config.cpp" path="C:/Users/Steven/workspace/sdl_game/src/system/config/Config.cpp" title="Config.cpp" tooltip="sdl_game/src/system/config/Config.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/config/Config.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="940" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="config_types.h" partName="config_types.h" path="C:/Users/Steven/workspace/sdl_game/src/system/config/config_types.h" title="config_types.h" tooltip="sdl_game/src/system/config/config_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/config/config_types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="124" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Overlay.cpp" partName="Overlay.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/overlay/Overlay.cpp" title="Overlay.cpp" tooltip="sdl_game/src/sandbox/controllers/overlay/Overlay.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/overlay/Overlay.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2552" selectionTopPixel="1125"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Overlay.h" partName="Overlay.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/overlay/Overlay.h" title="Overlay.h" tooltip="sdl_game/src/sandbox/controllers/overlay/Overlay.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/overlay/Overlay.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="174" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Container.cpp" partName="Container.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/container/Container.cpp" title="Container.cpp" tooltip="sdl_game/src/sandbox/container/Container.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/container/Container.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1692" selectionTopPixel="649"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Container.h" partName="Container.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/container/Container.h" title="Container.h" tooltip="sdl_game/src/sandbox/container/Container.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/container/Container.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="201" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Generator.h" partName="Generator.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/generator/Generator.h" title="Generator.h" tooltip="sdl_game/src/sandbox/controllers/generator/Generator.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/generator/Generator.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="556" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Generator.cpp" partName="Generator.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/generator/Generator.cpp" title="Generator.cpp" tooltip="sdl_game/src/sandbox/controllers/generator/Generator.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/generator/Generator.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2220" selectionTopPixel="496"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Translate.h" partName="Translate.h" path="C:/Users/Steven/workspace/sdl_game/src/system/translate/Translate.h" title="Translate.h" tooltip="sdl_game/src/system/translate/Translate.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/translate/Translate.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameObject.cpp" partName="GameObject.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/game_object/GameObject.cpp" title="GameObject.cpp" tooltip="sdl_game/src/sandbox/assets/game_object/GameObject.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/game_object/GameObject.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1112" selectionTopPixel="714"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameObject.h" partName="GameObject.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/game_object/GameObject.h" title="GameObject.h" tooltip="sdl_game/src/sandbox/assets/game_object/GameObject.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/game_object/GameObject.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Tile.cpp" partName="Tile.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/tiles/base/Tile.cpp" title="Tile.cpp" tooltip="sdl_game/src/sandbox/assets/tiles/base/Tile.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/tiles/base/Tile.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="96" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Tile.h" partName="Tile.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/tiles/base/Tile.h" title="Tile.h" tooltip="sdl_game/src/sandbox/assets/tiles/base/Tile.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/tiles/base/Tile.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="30" selectionOffset="14" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="texture_types.h" partName="texture_types.h" path="C:/Users/Steven/workspace/sdl_game/src/system/texture_loading/texture_types.h" title="texture_types.h" tooltip="sdl_game/src/system/texture_loading/texture_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/texture_loading/texture_types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="101" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="container_types.h" partName="container_types.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/container/container_types.h" title="container_types.h" tooltip="sdl_game/src/sandbox/container/container_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/container/container_types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="294" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Grid.cpp" partName="Grid.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/grid/Grid.cpp" title="Grid.cpp" tooltip="sdl_game/src/sandbox/assets/grid/Grid.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/grid/Grid.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="192" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Grid.h" partName="Grid.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/grid/Grid.h" title="Grid.h" tooltip="sdl_game/src/sandbox/assets/grid/Grid.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/grid/Grid.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="55" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="grid_types.h" partName="grid_types.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/grid/grid_types.h" title="grid_types.h" tooltip="sdl_game/src/sandbox/assets/grid/grid_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/grid/grid_types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="56" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Camera.cpp" partName="Camera.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/utility/camera/Camera.cpp" title="Camera.cpp" tooltip="sdl_game/src/sandbox/assets/utility/camera/Camera.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/utility/camera/Camera.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1599" selectionTopPixel="615"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Camera.h" partName="Camera.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/utility/camera/Camera.h" title="Camera.h" tooltip="sdl_game/src/sandbox/assets/utility/camera/Camera.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/utility/camera/Camera.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="199" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="camera_types.h" partName="camera_types.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/utility/camera/camera_types.h" title="camera_types.h" tooltip="sdl_game/src/sandbox/assets/utility/camera/camera_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/utility/camera/camera_types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="130" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Cursor.cpp" partName="Cursor.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/utility/cursor/Cursor.cpp" title="Cursor.cpp" tooltip="sdl_game/src/sandbox/assets/utility/cursor/Cursor.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/utility/cursor/Cursor.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="625" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Cursor.h" partName="Cursor.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/utility/cursor/Cursor.h" title="Cursor.h" tooltip="sdl_game/src/sandbox/assets/utility/cursor/Cursor.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/utility/cursor/Cursor.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="190" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sdl_game.cpp" partName="sdl_game.cpp" path="C:/Users/Steven/workspace/sdl_game/sdl_game.cpp" title="sdl_game.cpp" tooltip="sdl_game/sdl_game.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/sdl_game.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="415" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Unit.h" partName="Unit.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/units/base/Unit.h" title="Unit.h" tooltip="sdl_game/src/sandbox/assets/units/base/Unit.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/units/base/Unit.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="218" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Unit.cpp" partName="Unit.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/units/base/Unit.cpp" title="Unit.cpp" tooltip="sdl_game/src/sandbox/assets/units/base/Unit.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/units/base/Unit.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="223" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="GlobalObjectPool.cpp" partName="GlobalObjectPool.cpp" path="C:/Users/Steven/Documents/GitHub/sdl_sdk/workspace/sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.cpp" title="GlobalObjectPool.cpp" tooltip="sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="686" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GlobalObjectPool.h" partName="GlobalObjectPool.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.h" title="GlobalObjectPool.h" tooltip="sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="164" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Warrior.h" partName="Warrior.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/units/warrior/Warrior.h" title="Warrior.h" tooltip="sdl_game/src/sandbox/assets/units/warrior/Warrior.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/units/warrior/Warrior.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="163" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Warrior.cpp" partName="Warrior.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/units/warrior/Warrior.cpp" title="Warrior.cpp" tooltip="sdl_game/src/sandbox/assets/units/warrior/Warrior.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/units/warrior/Warrior.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="370" selectionOffset="140" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Input.h" partName="Input.h" path="C:/Users/Steven/workspace/sdl_game/src/system/input/Input.h" title="Input.h" tooltip="sdl_game/src/system/input/Input.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/system/input/Input.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="38" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Resource.h" partName="Resource.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/base/Resource.h" title="Resource.h" tooltip="sdl_game/src/sandbox/assets/resources/base/Resource.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/base/Resource.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Resource.cpp" partName="Resource.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/base/Resource.cpp" title="Resource.cpp" tooltip="sdl_game/src/sandbox/assets/resources/base/Resource.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/base/Resource.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="209" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RawStone.h" partName="RawStone.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.h" title="RawStone.h" tooltip="sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RawStone.cpp" partName="RawStone.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.cpp" title="RawStone.cpp" tooltip="sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="23" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RawResource.h" partName="RawResource.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/raw/base/RawResource.h" title="RawResource.h" tooltip="sdl_game/src/sandbox/assets/resources/raw/base/RawResource.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/raw/base/RawResource.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="158" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RawResource.cpp" partName="RawResource.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/raw/base/RawResource.cpp" title="RawResource.cpp" tooltip="sdl_game/src/sandbox/assets/resources/raw/base/RawResource.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/raw/base/RawResource.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="81" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RawWood.h" partName="RawWood.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.h" title="RawWood.h" tooltip="sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RawWood.cpp" partName="RawWood.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.cpp" title="RawWood.cpp" tooltip="sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="110" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="asset_create.h" partName="asset_create.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/asset_create/asset_create.h" title="asset_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/asset_create.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/asset_create/asset_create.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="resource_create.h" partName="resource_create.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/asset_create/resource/resource_create.h" title="resource_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/resource/resource_create.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/asset_create/resource/resource_create.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="48" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="unit_create.h" partName="unit_create.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.h" title="unit_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="44" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="resource_raw_create.h" partName="resource_raw_create.h" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.h" title="resource_raw_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="94" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="resource_raw_create.cpp" partName="resource_raw_create.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.cpp" title="resource_raw_create.cpp" tooltip="sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="334" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="unit_create.cpp" partName="unit_create.cpp" path="C:/Users/Steven/workspace/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.cpp" title="unit_create.cpp" tooltip="sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="113" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" CommonNavigator.LINKING_ENABLED.delayed="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.SearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.make.ui.makeTargetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.buildConfigActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.NavigationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.OpenActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CodingActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.ui.CView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.cdt.ui.includeBrowser"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.ConvertToMakeWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewMakeFromExisting"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewCWizard1"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewCWizard2"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewHeaderFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.views.ProblemView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" ratio="0.3"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.cdt.ui.CView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@3e9803c2" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.20775771" ratioLeft="391" ratioRight="1491" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.7730337" ratioLeft="688" ratioRight="202" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.7449941" ratioLeft="1265" ratioRight="433" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.make.ui.views.MakeView" label="LabelNotFound"/>
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@501e832b" ratio="0.7498448" ratioLeft="1208" ratioRight="403" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/container/Container.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/container/Container.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sdl_game.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/object_pool/GlobalObjectPool.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/utility/camera/Camera.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/utility/camera/Camera.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/utility/camera/camera_types.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/system/texture_loading/texture_types.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/generator/Generator.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/generator/Generator.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/overlay/Overlay.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/container/container_types.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/controllers/overlay/Overlay.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/units/base/Unit.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/units/warrior/Warrior.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/sdl_game/src/sandbox/assets/resources/base/Resource.cpp"/>
+</editors>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="2399" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="2399" y="0"/>
+</item>
+<item historyLabel="unit_create.h" index="2">
+<position info="not_deleted" x="44" y="0"/>
+</item>
+<item historyLabel="sdl_game.cpp" index="4">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="RawStone.h" index="5">
+<position/>
+</item>
+<item historyLabel="resource_raw_create.cpp" index="3">
+<position info="not_deleted" x="187" y="0"/>
+</item>
+<item historyLabel="RawStone.cpp" index="6">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="RawStone.h" index="5">
+<position info="not_deleted" x="14" y="0"/>
+</item>
+<item historyLabel="resource_raw_create.cpp" index="3">
+<position info="not_deleted" x="334" y="0"/>
+</item>
+<item historyLabel="GlobalObjectPool.cpp" index="7">
+<position info="not_deleted" x="869" y="0"/>
+</item>
+<item historyLabel="Camera.cpp" index="8">
+<position info="not_deleted" x="1652" y="0"/>
+</item>
+<item historyLabel="Camera.h" index="9">
+<position info="not_deleted" x="158" y="0"/>
+</item>
+<item historyLabel="camera_types.h" index="10">
+<position info="not_deleted" x="130" y="0"/>
+</item>
+<item historyLabel="texture_types.h" index="11">
+<position info="not_deleted" x="101" y="18"/>
+</item>
+<item historyLabel="sdl_game.cpp" index="4">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="2399" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="802" y="0"/>
+</item>
+<item historyLabel="Generator.h" index="12">
+<position info="not_deleted" x="253" y="50"/>
+</item>
+<item historyLabel="Generator.h" index="12">
+<position info="not_deleted" x="535" y="0"/>
+</item>
+<item historyLabel="Generator.h" index="12">
+<position info="not_deleted" x="543" y="0"/>
+</item>
+<item historyLabel="Generator.h" index="12">
+<position info="not_deleted" x="556" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="1381" y="6"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2012" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2020" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2225" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2083" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2086" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2105" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2209" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="852" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="1558" y="0"/>
+</item>
+<item historyLabel="Overlay.cpp" index="14">
+<position info="not_deleted" x="2552" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="1494" y="0"/>
+</item>
+<item historyLabel="Camera.h" index="9">
+<position info="not_deleted" x="199" y="0"/>
+</item>
+<item historyLabel="Camera.cpp" index="8">
+<position info="not_deleted" x="1599" y="0"/>
+</item>
+<item historyLabel="container_types.h" index="15">
+<position info="not_deleted" x="294" y="22"/>
+</item>
+<item historyLabel="Container.h" index="1">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="1494" y="0"/>
+</item>
+<item historyLabel="Overlay.h" index="16">
+<position info="not_deleted" x="174" y="0"/>
+</item>
+<item historyLabel="Overlay.cpp" index="14">
+<position info="not_deleted" x="2552" y="0"/>
+</item>
+<item historyLabel="Generator.cpp" index="13">
+<position info="not_deleted" x="2220" y="0"/>
+</item>
+<item historyLabel="Container.h" index="1">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="1489" y="0"/>
+</item>
+<item historyLabel="Overlay.h" index="16">
+<position info="not_deleted" x="174" y="0"/>
+</item>
+<item historyLabel="Overlay.cpp" index="14">
+<position info="not_deleted" x="2552" y="0"/>
+</item>
+<item historyLabel="Container.cpp" index="0">
+<position info="not_deleted" x="1692" y="0"/>
+</item>
+<item historyLabel="Unit.cpp" index="17">
+<position info="not_deleted" x="223" y="0"/>
+</item>
+<item historyLabel="Warrior.cpp" index="18">
+<position info="not_deleted" x="140" y="370"/>
+</item>
+<item historyLabel="Resource.cpp" index="19">
+<position info="not_deleted" x="209" y="0"/>
+</item>
+<item active="true" historyLabel="GlobalObjectPool.cpp" index="7">
+<position info="not_deleted" x="1151" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="unit_create.cpp" tooltip="sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.cpp">
+<persistable path="/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="resource_raw_create.cpp" tooltip="sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.cpp">
+<persistable path="/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="resource_raw_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.h">
+<persistable path="/sdl_game/src/sandbox/controllers/asset_create/resource/raw/resource_raw_create.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="unit_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.h">
+<persistable path="/sdl_game/src/sandbox/controllers/asset_create/unit/unit_create.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="resource_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/resource/resource_create.h">
+<persistable path="/sdl_game/src/sandbox/controllers/asset_create/resource/resource_create.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="asset_create.h" tooltip="sdl_game/src/sandbox/controllers/asset_create/asset_create.h">
+<persistable path="/sdl_game/src/sandbox/controllers/asset_create/asset_create.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RawWood.cpp" tooltip="sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.cpp">
+<persistable path="/sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RawWood.h" tooltip="sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.h">
+<persistable path="/sdl_game/src/sandbox/assets/resources/raw/wood/RawWood.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RawResource.cpp" tooltip="sdl_game/src/sandbox/assets/resources/raw/base/RawResource.cpp">
+<persistable path="/sdl_game/src/sandbox/assets/resources/raw/base/RawResource.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RawResource.h" tooltip="sdl_game/src/sandbox/assets/resources/raw/base/RawResource.h">
+<persistable path="/sdl_game/src/sandbox/assets/resources/raw/base/RawResource.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RawStone.cpp" tooltip="sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.cpp">
+<persistable path="/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RawStone.h" tooltip="sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.h">
+<persistable path="/sdl_game/src/sandbox/assets/resources/raw/stone/RawStone.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Input.h" tooltip="sdl_game/src/system/input/Input.h">
+<persistable path="/sdl_game/src/system/input/Input.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Warrior.cpp" tooltip="sdl_game/src/sandbox/assets/units/warrior/Warrior.cpp">
+<persistable path="/sdl_game/src/sandbox/assets/units/warrior/Warrior.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Warrior.h" tooltip="sdl_game/src/sandbox/assets/units/warrior/Warrior.h">
+<persistable path="/sdl_game/src/sandbox/assets/units/warrior/Warrior.h"/>
+</file>
+</mruList>
+</workbench>

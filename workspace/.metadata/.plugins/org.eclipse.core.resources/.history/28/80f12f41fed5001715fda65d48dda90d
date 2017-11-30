@@ -1,0 +1,4 @@
+#include "resource_raw_create.h"
+
+void createRawStone(int xPos, int yPos);
+void createRawWood(int xPos, int yPos);

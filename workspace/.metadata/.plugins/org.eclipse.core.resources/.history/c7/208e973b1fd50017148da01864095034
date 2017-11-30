@@ -1,0 +1,26 @@
+#include "GameObject.h"
+
+GameObject::GameObject():
+	_selected(false),
+	_hovered(false),
+	_hasActionMenu(false),
+	_textureType(0),
+	_screenPosX(0),
+	_screenPosY(0),
+	_offsetX(0),
+	_offsetY(0),
+	_priority(0),
+	_basePriority(0),
+	_velocity(0),
+	_xPos(0),
+	_yPos(0),
+	flip(SDL_FLIP_NONE),
+	zoom(0.0)
+{
+
+}
+
+GameObject::~GameObject()
+{
+
+}

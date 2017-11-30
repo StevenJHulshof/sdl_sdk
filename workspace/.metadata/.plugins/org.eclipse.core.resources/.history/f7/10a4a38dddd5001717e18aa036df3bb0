@@ -1,0 +1,44 @@
+#include "GlobalObjectPool.h"
+
+GlobalObjectPool *GlobalObjectPool::_pInstance = 0;
+
+GlobalObjectPool::GlobalObjectPool()
+{
+
+}
+
+GlobalObjectPool::~GlobalObjectPool()
+{
+
+}
+
+void GlobalObjectPool::update(int offsetX, int offsetY)
+{
+	for(size_t i = 0; i < _unitPool.size(); i++)
+	{
+		_unitPool[i]->_offsetX = offsetX;
+		_unitPool[i]->_offsetY = offsetY;
+		_unitPool[i]->update();
+	}
+	sortObjectPool(_unitPool);
+}
+
+void GlobalObjectPool::render()
+{
+	int unitIndex = _unitPool.size() - 1;
+
+	for(int y = 0; y < GRID_Y; y++)
+	{
+		while(_unitPool[unitIndex]->_yPos == y)
+		{
+			std::cout << "Y: " << y << " yPos: " << _unitPool[unitIndex]->_yPos << " unitIndex: " << unitIndex << std::endl;
+			_unitPool[unitIndex]->render();
+			unitIndex--;
+			if(unitIndex < 0)
+			{
+				break;
+			}
+		}
+	}
+}
+

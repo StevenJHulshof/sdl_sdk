@@ -1,0 +1,23 @@
+#include "Unit.h"
+
+Unit::Unit(int xPos, int yPos, int type)
+{
+
+}
+
+Unit::~Unit()
+{
+
+}
+
+void Unit::setTextureType()
+{
+	switch(_type)
+	{
+	case TYPE_UNIT_WARRIOR:
+		_textureType = TEXTURE_UNIT_WARRIOR;
+		break;
+	default:
+		break;
+	}
+}

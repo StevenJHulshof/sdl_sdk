@@ -1,0 +1,18 @@
+/*
+ * Cursor.cpp
+ *
+ *  Created on: Nov 29, 2017
+ *      Author: Steven
+ */
+
+#include "Cursor.h"
+
+Cursor::Cursor()
+{
+
+}
+
+Cursor::~Cursor()
+{
+
+}

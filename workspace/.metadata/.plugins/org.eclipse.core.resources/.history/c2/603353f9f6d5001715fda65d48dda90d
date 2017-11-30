@@ -1,0 +1,10 @@
+#pragma once
+
+#include "GameObject.h"
+
+class RawWood: public GameObject
+{
+public:
+	RawWood();
+	virtual ~RawWood();
+};

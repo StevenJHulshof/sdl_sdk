@@ -1,0 +1,10 @@
+#pragma once
+
+#include "GameObject.h"
+
+class Tile: public GameObject
+{
+public:
+	Tile(int xPos, int yPos, int type);
+	virtual ~Tile();
+};

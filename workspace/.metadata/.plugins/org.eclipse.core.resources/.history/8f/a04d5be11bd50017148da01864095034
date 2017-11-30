@@ -1,0 +1,10 @@
+#pragma once
+
+class Container {
+public:
+	Container();
+	virtual ~Container();
+
+	virtual void update();
+	virtual void render();
+};
