@@ -1,7 +1,6 @@
-#Thu Nov 30 17:35:29 CET 2017
-eclipse.preferences.version=1
-tipsAndTricks=true
-platformState=1511951347203
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
-quickStart=false
 PROBLEMS_FILTERS_MIGRATE=true
+eclipse.preferences.version=1
+platformState=1488185463205
+quickStart=false
+tipsAndTricks=true

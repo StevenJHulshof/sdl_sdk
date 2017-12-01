@@ -72,7 +72,7 @@ void Container::createWorld()
 {
 	generator.fillGrid(Grid::_tileGrid, TYPE_TILE_GRASS);
 	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_SAND, 40, 20);
-	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_WATER, 80, 80);
+	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_WATER, 80, 60);
 	generator.generateBorder(Grid::_tileGrid, TYPE_TILE_WATER);
 
 	generator.fillGrid(Grid::_playableGrid, TYPE_EMPTY);

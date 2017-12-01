@@ -13,10 +13,9 @@ Container::Container():
 	waterTile(TYPE_TILE_WATER),
 	generator(),
 	camera(CAMERA_OFFSET_X_START, CAMERA_OFFSET_Y_START),
-	cursor(),
-	unit(10, 10, TYPE_UNIT_WARRIOR)
+	cursor()
 {
-	generateWorld();
+	createWorld();
 }
 
 Container::~Container()
@@ -33,16 +32,16 @@ void Container::update()
 	sandTile._offsetY = camera._offsetY;
 	waterTile._offsetX = camera._offsetX;
 	waterTile._offsetY = camera._offsetY;
-	unit._offsetX = camera._offsetX;
-	unit._offsetY = camera._offsetY;
 
-	unit.update();
+	gGlobalObjectPool.update(camera._offsetX, camera._offsetY);
 
 	cursor.update();
 }
 
 void Container::render()
 {
+	gTextures[TEXTURE_BACKGROUND].render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1.0);
+
 	for(int y = 0; y < GRID_Y; y++)
 	{
 		for(int x = 0; x < GRID_X; x++)
@@ -64,28 +63,43 @@ void Container::render()
 		}
 	}
 
-	unit.render();
+	gGlobalObjectPool.render();
 
 	cursor.render();
 }
 
-void Container::generateWorld()
+void Container::createWorld()
 {
 	generator.fillGrid(Grid::_tileGrid, TYPE_TILE_GRASS);
 	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_SAND, 40, 20);
-	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_WATER, 40, 30);
+	generator.generatePatch(Grid::_tileGrid, TYPE_TILE_WATER, 80, 80);
+	generator.generateBorder(Grid::_tileGrid, TYPE_TILE_WATER);
 
 	generator.fillGrid(Grid::_playableGrid, TYPE_EMPTY);
+	generator.generatePatch(Grid::_playableGrid, TYPE_RESOURCE_RAW_WOOD, 10, 60, Grid::_tileGrid, TYPE_TILE_GRASS);
+	generator.generatePatch(Grid::_playableGrid, TYPE_RESOURCE_RAW_STONE, 5, 10, Grid::_tileGrid, TYPE_TILE_GRASS);
 
+	for(int y = 0; y < GRID_Y; y++)
+	{
+		for(int x = 0; x < GRID_X; x++)
+		{
+			if(Grid::_playableGrid[x][y] == TYPE_RESOURCE_RAW_STONE)
+			{
+				createRawStone(x, y);
+			}
+			else if(Grid::_playableGrid[x][y] == TYPE_RESOURCE_RAW_WOOD)
+			{
+				createRawWood(x, y);
+			}
+		}
+	}
 	for(int i = 0; i < 100; i++)
 	{
-		int xRand = rand() % GRID_X;
-		int yRand = rand() % GRID_Y;
+		int xRand = rand() % (GRID_X - 1) + 1;
+		int yRand = rand() % (GRID_Y - 1) + 1;
 		if(Grid::_tileGrid[xRand][yRand] != TYPE_TILE_WATER && Grid::_playableGrid[xRand][yRand] == TYPE_EMPTY)
 		{
-			Unit *unit = new Unit(xRand, yRand, TYPE_UNIT_WARRIOR);
-			GlobalObjectPool::_unitPool.push_back(unit);
-			std::cout << GlobalObjectPool::_unitPool.size() << std::endl;
+			createWarrior(xRand, yRand);
 		}
 	}
 }

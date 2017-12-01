@@ -8,6 +8,19 @@
 #include "RawStone.h"
 #include "RawWood.h"
 
+struct GameObjectUnion
+{
+	int type;
+	union
+	{
+		Unit *unit;
+		Warrior *warrior;
+		Resource *resource;
+		RawStone *rawStone;
+		RawWood *rawWood;
+	};
+};
+
 class GlobalObjectPool
 {
 private:
@@ -68,7 +81,7 @@ void GlobalObjectPool::updatePool(std::vector<object_t> &pool, int offsetX, int 
 template <class object_t>
 void GlobalObjectPool::renderPool(std::vector<object_t> &pool, int yPos, int *index)
 {
-	if(*index >= 0)
+	if(*index >= 0 && pool[*index]->_yPos == yPos)
 	{
 		while(true)
 		{
