@@ -77,15 +77,8 @@ bool Config::loadMedia()
         if(!gTextures[i].loadFromFile(basePath + "../textures/" + gTextureStringNames[i] + ".png"))
             success = false;
     }
-    //Open the font
-    char* fontPath = SDL_GetBasePath();
-    strcat(fontPath, "../true_type_fonts/Courier Prime Italic.ttf");
-    gFont = TTF_OpenFont(fontPath, 16);
-    if(gFont == NULL)
-    {
-        printf( "Failed to load font! SDL_ttf Error: %s\n", TTF_GetError() );
-        success = false;
-    }
+	Texture::openFont("Courier Prime", 11);
+
     return success;
 }
 

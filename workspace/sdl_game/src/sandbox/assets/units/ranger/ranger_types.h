@@ -1,0 +1,5 @@
+#pragma once
+
+const int RANGER_HEALTH_DEFAULT = 3;
+const int RANGER_DEFENSE_DEFAULT = 2;
+const int RANGER_ATTACK_RANGED_DEFAULT = 5;

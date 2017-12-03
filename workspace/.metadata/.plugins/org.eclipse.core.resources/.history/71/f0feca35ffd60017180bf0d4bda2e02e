@@ -1,0 +1,27 @@
+#include "Menu.h"
+
+Menu::Menu():
+	GameObject()
+{
+
+}
+
+Menu::~Menu()
+{
+
+}
+
+void Menu::setTextureType()
+{
+	switch(_type)
+	{
+	case TYPE_MENU_ACTION:
+		_textureType = TEXTURE_MENU_ACTION;
+		break;
+	case TYPE_MENU_STAT:
+		_textureType = TEXTURE_OBJECT_MENU_ACTION;
+		break;
+	default:
+		break;
+	}
+}

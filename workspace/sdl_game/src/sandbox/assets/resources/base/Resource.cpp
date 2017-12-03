@@ -29,3 +29,5 @@ void Resource::setTextureType()
 		break;
 	}
 }
+
+std::vector<Resource*> gResourcePool;

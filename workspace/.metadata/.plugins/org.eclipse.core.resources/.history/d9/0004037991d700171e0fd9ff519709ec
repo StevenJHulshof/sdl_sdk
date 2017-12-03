@@ -1,0 +1,17 @@
+#pragma once
+
+#include "stat_types.h"
+#include "Menu.h"
+
+class StatMenu: public Menu
+{
+public:
+	StatMenu(int xPos, int yPos);
+	virtual ~StatMenu();
+
+	std::vector<int> _statTextures;
+
+	virtual void updateGraphics();
+};
+
+extern std::vector<StatMenu*> gStatMenuPool;

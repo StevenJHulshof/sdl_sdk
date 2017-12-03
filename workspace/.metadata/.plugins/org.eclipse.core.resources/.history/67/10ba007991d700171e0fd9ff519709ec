@@ -1,0 +1,8 @@
+#pragma once
+
+enum
+{
+	STAT_HEALTH,
+	STAT_ATTACK,
+	STAT_TOTAL
+};

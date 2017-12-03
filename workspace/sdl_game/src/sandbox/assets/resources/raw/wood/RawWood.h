@@ -10,3 +10,5 @@ public:
 
 	virtual void renderGraphics();
 };
+
+extern std::vector<RawWood*> gRawWoodPool;

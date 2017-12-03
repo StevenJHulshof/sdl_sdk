@@ -2,25 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="_screenPosX" key="selection"/>
+		<item value="gStatMenuPool" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="screenPosX"/>
-			<item value="_screenPosX"/>
-			<item value="pool_t"/>
-			<item value="TILE_GRID_X"/>
-			<item value="TILE_GRID_Y"/>
-			<item value="WORLD"/>
+			<item value="_statMenuPool"/>
+			<item value="_actionMenuPool"/>
+			<item value="_warriorPool"/>
+			<item value="_unitPool"/>
+			<item value="_rawWoodPool"/>
+			<item value="_rawStonePool"/>
+			<item value="_resourcePool"/>
+			<item value="_pWarriorBuffer"/>
 		</list>
 		<list key="replacehistory">
-			<item value="_screenPosX"/>
-			<item value="object_t"/>
-			<item value="GRID_X"/>
-			<item value="GRID_Y"/>
-			<item value="TYPE"/>
+			<item value="gStatMenuPool"/>
+			<item value="gActionMenuPool"/>
+			<item value="gWarriorPool"/>
+			<item value="gUnitPool"/>
+			<item value="gRawWoodPool"/>
+			<item value="gRawStonePool"/>
+			<item value="gResourcePool"/>
+			<item value="_warriorBuffer"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

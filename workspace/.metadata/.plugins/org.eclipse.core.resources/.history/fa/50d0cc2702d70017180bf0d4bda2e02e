@@ -1,0 +1,11 @@
+#include "menu_create.h"
+
+void createActionMenu(int xPos, int yPos)
+{
+
+}
+
+void createStatMenu(int xPos, int yPos)
+{
+
+}

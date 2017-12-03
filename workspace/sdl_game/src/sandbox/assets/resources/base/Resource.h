@@ -11,3 +11,5 @@ public:
 	Resource(int xPos, int yPos, int type);
 	virtual ~Resource();
 };
+
+extern std::vector<Resource*> gResourcePool;

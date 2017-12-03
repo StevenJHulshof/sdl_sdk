@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;sdl_game/src/sandbox/controllers/asset_create/menu/menu_create&apos; to &apos;menu_create.cpp&apos;" description="Rename resource &apos;menu_create&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/sandbox/controllers/asset_create/menu/menu_create" name="menu_create.cpp" stamp="1512178438618" updateReferences="true"/>
+</session>

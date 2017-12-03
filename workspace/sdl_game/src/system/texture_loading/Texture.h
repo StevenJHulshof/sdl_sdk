@@ -22,9 +22,11 @@ public:
     void render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip, float zoom);
     Uint32 getPixelColor(int x, int y);
     SDL_PixelFormat *getPixelFormat();
+    static void openFont(const char* font, int size);
     //Gets image dimensions
     int getWidth();
     int getHeight();
+    void deleteSelf();
 
 
 private:

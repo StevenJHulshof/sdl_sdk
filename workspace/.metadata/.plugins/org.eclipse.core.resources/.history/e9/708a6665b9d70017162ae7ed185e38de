@@ -1,0 +1,12 @@
+#pragma once
+
+#include "Unit.h"
+
+class Ranger: public Unit
+{
+public:
+	Ranger(int xPos, int yPos, int type);
+	virtual ~Ranger();
+};
+
+extern std::vector<Ranger*> gRangerPool;

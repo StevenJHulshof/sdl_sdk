@@ -1,0 +1,3 @@
+#pragma once
+
+const int WARRIOR_HEALTH_DEFAULT = 6;

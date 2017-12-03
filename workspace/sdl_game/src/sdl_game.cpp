@@ -37,9 +37,7 @@ int main(int argc, char* args[])
 
 				}
                 uint64_t startTime = getTimeMicroSec();
-                SDL_Color textColor = { 0, 255, 0 };
-                gTextTexture.loadFromRenderedText("FPS: " + std::to_string((int)(1000000 / frameTime)), textColor);
-//				Handle events on queue
+                // Handle events on queue
                 quit = Input::onKeyPressed(VK_ESCAPE);
                 core.update();
                 // Clear screen
@@ -48,6 +46,9 @@ int main(int argc, char* args[])
 				SDL_RenderClear( gRenderer );
 				// Update screen
                 core.render();
+
+                SDL_Color textColor = { 0, 255, 0 };
+                gTextTexture.loadFromRenderedText("FPS: " + std::to_string((int)(1000000 / frameTime)), textColor);
                 gTextTexture.render(0, 0, NULL, 0, NULL, SDL_FLIP_NONE, 1);
 				SDL_RenderPresent( gRenderer );
                 frameTime = getTimeMicroSec() - startTime;

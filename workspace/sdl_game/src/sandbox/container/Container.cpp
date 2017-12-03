@@ -76,6 +76,8 @@ void Container::createWorld()
 	generator.generateBorder(Grid::_tileGrid, TYPE_TILE_WATER);
 
 	generator.fillGrid(Grid::_playableGrid, TYPE_EMPTY);
+	generator.generatePatch(Grid::_playableGrid, TYPE_UNIT_WARRIOR, 1, 3, Grid::_tileGrid, TYPE_TILE_GRASS);
+	generator.generatePatch(Grid::_playableGrid, TYPE_UNIT_RANGER, 1, 3, Grid::_tileGrid, TYPE_TILE_GRASS);
 	generator.generatePatch(Grid::_playableGrid, TYPE_RESOURCE_RAW_WOOD, 10, 60, Grid::_tileGrid, TYPE_TILE_GRASS);
 	generator.generatePatch(Grid::_playableGrid, TYPE_RESOURCE_RAW_STONE, 5, 10, Grid::_tileGrid, TYPE_TILE_GRASS);
 
@@ -85,21 +87,24 @@ void Container::createWorld()
 		{
 			if(Grid::_playableGrid[x][y] == TYPE_RESOURCE_RAW_STONE)
 			{
-				createRawStone(x, y);
+				RawStone *rawStone = new RawStone(x, y);
+				gRawStonePool.push_back(rawStone);
 			}
 			else if(Grid::_playableGrid[x][y] == TYPE_RESOURCE_RAW_WOOD)
 			{
-				createRawWood(x, y);
+				RawWood *rawWood = new RawWood(x, y);
+				gRawWoodPool.push_back(rawWood);
 			}
-		}
-	}
-	for(int i = 0; i < 100; i++)
-	{
-		int xRand = rand() % (GRID_X - 1) + 1;
-		int yRand = rand() % (GRID_Y - 1) + 1;
-		if(Grid::_tileGrid[xRand][yRand] != TYPE_TILE_WATER && Grid::_playableGrid[xRand][yRand] == TYPE_EMPTY)
-		{
-			createWarrior(xRand, yRand);
+			else if(Grid::_playableGrid[x][y] == TYPE_UNIT_WARRIOR)
+			{
+				Warrior *warrior = new Warrior(x, y);
+				gWarriorPool.push_back(warrior);
+			}
+			else if(Grid::_playableGrid[x][y] == TYPE_UNIT_RANGER)
+			{
+				Ranger *ranger = new Ranger(x, y);
+				gRangerPool.push_back(ranger);
+			}
 		}
 	}
 }

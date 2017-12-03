@@ -1,0 +1,4 @@
+#pragma once
+
+const int UNIT_HEALTH_DEFAULT = 3;
+const int UNIT_DEFENSE_DEFAULT = 1;

@@ -1,0 +1,10 @@
+#pragma once
+
+class Warrior: public Unit
+{
+public:
+	Warrior(int xPos, int yPos);
+	virtual ~Warrior();
+
+	virtual void renderGraphics();
+};

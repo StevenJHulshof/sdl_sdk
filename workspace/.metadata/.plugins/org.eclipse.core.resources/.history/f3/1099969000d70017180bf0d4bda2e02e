@@ -1,0 +1,10 @@
+#pragma once
+
+#include "Menu.h"
+
+class ActionMenu: public Menu
+{
+public:
+	ActionMenu(int xPos, int yPos, int type);
+	virtual ~ActionMenu();
+};

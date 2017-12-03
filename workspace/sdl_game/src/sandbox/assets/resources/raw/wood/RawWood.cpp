@@ -21,3 +21,5 @@ void RawWood::renderGraphics()
 		gTextures[TEXTURE_RESOURCE_RAW_WOOD_HOVERED].render(_screenPosX + _offsetX, _screenPosY + _offsetY, NULL, 0, NULL, _flip, _zoom);
 	}
 }
+
+std::vector<RawWood*> gRawWoodPool;

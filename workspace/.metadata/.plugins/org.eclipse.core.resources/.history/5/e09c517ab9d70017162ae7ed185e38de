@@ -1,0 +1,14 @@
+#include "Ranger.h"
+
+Ranger::Ranger(int xPos, int yPos, int type):
+	Unit(xPos, yPos, type)
+{
+
+}
+
+Ranger::~Ranger()
+{
+
+}
+
+std::vector<Ranger*> gRangerPool;

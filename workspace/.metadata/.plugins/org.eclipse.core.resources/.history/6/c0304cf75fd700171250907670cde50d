@@ -1,0 +1,41 @@
+#include "Menu.h"
+
+Menu::Menu(int xPos, int yPos, int type):
+	GameObject()
+{
+	_xPos = xPos;
+	_yPos = yPos;
+	_type = type;
+	setTextureType();
+	_priority = _basePriority = PRIORITY_MENU;
+}
+
+Menu::~Menu()
+{
+
+}
+
+void Menu::updateInput()
+{
+	GameObject::updateInput();
+
+	if(_selected)
+	{
+		std::cout << _priority << std::endl;
+	}
+}
+
+void Menu::setTextureType()
+{
+	switch(_type)
+	{
+	case TYPE_OBJECT_MENU_ACTION:
+		_textureType = TEXTURE_OBJECT_MENU_ACTION;
+		break;
+	case TYPE_OBJECT_MENU_STAT:
+		_textureType = TEXTURE_OBJECT_MENU_STAT;
+		break;
+	default:
+		break;
+	}
+}

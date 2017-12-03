@@ -6,6 +6,7 @@
 Texture::Texture()
 {
     // Initialize
+	mSurface = NULL;
     mTexture = NULL;
     mWidth = 0;
     mHeight = 0;
@@ -149,6 +150,20 @@ bool Texture::unlockSurface()
 SDL_PixelFormat* Texture::getPixelFormat()
 {
     return mSurface->format;
+}
+
+void Texture::openFont(const char* font, int size)
+{
+    char* fontPath = SDL_GetBasePath();
+    strcat(fontPath, "../true_type_fonts/");
+    strcat(fontPath, font);
+    strcat(fontPath, ".ttf");
+    gFont = TTF_OpenFont(fontPath, size);
+}
+
+void Texture::deleteSelf()
+{
+	delete this;
 }
 
 /** Create texture buffer. */
