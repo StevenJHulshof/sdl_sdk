@@ -5,7 +5,7 @@
 class RawWood: public RawResource
 {
 public:
-	RawWood(int xPos, int yPos, int zPos);
+	RawWood(int xPos, int yPos);
 	virtual ~RawWood();
 
 	virtual void renderGraphics();

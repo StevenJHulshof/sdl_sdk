@@ -5,7 +5,7 @@
 class ActionMenu: public Menu
 {
 public:
-	ActionMenu(int xPos, int yPos, int zPos);
+	ActionMenu(int xPos, int yPos);
 	virtual ~ActionMenu();
 
 	virtual void updateGraphics();

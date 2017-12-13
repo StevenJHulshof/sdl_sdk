@@ -1,0 +1,12 @@
+#include "RawWood.h"
+
+RawWood::RawWood():
+	GameObject()
+{
+
+}
+
+RawWood::~RawWood()
+{
+
+}

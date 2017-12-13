@@ -1,0 +1,12 @@
+#include "RawResource.h"
+
+RawResource::RawResource(int xPos, int yPos):
+	Resource(xPos, yPos, type)
+{
+
+}
+
+RawResource::~RawResource()
+{
+
+}

@@ -1,0 +1,25 @@
+#include "Resource.h"
+
+Resource::Resource(int xPos, int yPos, int type):
+	GameObject()
+{
+
+}
+
+Resource::~Resource()
+{
+
+}
+
+
+void Unit::setTextureType()
+{
+	switch(_type)
+	{
+	case TYPE_UNIT_WARRIOR:
+		_textureType = TEXTURE_UNIT_WARRIOR;
+		break;
+	default:
+		break;
+	}
+}

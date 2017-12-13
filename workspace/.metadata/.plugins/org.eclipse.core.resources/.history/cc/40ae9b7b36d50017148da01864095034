@@ -1,0 +1,33 @@
+#include "Cursor.h"
+
+Cursor::Cursor():
+	GameObject()
+{
+	_textureType = TEXTURE_CURSOR_ARROW;
+}
+
+Cursor::~Cursor()
+{
+
+}
+
+void Cursor::updateInput()
+{
+
+}
+
+void Cursor::updateGraphics()
+{
+	int textureOffsetX = 0, textureOffsetY = 0;
+
+	if(_textureType == TEXTURE_CURSOR_DRAG)
+	{
+		int w = gTextures[TEXTURE_TEMPLATE].getWidth() * _zoom;
+		int h = gTextures[TEXTURE_TEMPLATE].getHeight() * _zoom;
+
+		textureOffsetX = (int)(-w / 2);
+		textureOffsetY = (int)(-h / 2);
+	}
+
+	gTextures[_textureType]
+}

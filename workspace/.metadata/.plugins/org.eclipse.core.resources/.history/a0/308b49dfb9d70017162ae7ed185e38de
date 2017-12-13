@@ -1,0 +1,17 @@
+#include "Ranger.h"
+
+Ranger::Ranger(int xPos, int yPos, int type):
+	Unit(xPos, yPos, type),
+	_attackRanged(RANGER_ATTACK_RANGED_DEFAULT)
+{
+	_health = RANGER_HEALTH_DEFAULT;
+	_defense = RANGER_DEFENSE_DEFAULT;
+
+}
+
+Ranger::~Ranger()
+{
+
+}
+
+std::vector<Ranger*> gRangerPool;

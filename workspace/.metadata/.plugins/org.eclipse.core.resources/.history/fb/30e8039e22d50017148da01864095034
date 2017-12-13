@@ -1,0 +1,12 @@
+#include "Tile.h"
+
+Tile::Tile(int xPos, int yPos, int type):
+	GameObject()
+{
+
+}
+
+Tile::~Tile()
+{
+
+}

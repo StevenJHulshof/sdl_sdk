@@ -1,0 +1,4 @@
+#pragma once
+
+#define GRID_X 30
+#define GRID_Y 30

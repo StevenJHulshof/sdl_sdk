@@ -1,0 +1,7 @@
+#pragma once
+
+#include "ActionMenu.h"
+#include "StatMenu.h"
+
+extern void createActionMenu(int xPos, int yPos);
+extern void createStatMenu(int xPos, int yPos);

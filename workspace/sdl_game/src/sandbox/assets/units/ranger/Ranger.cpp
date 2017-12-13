@@ -1,7 +1,7 @@
 #include "Ranger.h"
 
-Ranger::Ranger(int xPos, int yPos, int zPos):
-	Unit(xPos, yPos, zPos, TYPE_UNIT_RANGER),
+Ranger::Ranger(int xPos, int yPos):
+	Unit(xPos, yPos, TYPE_UNIT_RANGER),
 	_attackRanged(RANGER_ATTACK_RANGED_DEFAULT)
 {
 	_health = RANGER_HEALTH_DEFAULT;

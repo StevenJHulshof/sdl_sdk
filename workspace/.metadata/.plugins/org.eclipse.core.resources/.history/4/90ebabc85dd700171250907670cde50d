@@ -1,0 +1,13 @@
+#include "menu_create.h"
+
+void createActionMenu(int xPos, int yPos)
+{
+	ActionMenu *actionMenu = new ActionMenu(xPos, yPos);
+	gActionMenuPool.push_back(actionMenu);
+}
+
+void createStatMenu(int xPos, int yPos)
+{
+	StatMenu *statMenu = new StatMenu(xPos, yPos);
+	gStatMenuPool.push_back(statMenu);
+}

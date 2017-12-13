@@ -1,0 +1,18 @@
+#pragma once
+
+#include "sdl_includes.h"
+
+class GameObject
+{
+public:
+	bool _selected, _hovered, _hasActionMenu;
+	int _textureType, _screenPosX, _screenPosY, _offsetX, _offsetY;
+	SDL_RendererFlip flip;
+	float zoom;
+
+	GameObject();
+	virtual ~GameObject();
+
+	virtual void update();
+	virtual void render();
+};

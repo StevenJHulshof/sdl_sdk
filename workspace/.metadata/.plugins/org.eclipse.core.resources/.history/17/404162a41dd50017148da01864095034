@@ -1,0 +1,9 @@
+#pragma once
+
+class GameObject {
+public:
+	GameObject();
+	virtual ~GameObject();
+};
+
+#endif /* GAMEOBJECT_H_ */

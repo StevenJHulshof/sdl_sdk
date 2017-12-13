@@ -1,0 +1,17 @@
+/*
+ * Cursor.h
+ *
+ *  Created on: Nov 29, 2017
+ *      Author: Steven
+ */
+
+#ifndef CURSOR_H_
+#define CURSOR_H_
+
+class Cursor {
+public:
+	Cursor();
+	virtual ~Cursor();
+};
+
+#endif /* CURSOR_H_ */

@@ -1,0 +1,10 @@
+#pragma once
+
+#include "Menu.h"
+
+class StatMenu: public Menu
+{
+public:
+	StatMenu(int xPos, int yPos);
+	virtual ~StatMenu();
+};

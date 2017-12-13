@@ -1,0 +1,10 @@
+#pragma once
+
+#include "GameObject.h"
+
+class RawStone: public GameObject
+{
+public:
+	RawStone();
+	virtual ~RawStone();
+};

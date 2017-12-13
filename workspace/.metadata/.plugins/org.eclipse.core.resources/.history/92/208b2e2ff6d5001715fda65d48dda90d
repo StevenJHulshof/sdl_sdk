@@ -1,0 +1,11 @@
+#pragma once
+
+#include "container_types"
+#include "Resource.h"
+
+class RawStone: public Resource
+{
+public:
+	RawStone(int xPos, int yPos);
+	virtual ~RawStone();
+};

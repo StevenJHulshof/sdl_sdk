@@ -1,0 +1,17 @@
+/*
+ * Tile.h
+ *
+ *  Created on: Nov 29, 2017
+ *      Author: Steven
+ */
+
+#ifndef TILE_H_
+#define TILE_H_
+
+class Tile {
+public:
+	Tile();
+	virtual ~Tile();
+};
+
+#endif /* TILE_H_ */

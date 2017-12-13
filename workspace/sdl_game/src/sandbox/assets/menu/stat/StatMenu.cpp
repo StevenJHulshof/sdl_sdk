@@ -1,7 +1,7 @@
 #include "StatMenu.h"
 
-StatMenu::StatMenu(int xPos, int yPos, int zPos):
-	Menu(xPos, yPos, zPos, TYPE_OBJECT_MENU_STAT),
+StatMenu::StatMenu(int xPos, int yPos):
+	Menu(xPos, yPos, TYPE_OBJECT_MENU_STAT),
 	_statTextures(0),
 	_statValue(0),
 	_statStringTex(0)

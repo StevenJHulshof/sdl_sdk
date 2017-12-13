@@ -1,0 +1,17 @@
+#include "GameCore.h"
+
+GameCore::GameCore():
+	world()
+{
+    
+}
+
+void GameCore::update() 
+{
+
+}
+
+void GameCore::render() 
+{
+
+}

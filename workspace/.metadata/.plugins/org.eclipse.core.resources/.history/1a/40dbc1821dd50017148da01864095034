@@ -1,0 +1,27 @@
+#pragma once
+
+#include "Generator.h"
+
+enum
+{
+	TYPE_EMPTY,
+	TYPE_TILE_GRASS,
+	TYPE_TILE_SAND,
+	TYPE_TILE_WATER,
+	TYPE_UNIT_WARRIOR,
+	TYPE_RESOURCE_RAW_WOOD,
+	TYPE_RESOURCE_RAW_STONE,
+};
+
+class Container {
+public:
+	Container();
+	virtual ~Container();
+
+    int _tileGrid[TILE_GRID_X][TILE_GRID_Y];
+    int _playableGrid[TILE_GRID_X][TILE_GRID_Y];
+    Generator generator;
+
+	virtual void update();
+	virtual void render();
+};

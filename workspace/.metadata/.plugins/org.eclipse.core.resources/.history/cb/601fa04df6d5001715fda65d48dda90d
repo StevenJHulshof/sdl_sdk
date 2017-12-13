@@ -1,0 +1,12 @@
+#include "RawStone.h"
+
+RawStone::RawStone():
+	Resource(xPos, yPos, TYPE_RESOURCE_RAW_STONE)
+{
+
+}
+
+RawStone::~RawStone()
+{
+
+}

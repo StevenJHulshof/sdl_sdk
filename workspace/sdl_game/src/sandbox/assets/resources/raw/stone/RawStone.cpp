@@ -1,7 +1,7 @@
 #include "RawStone.h"
 
-RawStone::RawStone(int xPos, int yPos, int zPos):
-	RawResource(xPos, yPos, zPos, TYPE_RESOURCE_RAW_STONE)
+RawStone::RawStone(int xPos, int yPos):
+	RawResource(xPos, yPos, TYPE_RESOURCE_RAW_STONE)
 {
 
 }

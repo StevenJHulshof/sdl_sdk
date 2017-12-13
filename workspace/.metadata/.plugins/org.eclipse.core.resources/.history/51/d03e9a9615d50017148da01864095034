@@ -1,0 +1,11 @@
+#pragma once
+
+class GameCore {
+private:
+   World world; 
+    
+public:
+    GameCore();
+    void update();
+    void render();
+};

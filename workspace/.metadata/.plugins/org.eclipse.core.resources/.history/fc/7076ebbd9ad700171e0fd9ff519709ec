@@ -1,0 +1,14 @@
+#pragma once
+
+#include "Unit.h"
+
+class Warrior: public Unit
+{
+public:
+	Warrior(int xPos, int yPos);
+	virtual ~Warrior();
+
+	virtual void renderGraphics();
+};
+
+extern std::vector<Warrior*> gWarriorPool;

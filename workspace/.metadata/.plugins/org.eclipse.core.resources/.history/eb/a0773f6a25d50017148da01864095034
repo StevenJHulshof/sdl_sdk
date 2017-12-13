@@ -1,0 +1,9 @@
+#pragma once;
+
+class Grid {
+public:
+	Grid();
+	virtual ~Grid();
+};
+
+#endif /* GRID_H_ */

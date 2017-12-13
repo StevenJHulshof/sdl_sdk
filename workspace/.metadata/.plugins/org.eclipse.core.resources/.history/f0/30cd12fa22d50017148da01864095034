@@ -1,0 +1,13 @@
+#pragma once
+
+#include "GameObject.h"
+#include "container_types.h"
+
+class Tile: public GameObject
+{
+public:
+	Tile(int xPos, int yPos, int type);
+	virtual ~Tile();
+
+	virtual void setTextureType();
+};

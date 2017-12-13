@@ -1,0 +1,12 @@
+#include "Camera.h"
+
+Camera::Camera(int screenPosX, int screenPosY):
+	GameObject()
+{
+
+}
+
+Camera::~Camera()
+{
+
+}

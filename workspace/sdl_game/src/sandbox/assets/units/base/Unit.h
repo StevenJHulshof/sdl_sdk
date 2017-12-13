@@ -12,7 +12,7 @@ protected:
 	virtual void setTextureType();
 
 public:
-	Unit(int xPos, int yPos, int zPos, int type);
+	Unit(int xPos, int yPos, int type);
 	virtual ~Unit();
 
 	virtual void renderInput();

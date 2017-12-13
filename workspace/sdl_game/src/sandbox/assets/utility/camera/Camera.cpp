@@ -32,7 +32,7 @@ void Camera::updateInput()
 			_dragStartY = _offsetY - dragY;
 			_dragFlag = true;
 		}
-		if(_dragStartY + dragY < (GRID_Z * h * 0.25 - h * 0.75) && _dragStartY + dragY - SCREEN_HEIGHT > -(GRID_Z * h * 0.25 + h))
+		if(_dragStartY + dragY < -96 + 100 && _dragStartY + dragY - SCREEN_HEIGHT + 64 + 100 > (int) -GRID_Y * (h / 4))
 		{
 			_offsetY = _dragStartY + dragY;
 		}
@@ -40,7 +40,7 @@ void Camera::updateInput()
 		{
 			_dragStartY = _offsetY - dragY;
 		}
-		if(_dragStartX + dragX < (GRID_X * w * 0.75 + w) && _dragStartX + dragX - SCREEN_WIDTH  > -(GRID_Y * w * 0.75 + w))
+		if(_dragStartX + dragX < -16 + 100 && _dragStartX + dragX - SCREEN_WIDTH - 16 + 100 > (int) -GRID_X * w * 0.75)
 		{
 			_offsetX = _dragStartX + dragX;
 		}
@@ -55,28 +55,28 @@ void Camera::updateInput()
 
 		if(Input::onKeyPressed(VK_UP))
 		{
-			if(_offsetY < (GRID_Z * h * 0.25 - h * 0.75))
+			if(_offsetY < -96 + 100)
 			{
 				_offsetY += _velocity;
 			}
 		}
 		if(Input::onKeyPressed(VK_DOWN))
 		{
-			if(_offsetY - SCREEN_HEIGHT > -(GRID_Z * h * 0.25 + h))
+			if(_offsetY - SCREEN_HEIGHT + 64 + 100 > (int) -GRID_Y * (h / 4))
 			{
 				_offsetY -= _velocity;
 			}
 		}
 		if(Input::onKeyPressed(VK_LEFT))
 		{
-			if(_offsetX < (GRID_X * w * 0.75 + w))
+			if(_offsetX < -16 + 100)
 			{
 				_offsetX += _velocity;
 			}
 		}
 		if(Input::onKeyPressed(VK_RIGHT))
 		{
-			if(_offsetX - SCREEN_WIDTH > -(GRID_Y * w * 0.75 + w))
+			if(_offsetX - SCREEN_WIDTH - 16 + 100 > (int) -GRID_X * w * 0.75)
 			{
 				_offsetX -= _velocity;
 			}

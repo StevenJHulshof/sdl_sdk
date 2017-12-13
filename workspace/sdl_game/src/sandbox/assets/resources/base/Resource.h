@@ -8,7 +8,7 @@ class Resource: public GameObject
 protected:
 	virtual void setTextureType();
 public:
-	Resource(int xPos, int yPos, int zPos, int type);
+	Resource(int xPos, int yPos, int type);
 	virtual ~Resource();
 };
 

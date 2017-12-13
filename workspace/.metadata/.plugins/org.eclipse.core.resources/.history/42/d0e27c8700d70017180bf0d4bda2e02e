@@ -1,0 +1,12 @@
+#include "ActionMenu.h"
+
+ActionMenu::ActionMenu(int xPos, int yPos, int type):
+	Menu(xPos, yPos, type)
+{
+
+}
+
+ActionMenu::~ActionMenu()
+{
+
+}

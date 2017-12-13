@@ -1,0 +1,12 @@
+#include "RawStone.h"
+
+RawStone::RawStone():
+	GameObject()
+{
+
+}
+
+RawStone::~RawStone()
+{
+
+}

@@ -6,7 +6,7 @@
 class StatMenu: public Menu
 {
 public:
-	StatMenu(int xPos, int yPos, int zPos);
+	StatMenu(int xPos, int yPos);
 	virtual ~StatMenu();
 
 	std::vector<int> _statTextures;

@@ -13,7 +13,7 @@ public:
 	Tile(int type);
 	virtual ~Tile();
 
-	virtual void render(int xPos, int yPos, int zPos);
+	virtual void render(int xPos, int yPos);
 
-	virtual void renderGraphics(int xPos, int yPos, int zPos);
+	virtual void renderGraphics(int xPos, int yPos);
 };
