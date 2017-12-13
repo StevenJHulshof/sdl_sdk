@@ -1,7 +1,7 @@
 #include "Warrior.h"
 
-Warrior::Warrior(int xPos, int yPos):
-	Unit(xPos, yPos, TYPE_UNIT_WARRIOR),
+Warrior::Warrior(int xPos, int yPos, int zPos):
+	Unit(xPos, yPos, zPos, TYPE_UNIT_WARRIOR),
 	_attackMelee(WARRIOR_ATTACK_MELEE_DEFAULT)
 {
 	_health = WARRIOR_HEALTH_DEFAULT;

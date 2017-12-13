@@ -85,15 +85,15 @@ void GlobalObjectPool::updatePool(std::vector<object_t> &pool, std::vector<objec
 }
 
 template <class object_t>
-void GlobalObjectPool::renderPool(std::vector<object_t> &pool, int yPos, int *index)
+void GlobalObjectPool::renderPool(std::vector<object_t> &pool, int zPos, int *index)
 {
-	if(*index >= 0 && pool[*index]->_yPos == yPos)
+	if(*index >= 0 && pool[*index]->_zPos == zPos)
 	{
 		while(true)
 		{
 			pool[*index]->render();
 			(*index)--;
-			if(*index < 0 || pool[*index]->_yPos != yPos)
+			if(*index < 0 || pool[*index]->_zPos != zPos)
 			{
 				break;
 			}

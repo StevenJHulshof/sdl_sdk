@@ -3,6 +3,8 @@
 #include "texture_types.h"
 #include "config_types.h"
 #include "windows.h"
+#include <string.h>
+#include "Texture.h"
 #include "GlobalObjectPool.h"
 
 class Config {

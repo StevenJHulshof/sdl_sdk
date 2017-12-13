@@ -1,10 +1,11 @@
 #include "Menu.h"
 
-Menu::Menu(int xPos, int yPos, int type):
+Menu::Menu(int xPos, int yPos, int zPos, int type):
 	GameObject()
 {
 	_xPos = xPos;
 	_yPos = yPos;
+	_zPos = zPos;
 	_type = type;
 	setTextureType();
 	_priority = _basePriority = PRIORITY_MENU;

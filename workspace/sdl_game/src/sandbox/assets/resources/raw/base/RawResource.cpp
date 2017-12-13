@@ -1,7 +1,7 @@
 #include "RawResource.h"
 
-RawResource::RawResource(int xPos, int yPos, int type):
-	Resource(xPos, yPos, type)
+RawResource::RawResource(int xPos, int yPos, int zPos, int type):
+	Resource(xPos, yPos, zPos, type)
 {
 
 }

@@ -6,7 +6,7 @@
 class Ranger: public Unit
 {
 public:
-	Ranger(int xPos, int yPos);
+	Ranger(int xPos, int yPos, int zPos);
 	virtual ~Ranger();
 
 	int _attackRanged;

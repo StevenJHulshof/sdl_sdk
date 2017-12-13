@@ -1,0 +1,16 @@
+#pragma once
+
+#include "GameObject.h"
+
+template <class tile_t>
+class TileData
+{
+public:
+	int _xPos;
+	int _yPos;
+	int _zPos;
+	tile_t *_tile;
+
+	TileData(int xPos, int yPos, int zPos);
+	~TileData();
+};

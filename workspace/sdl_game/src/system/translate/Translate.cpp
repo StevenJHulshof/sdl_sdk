@@ -6,9 +6,9 @@ Translate::Translate() {
 Translate::~Translate() {
 }
 
-void Translate::gridToScreenPos(int xPos, int yPos, int w, int h, int *screenPosX, int *screenPosY) {
-    *screenPosX = xPos * w * 0.75;
-    *screenPosY = (xPos % 2) * -1 * h * 0.125 + yPos * h * 0.25;
+void Translate::gridToScreenPos(int xPos, int yPos, int zPos, int w, int h, int *screenPosX, int *screenPosY) {
+    *screenPosX = (int) (xPos * 0.75 * w  - yPos * 0.75 * w);
+    *screenPosY = (int) (xPos * 0.5 * 0.25 * h + yPos * 0.5 * 0.25 * h - zPos * h * 0.25);
 }
 
 void Translate::screenPosToGrid(int screenPosX, int screenPosY, int w, int h, int *xPos, int *yPos) {

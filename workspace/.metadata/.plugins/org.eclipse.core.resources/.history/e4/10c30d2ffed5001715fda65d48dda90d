@@ -1,6 +1,0 @@
-#pragma once
-
-#include "GlobalObjectPool.h"
-
-extern void createRawStone(int x, int y);
-extern void createRawWood(int x, int y);

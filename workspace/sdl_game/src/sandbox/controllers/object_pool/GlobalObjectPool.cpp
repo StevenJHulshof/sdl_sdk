@@ -40,14 +40,14 @@ void GlobalObjectPool::render()
 	int warriorIndex = gWarriorPool.size() - 1;
 	int rangerIndex = gRangerPool.size() - 1;
 
-	for(int y = 0; y < GRID_Y; y++)
+	for(int z = 0; z < GRID_Z; z++)
 	{
-		renderPool(gResourcePool, y, &resourceIndex);
-		renderPool(gRawStonePool, y, &rawStoneIndex);
-		renderPool(gRawWoodPool, y, &rawWoodIndex);
-		renderPool(gUnitPool, y, &unitIndex);
-		renderPool(gWarriorPool, y, &warriorIndex);
-		renderPool(gRangerPool, y, &rangerIndex);
+		renderPool(gResourcePool, z, &resourceIndex);
+		renderPool(gRawStonePool, z, &rawStoneIndex);
+		renderPool(gRawWoodPool, z, &rawWoodIndex);
+		renderPool(gUnitPool, z, &unitIndex);
+		renderPool(gWarriorPool, z, &warriorIndex);
+		renderPool(gRangerPool, z, &rangerIndex);
 	}
 
 	// render menus

@@ -5,7 +5,7 @@
 class RawStone: public RawResource
 {
 public:
-	RawStone(int xPos, int yPos);
+	RawStone(int xPos, int yPos, int zPos);
 	virtual ~RawStone();
 
 	virtual void renderGraphics();

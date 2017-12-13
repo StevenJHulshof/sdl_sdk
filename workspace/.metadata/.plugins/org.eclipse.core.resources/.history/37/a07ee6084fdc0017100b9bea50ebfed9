@@ -1,0 +1,25 @@
+#pragma once
+
+#include "grid_types.h"
+#include <algorithm>
+#include "Tile.h"
+
+struct TileData
+{
+	int xPos;
+	int yPos;
+	int zPos;
+	Tile *tile;
+};
+
+class Grid
+{
+public:
+	Grid();
+	virtual ~Grid();
+
+	std::vector<TileData> _tileGrid;
+
+    static int _tileGrid[GRID_X][GRID_Y][GRID_Z];
+    static int _playableGrid[GRID_X][GRID_Y][GRID_Z];
+};

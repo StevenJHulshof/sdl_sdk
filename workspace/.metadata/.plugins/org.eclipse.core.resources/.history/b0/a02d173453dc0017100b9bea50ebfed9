@@ -1,0 +1,17 @@
+/*
+ * TileData.h
+ *
+ *  Created on: Dec 8, 2017
+ *      Author: Steven
+ */
+
+#ifndef TILEDATA_H_
+#define TILEDATA_H_
+
+class TileData {
+public:
+	TileData();
+	virtual ~TileData();
+};
+
+#endif /* TILEDATA_H_ */

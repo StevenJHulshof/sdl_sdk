@@ -1,7 +1,7 @@
 #include "ActionMenu.h"
 
-ActionMenu::ActionMenu(int xPos, int yPos):
-	Menu(xPos, yPos, TYPE_OBJECT_MENU_ACTION)
+ActionMenu::ActionMenu(int xPos, int yPos, int zPos):
+	Menu(xPos, yPos, zPos, TYPE_OBJECT_MENU_ACTION)
 {
 
 }

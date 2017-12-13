@@ -1,5 +1,3 @@
-#include <string.h>
-#include "Texture.h"
 #include "Config.h"
 
 /** The SDL window. */
@@ -28,7 +26,7 @@ bool Config::init()
 
         // Create window
         gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-            SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_INPUT_GRABBED | SDL_WINDOW_FULLSCREEN);
+            SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_INPUT_GRABBED/* | SDL_WINDOW_FULLSCREEN*/);
         if(gWindow == NULL) {
             printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
             success = false;

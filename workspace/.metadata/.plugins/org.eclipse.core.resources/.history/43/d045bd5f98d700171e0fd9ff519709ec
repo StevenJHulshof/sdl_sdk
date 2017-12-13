@@ -1,3 +1,0 @@
-#pragma once
-
-const int UNIT_HEALTH_DEFAULT = 100;

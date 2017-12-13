@@ -6,7 +6,7 @@
 class Warrior: public Unit
 {
 public:
-	Warrior(int xPos, int yPos);
+	Warrior(int xPos, int yPos, int zPos);
 	virtual ~Warrior();
 
 	int _attackMelee;

@@ -1,0 +1,18 @@
+#pragma once
+
+#include <vector>
+#include <algorithm>
+#include "grid_types.h"
+#include "TileData.h"
+
+class Grid
+{
+public:
+	Grid();
+	virtual ~Grid();
+
+	static std::vector<TileData> _tileGrid;
+	static void setTileData(std::vector<TileData> &grid, int xPos, int yPos, int zPos, Tile *tile);
+
+    static int _playableGrid[GRID_X][GRID_Y][GRID_Z];
+};

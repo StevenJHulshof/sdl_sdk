@@ -9,6 +9,6 @@ protected:
 	virtual void setTextureType();
 
 public:
-	Menu(int xPos, int yPos, int type);
+	Menu(int xPos, int yPos, int zPos, int type);
 	virtual ~Menu();
 };

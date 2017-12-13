@@ -1,0 +1,15 @@
+#pragma once
+
+class Tile;
+
+class TileData
+{
+public:
+	int _xPos;
+	int _yPos;
+	int _zPos;
+	Tile *_tile;
+
+	TileData(int xPos, int yPos, int zPos);
+	~TileData();
+};

@@ -14,6 +14,7 @@ GameObject::GameObject():
 	_velocity(0),
 	_xPos(0),
 	_yPos(0),
+	_zPos(0),
 	_flip(SDL_FLIP_NONE),
 	_zoom(1.0)
 {
@@ -106,7 +107,7 @@ void GameObject::updateGraphics()
 	int w = gTextures[TEXTURE_TEMPLATE].getWidth() * _zoom;
 	int h = gTextures[TEXTURE_TEMPLATE].getHeight() * _zoom;
 
-	Translate::gridToScreenPos(_xPos, _yPos, w, h, &_screenPosX, &_screenPosY);
+	Translate::gridToScreenPos(_xPos, _yPos, _zPos, w, h, &_screenPosX, &_screenPosY);
 }
 
 void GameObject::renderInput()

@@ -1,6 +1,6 @@
 #include "Unit.h"
 
-Unit::Unit(int xPos, int yPos, int type):
+Unit::Unit(int xPos, int yPos, int zPos, int type):
 	GameObject(),
 	_health(UNIT_HEALTH_DEFAULT),
 	_defense(UNIT_DEFENSE_DEFAULT),
@@ -10,18 +10,19 @@ Unit::Unit(int xPos, int yPos, int type):
 {
 	_xPos = xPos;
 	_yPos = yPos;
+	_zPos = zPos;
 	_type = type;
 	_priority = _basePriority = PRIORITY_UNIT;
 	setTextureType();
 
-	_pStatMenu = new StatMenu(_xPos, _yPos);
+	_pStatMenu = new StatMenu(_xPos, _yPos, _zPos);
 	gStatMenuPool.push_back(_pStatMenu);
 
 	_pStatMenu->addStat(STAT_TYPE_HEALTH, &_health);
 	_pStatMenu->addStat(STAT_TYPE_DEFENSE, &_defense);
 	_pStatMenu->addStat(STAT_TYPE_MOVEMENT_SPEED, &_movementSpeed);
 
-	_pActionMenu = new ActionMenu(_xPos, _yPos);
+	_pActionMenu = new ActionMenu(_xPos, _yPos, _zPos);
 	gActionMenuPool.push_back(_pActionMenu);
 }
 

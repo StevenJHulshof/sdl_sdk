@@ -1,0 +1,14 @@
+#include "TileData.h"
+
+TileData::TileData()
+{
+	_xPos = xPos;
+	_yPos = yPos;
+	_zPos = zPos;
+	_tile = NULL;
+}
+
+TileData::~TileData()
+{
+
+}

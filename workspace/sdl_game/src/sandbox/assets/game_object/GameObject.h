@@ -4,7 +4,7 @@
 #include <string>
 #include "Texture.h"
 #include "Translate.h"
-#include "Grid.h"
+#include "grid_types.h"
 #include "Input.h"
 
 class GameObject
@@ -16,7 +16,7 @@ public:
 	bool _selected, _hovered, _isActive;
 	int _textureType, _screenPosX, _screenPosY,
 		_offsetX, _offsetY, _priority, _basePriority,
-		_velocity, _xPos, _yPos, _type, _slot;
+		_velocity, _xPos, _yPos, _zPos, _type, _slot;
 	SDL_RendererFlip _flip;
 	float _zoom;
 

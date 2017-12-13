@@ -8,24 +8,57 @@ Overlay::~Overlay()
 {
 }
 
-int Overlay::getTileOverlay(int tileGrid[GRID_X][GRID_Y], int xPos, int yPos, int type)
+int Overlay::getTileOverlay(int tileGrid[GRID_X][GRID_Y][GRID_Z], int xPos, int yPos, int zPos, int type)
 {
     int overlay = 0;
     
-    if(yPos > 0)
+    if(xPos > 0)
     {
-        if(tileGrid[xPos][yPos - 1] == type)
+        if(tileGrid[xPos - 1][yPos][zPos] == type)
         {
-            overlay |= 0x01;
+            overlay |= 0x20;
         }
     }
     else
     {
-        overlay |= 0x01;
+        overlay |= 0x20;
+    }
+    if(xPos < GRID_X - 1)
+    {
+        if(tileGrid[xPos + 1][yPos][zPos] == type)
+        {
+            overlay |= 0x04;
+        }
+    }
+    else
+    {
+        overlay |= 0x04;
+    }
+    if(yPos > 0)
+    {
+        if(tileGrid[xPos][yPos - 1][zPos] == type)
+        {
+            overlay |= 0x02;
+        }
+    }
+    else
+    {
+        overlay |= 0x02;
     }
     if(yPos < GRID_Y - 1)
     {
-        if(tileGrid[xPos][yPos + 1] == type)
+        if(tileGrid[xPos][yPos + 1][zPos] == type)
+        {
+            overlay |= 0x10;
+        }
+    }
+    else
+    {
+        overlay |= 0x10;
+    }
+    if(zPos > GRID_Z)
+    {
+        if(tileGrid[xPos][yPos][zPos - 1] == type)
         {
             overlay |= 0x08;
         }
@@ -34,100 +67,18 @@ int Overlay::getTileOverlay(int tileGrid[GRID_X][GRID_Y], int xPos, int yPos, in
     {
         overlay |= 0x08;
     }
-    if(xPos % 2 == 0)
+    if(zPos < GRID_Z - 1 + GRID_Z)
     {
-        if(xPos < GRID_X - 1)
+        if(tileGrid[xPos][yPos][zPos + 1] == type)
         {
-            if(tileGrid[xPos + 1][yPos] == type) 
-            {
-                overlay |= 0x02;  
-            }
-        }
-        else
-        {
-            overlay |= 0x02;
-        }
-        if(xPos < GRID_X - 1 && yPos < GRID_Y - 1)
-        {     
-            if(tileGrid[xPos + 1][yPos + 1] == type)
-            {
-                overlay |= 0x04;
-            }
-        }
-        else
-        {
-            overlay |= 0x04;
-        }
-        if(xPos > 0 && yPos < GRID_Y - 1)
-        {
-            if(tileGrid[xPos - 1][yPos + 1] == type)
-            {
-                overlay |= 0x10;
-            }
-        }
-        else
-        {
-            overlay |= 0x10;
-        }
-        if(xPos > 0)
-        {
-            if(tileGrid[xPos - 1][yPos] == type)
-            {
-                overlay |= 0x20;        
-            }
-        }
-        else
-        {
-            overlay |= 0x20;
+            overlay |= 0x01;
         }
     }
     else
     {
-        if(xPos < GRID_X - 1 && yPos > 0)
-        {
-            if(tileGrid[xPos + 1][yPos - 1] == type) 
-            {
-                overlay |= 0x02;  
-            }
-        }
-        else
-        {
-            overlay |= 0x02;
-        }
-        if(xPos < GRID_X - 1)
-        {     
-            if(tileGrid[xPos + 1][yPos] == type)
-            {
-                overlay |= 0x04;
-            }
-        }
-        else
-        {
-            overlay |= 0x04;
-        }
-        if(xPos > 0)
-        {
-            if(tileGrid[xPos - 1][yPos] == type)
-            {
-                overlay |= 0x10;
-            }
-        }
-        else
-        {
-            overlay |= 0x10;
-        }
-        if(xPos > 0 && yPos > 0)
-        {
-            if(tileGrid[xPos - 1][yPos - 1] == type)
-            {
-                overlay |= 0x20;        
-            }
-        }
-        else
-        {
-            overlay |= 0x20;
-        }
+        overlay |= 0x01;
     }
+
     
     return overlay;
 }

@@ -1,3 +1,0 @@
-#pragma once
-
-extern void createWarrior(int xPos, int yPos);
