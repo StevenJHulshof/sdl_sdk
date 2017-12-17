@@ -2,6 +2,7 @@
 
 #include "GlobalObjectPool.h"
 #include "Generator.h"
+#include "Map.h"
 #include "Tile.h"
 #include "Camera.h"
 #include "Cursor.h"
@@ -14,6 +15,8 @@ private:
 public:
 	Container();
 	virtual ~Container();
+
+	Map map;
 
 	Tile grassTile;
 	Tile sandTile;

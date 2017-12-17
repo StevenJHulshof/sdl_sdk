@@ -1,0 +1,12 @@
+#pragma once
+
+#include <algorithm>
+#include "Tile.h"
+
+class Map {
+public:
+	Map();
+	virtual ~Map();
+
+	std::vector<TileData> _tileMap;
+};

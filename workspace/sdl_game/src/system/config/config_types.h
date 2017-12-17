@@ -3,9 +3,11 @@
 #include <iostream>
 #include "sdl_includes.h"
 
+#define FULL_SCREEN	0
+
 enum {
-    SCREEN_WIDTH = 1920,
-    SCREEN_HEIGHT = 1080
+    SCREEN_WIDTH = 1600,
+    SCREEN_HEIGHT = 900
 };
 
 /** The SDL window. */

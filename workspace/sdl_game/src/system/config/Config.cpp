@@ -28,7 +28,11 @@ bool Config::init()
 
         // Create window
         gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-            SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_INPUT_GRABBED | SDL_WINDOW_FULLSCREEN);
+            SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_INPUT_GRABBED
+#if (1 == FULL_SCREEN)
+            | SDL_WINDOW_FULLSCREEN
+#endif
+        );
         if(gWindow == NULL) {
             printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
             success = false;

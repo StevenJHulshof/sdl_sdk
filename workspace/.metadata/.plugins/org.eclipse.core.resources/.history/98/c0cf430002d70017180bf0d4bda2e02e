@@ -1,7 +1,0 @@
-#pragma once
-
-#include "RawStone.h"
-#include "RawWood.h"
-
-extern void createRawStone(int xPos, int yPos);
-extern void createRawWood(int xPos, int yPos);

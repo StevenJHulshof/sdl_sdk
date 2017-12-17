@@ -55,31 +55,31 @@ void Camera::updateInput()
 
 		if(Input::onKeyPressed(VK_UP))
 		{
-			if(_offsetY < -96 + 100)
-			{
+//			if(_offsetY < -96 + 100)
+//			{
 				_offsetY += _velocity;
-			}
+//			}
 		}
 		if(Input::onKeyPressed(VK_DOWN))
 		{
-			if(_offsetY - SCREEN_HEIGHT + 64 + 100 > (int) -GRID_Y * (h / 4))
-			{
+//			if(_offsetY - SCREEN_HEIGHT + 64 + 100 > (int) -GRID_Y * (h / 4))
+//			{
 				_offsetY -= _velocity;
-			}
+//			}
 		}
 		if(Input::onKeyPressed(VK_LEFT))
 		{
-			if(_offsetX < -16 + 100)
-			{
+//			if(_offsetX < -16 + 100)
+//			{
 				_offsetX += _velocity;
-			}
+//			}
 		}
 		if(Input::onKeyPressed(VK_RIGHT))
 		{
-			if(_offsetX - SCREEN_WIDTH - 16 + 100 > (int) -GRID_X * w * 0.75)
-			{
+//			if(_offsetX - SCREEN_WIDTH - 16 + 100 > (int) -GRID_X * w * 0.75)
+//			{
 				_offsetX -= _velocity;
-			}
+//			}
 		}
 	}
 }

@@ -1,5 +1,0 @@
-#pragma once
-
-#include "Warrior.h"
-
-extern void createWarrior(int xPos, int yPos);

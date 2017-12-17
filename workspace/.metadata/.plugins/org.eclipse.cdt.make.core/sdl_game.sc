@@ -2,13 +2,6 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="cdt.managedbuild.config.gnu.mingw.exe.debug.911731611;cdt.managedbuild.config.gnu.mingw.exe.debug.911731611.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.341209637;cdt.managedbuild.tool.gnu.cpp.compiler.input.276403812">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/x86_64-w64-mingw32"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
 <includePath path="D:/Compilers/TDM-GCC_MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++"/>
 <includePath path="D:/Compilers/TDM-GCC_MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/x86_64-w64-mingw32"/>
 <includePath path="D:/Compilers/TDM-GCC_MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
@@ -291,10 +284,6 @@
 </instance>
 <instance id="cdt.managedbuild.config.gnu.mingw.exe.debug.911731611;cdt.managedbuild.config.gnu.mingw.exe.debug.911731611.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.890004920;cdt.managedbuild.tool.gnu.c.compiler.input.245908085">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
-<includePath path="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
 <includePath path="D:/Compilers/TDM-GCC_MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 <includePath path="D:/Compilers/TDM-GCC_MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 <includePath path="D:/Compilers/TDM-GCC_MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>

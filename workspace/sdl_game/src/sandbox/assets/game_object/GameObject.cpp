@@ -106,7 +106,7 @@ void GameObject::updateGraphics()
 	int w = gTextures[TEXTURE_TEMPLATE].getWidth() * _zoom;
 	int h = gTextures[TEXTURE_TEMPLATE].getHeight() * _zoom;
 
-	Translate::gridToScreenPos(_xPos, _yPos, w, h, &_screenPosX, &_screenPosY);
+//	Translate::gridToScreenPos(_xPos, _yPos, w, h, &_screenPosX, &_screenPosY);
 }
 
 void GameObject::renderInput()
